@@ -117,21 +117,29 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+  <meta name="description" content="Java运行时数据区域分析Java运行时数据区域结构模型如下： ![jvm运行时结构模型图](E:\blog\hexo\source_posts\深入理解JVM虚拟机-一-：Java运行时数据区域\domain.png ​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区">
+<meta name="keywords" content="Java,JVM,Java面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深入理解JVM虚拟机(一)：Java运行时数据区域">
+<meta property="og:url" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/index.html">
 <meta property="og:site_name" content="Zuo&#39;s Blog Makes Better life and coding">
+<meta property="og:description" content="Java运行时数据区域分析Java运行时数据区域结构模型如下： ![jvm运行时结构模型图](E:\blog\hexo\source_posts\深入理解JVM虚拟机-一-：Java运行时数据区域\domain.png ​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-05T06:21:04.117Z">
+<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/domain.png">
+<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/虚拟机栈.jpg">
+<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/本地方法栈.jpg">
+<meta property="og:updated_time" content="2019-03-05T07:48:27.701Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
+<meta name="twitter:title" content="深入理解JVM虚拟机(一)：Java运行时数据区域">
+<meta name="twitter:description" content="Java运行时数据区域分析Java运行时数据区域结构模型如下： ![jvm运行时结构模型图](E:\blog\hexo\source_posts\深入理解JVM虚拟机-一-：Java运行时数据区域\domain.png ​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区">
+<meta name="twitter:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/domain.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/">
 
 
 
@@ -141,7 +149,7 @@
   };
 </script>
 
-  <title>关于 | Zuo's Blog Makes Better life and coding</title>
+  <title>深入理解JVM虚拟机(一)：Java运行时数据区域 | Zuo's Blog Makes Better life and coding</title>
   
 
 
@@ -252,7 +260,7 @@
         
         
           
-          <li class="menu-item menu-item-about menu-item-active">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -408,84 +416,306 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="码农翻身">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/touxiang.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zuo's Blog Makes Better life and coding">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">关于
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">深入理解JVM虚拟机(一)：Java运行时数据区域
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-05 15:31:12 / 修改时间：15:48:27" itemprop="dateCreated datePublished" datetime="2019-03-05T15:31:12+08:00">2019-03-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="Java运行时数据区域分析"><a href="#Java运行时数据区域分析" class="headerlink" title="Java运行时数据区域分析"></a>Java运行时数据区域分析</h2><p>Java运行时数据区域结构模型如下：</p>
+<p>![jvm运行时结构模型图](E:\blog\hexo\source_posts\深入理解JVM虚拟机-一-：Java运行时数据区域\domain.png</p>
+<p>​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区域之前，大多数程序员都会普遍的认为其中可以分为栈区域和堆区域两种，而这种理解比较浅显，也可以认为这其中的栈区域就是指上述的Java虚拟机栈，堆区域就是指堆（堆区域中实际包括不只堆）。 </p>
+<p><img src="/深入理解JVM虚拟机-一-：Java运行时数据区域/domain.png" alt="Java运行时数据区域结构模型图"></p>
+<p>###1、程序计数器</p>
+<p>　　程序计数器（Program Counter Register）可以看作是<strong>当前线程所执行的字节码的行号指示器</strong>，字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器来完成。每个线程都需要有一个独立的程序计数器，因此PC是“线程私有”的。并且这个计数器记录的是正在执行的虚拟机字节码指令的地址（如果是Native本地方法，那么计数器值为Undifined）。 </p>
+<h3 id="2、Java虚拟机栈"><a href="#2、Java虚拟机栈" class="headerlink" title="2、Java虚拟机栈"></a>2、Java虚拟机栈</h3><p>　　与程序计数器一样，Java虚拟机栈也是线程私有的，并且其生命周期与线程相同。<strong>虚拟机栈描述的是Java方法执行的内存模型</strong>，每个 Java 方法在执行的同时会创建一个栈帧用于存储局部变量表、操作数栈、常量池引用等信息。从方法调用直至执行完成的过程，就对应着一个栈帧在 Java 虚拟机栈中入栈和出栈的过程。 </p>
+<p><img src="/深入理解JVM虚拟机-一-：Java运行时数据区域/虚拟机栈.jpg" alt="java虚拟机栈结构模型图"></p>
+<p>可以通过 -Xss 这个虚拟机参数来指定每个线程的 Java 虚拟机栈内存大小： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xss512M HackTheJava</span><br></pre></td></tr></table></figure>
+<p>该区域可能抛出以下异常：</p>
+<ul>
+<li><p>当线程请求的栈深度超过最大值，会抛出 StackOverflowError 异常；</p>
+</li>
+<li><p>栈进行动态扩展时如果无法申请到足够内存，会抛出 OutOfMemoryError 异常。</p>
+</li>
+</ul>
+<h3 id="3、本地方法栈"><a href="#3、本地方法栈" class="headerlink" title="3、本地方法栈"></a>3、本地方法栈</h3><p>　　本地方法栈与 Java 虚拟机栈类似，它们之间的区别只不过是本地方法栈为本地方法服务。</p>
+<p>　　本地方法一般是用其它语言（C、C++ 或汇编语言等）编写的，并且被编译为基于本机硬件和操作系统的程序，对待这些方法需要特别处理。</p>
+<p><img src="/深入理解JVM虚拟机-一-：Java运行时数据区域/本地方法栈.jpg" alt="本地方法栈结构模型图"></p>
+<p> 　　与Java虚拟机栈一样，本地方法栈区域也会抛出StackOverFlow和OutOfMemoryError异常。 </p>
+<h3 id="4、堆"><a href="#4、堆" class="headerlink" title="4、堆"></a>4、堆</h3><p>所有对象都在这里分配内存，是垃圾收集的主要区域（”GC 堆”）。</p>
+<p>现代的垃圾收集器基本都是采用分代收集算法，其主要的思想是针对不同类型的对象采取不同的垃圾回收算法。可以将堆分成两块：</p>
+<ul>
+<li>新生代（Young Generation）</li>
+<li>老年代（Old Generation）</li>
+</ul>
+<p>堆不需要连续内存，并且可以动态增加其内存，增加失败会抛出 OutOfMemoryError 异常。</p>
+<p>可以通过 -Xms 和 -Xmx 这两个虚拟机参数来指定一个程序的堆内存大小，第一个参数设置初始值，第二个参数设置最大值。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xms1M -Xmx2M HackTheJava</span><br></pre></td></tr></table></figure>
+<h3 id="5、方法区"><a href="#5、方法区" class="headerlink" title="5、方法区"></a>5、方法区</h3><p>　　用于存放已被加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。虽然Java虚拟机规范把方法去描述为堆的一个逻辑部分，但是它却有一个别名叫做Non0Heap（非堆），目的应该是与Java堆区分开。</p>
+<p>　　和堆一样不需要连续的内存，并且可以动态扩展，动态扩展失败一样会抛出 OutOfMemoryError 异常。</p>
+<p>　　对这块区域进行垃圾回收的主要目标是对常量池的回收和对类的卸载，但是一般比较难实现。HotSpot 虚拟机把它当成永久代来进行垃圾回收。但很难确定永久代的大小，因为它受到很多因素影响，并且每次 Full GC 之后永久代的大小都会改变，所以经常会抛出 OutOfMemoryError 异常。为了更容易管理方法区，<strong>从 JDK 1.8 开始，移除永久代，并把方法区移至元空间，它位于本地内存中，而不是虚拟机内存中。</strong></p>
+<h3 id="6、运行时常量池"><a href="#6、运行时常量池" class="headerlink" title="6、运行时常量池"></a>6、运行时常量池</h3><p>　　运行时常量池是方法区的一部分。</p>
+<p>　　Class 文件中的常量池（编译器生成的字面量和符号引用）会在类加载后被放入这个区域。</p>
+<p>　　除了在编译期生成的常量，还允许动态生成，例如 String 类的 intern( )。</p>
+<h3 id="7、直接内存"><a href="#7、直接内存" class="headerlink" title="7、直接内存"></a>7、直接内存</h3><p>　　在 JDK 1.4 中新引入了 NIO 类，它可以使用 Native 函数库直接分配堆外内存，然后通过 Java 堆里的 DirectByteBuffer 对象作为这块内存的引用进行操作。这样能在一些场景中显著提高性能，因为避免了在堆内存和堆外内存来回拷贝数据。 </p>
+<h3 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h3><p>周志明《深入理解Java虚拟机：JVM高级特性与最佳实战》</p>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="码农翻身 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="码农翻身 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+	<div>
+	
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------　　　　本文结束　<i class="fa fa-heart"></i>　感谢您的阅读　　　　-------------</div>
+    
+</div>
+	
+	</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
+          
+            <a href="/tags/Java面试/" rel="tag"><i class="fa fa-tag"></i> Java面试</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Java中的锁分类/" rel="next" title="Java中的锁分类">
+                <i class="fa fa-chevron-left"></i> Java中的锁分类
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80Mjk5OC8xOTU0NA=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -505,8 +735,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -673,6 +912,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java运行时数据区域分析"><span class="nav-number">1.</span> <span class="nav-text">Java运行时数据区域分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2、Java虚拟机栈"><span class="nav-number">1.1.</span> <span class="nav-text">2、Java虚拟机栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、本地方法栈"><span class="nav-number">1.2.</span> <span class="nav-text">3、本地方法栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、堆"><span class="nav-number">1.3.</span> <span class="nav-text">4、堆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、方法区"><span class="nav-number">1.4.</span> <span class="nav-text">5、方法区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、运行时常量池"><span class="nav-number">1.5.</span> <span class="nav-text">6、运行时常量池</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、直接内存"><span class="nav-number">1.6.</span> <span class="nav-text">7、直接内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章："><span class="nav-number">1.7.</span> <span class="nav-text">参考文章：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -862,6 +1118,22 @@
   
   
 
+
+  
+    <script>
+  window.livereOptions = {
+    refer: '深入理解JVM虚拟机-一-：Java运行时数据区域/'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+  
 
 
 
