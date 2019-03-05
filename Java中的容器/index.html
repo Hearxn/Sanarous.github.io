@@ -59,7 +59,9 @@
 
   
   
-  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5">
+    
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.css">
 
 
 
@@ -72,7 +74,7 @@
 <link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/zuo32.ico?v=7.0.1">
 
 
   <link rel="icon" type="image/png" sizes="32x32" href="/images/zuo32.ico?v=7.0.1">
@@ -81,8 +83,10 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/zuo16.ico?v=7.0.1">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+  <link rel="mask-icon" href="/images/zuo32.ico?v=7.0.1" color="#222">
 
+
+  <link rel="manifest" href="/images/zuo32.ico">
 
 
 
@@ -232,7 +236,7 @@
     </div>
     
       
-        <p class="site-subtitle">普通的开发者  热情的学习者</p>
+        <h1 class="site-subtitle" itemprop="description">普通的开发者  热情的学习者</h1>
       
     
     
@@ -266,6 +270,8 @@
     
 
     
+      
+    
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
@@ -282,6 +288,8 @@
       
     
 
+    
+      
     
 
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
@@ -300,8 +308,10 @@
     
 
     
+      
+    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">12</span></a>
 
   </li>
         
@@ -317,8 +327,10 @@
     
 
     
+      
+    
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
 
   </li>
         
@@ -334,8 +346,10 @@
     
 
     
+      
+    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">5</span></a>
 
   </li>
         
@@ -350,6 +364,8 @@
       
     
 
+    
+      
     
 
     <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
@@ -367,6 +383,8 @@
       
     
 
+    
+      
     
 
     <a href="/messageboard" rel="section"><i class="menu-item-icon fa fa-fw fa-comment"></i> <br>留言板</a>
@@ -422,6 +440,15 @@
     </header>
 
     
+  
+  
+  
+  
+
+  
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NhbmFyb3Vz" title="fork on github" aria-label="fork on github"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></span>
+
 
 
     <main id="main" class="main">
@@ -443,6 +470,8 @@
   
   
 
+  
+    <div class="reading-progress-bar"></div>
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -467,11 +496,11 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java中的容器
+          <h2 class="post-title" itemprop="name headline">Java中的容器
 
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -836,20 +865,24 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcurrentCache</span>&lt;<span class="title">K</span>, <span class="title">V</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Map&lt;K, V&gt; eden;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Map&lt;K, V&gt; longterm;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ConcurrentCache</span><span class="params">(<span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.size = size;</span><br><span class="line">        <span class="keyword">this</span>.eden = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(size);</span><br><span class="line">        <span class="keyword">this</span>.longterm = <span class="keyword">new</span> WeakHashMap&lt;&gt;(size);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> V <span class="title">get</span><span class="params">(K k)</span> </span>&#123;</span><br><span class="line">        V v = <span class="keyword">this</span>.eden.get(k);</span><br><span class="line">        <span class="keyword">if</span> (v == <span class="keyword">null</span>) &#123;</span><br><span class="line">            v = <span class="keyword">this</span>.longterm.get(k);</span><br><span class="line">            <span class="keyword">if</span> (v != <span class="keyword">null</span>)</span><br><span class="line">                <span class="keyword">this</span>.eden.put(k, v);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> v;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(K k, V v)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.eden.size() &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">this</span>.longterm.putAll(<span class="keyword">this</span>.eden);</span><br><span class="line">            <span class="keyword">this</span>.eden.clear();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.eden.put(k, v);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
 <li>Eckel B. Java 编程思想 [M]. 机械工业出版社, 2002.</li>
-<li><a href="https://www.w3resource.com/java-tutorial/java-collections.php" target="_blank" rel="noopener">Java Collection Framework</a></li>
-<li><a href="https://openhome.cc/Gossip/DesignPattern/IteratorPattern.htm" target="_blank" rel="noopener">Iterator 模式</a></li>
-<li><a href="https://tech.meituan.com/java_hashmap.html" target="_blank" rel="noopener">Java 8 系列之重新认识 HashMap</a></li>
-<li><a href="http://javarevisited.blogspot.hk/2010/10/difference-between-hashmap-and.html" target="_blank" rel="noopener">What is difference between HashMap and Hashtable in Java?</a></li>
-<li><a href="http://www.zhangchangle.com/2018/02/07/Java%E9%9B%86%E5%90%88%E4%B9%8BHashMap/" target="_blank" rel="noopener">Java 集合之 HashMap</a></li>
-<li><a href="http://www.programering.com/a/MDO3QDNwATM.html" target="_blank" rel="noopener">The principle of ConcurrentHashMap analysis</a></li>
-<li><a href="https://www.ibm.com/developerworks/cn/java/java-lo-concurrenthashmap/" target="_blank" rel="noopener">探索 ConcurrentHashMap 高并发性的实现机制</a></li>
-<li><a href="https://www.jianshu.com/p/75adf47958a7" target="_blank" rel="noopener">HashMap 相关面试题及其解答</a></li>
-<li><a href="http://wiki.jikexueyuan.com/project/java-enhancement/java-thirtysix.html" target="_blank" rel="noopener">Java 集合细节（二）：asList 的缺陷</a></li>
-<li><a href="http://javaconceptoftheday.com/java-collection-framework-linkedlist-class/" target="_blank" rel="noopener">Java Collection Framework – The LinkedList Class</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cudzNyZXNvdXJjZS5jb20vamF2YS10dXRvcmlhbC9qYXZhLWNvbGxlY3Rpb25zLnBocA==" title="https://www.w3resource.com/java-tutorial/java-collections.php">Java Collection Framework<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9vcGVuaG9tZS5jYy9Hb3NzaXAvRGVzaWduUGF0dGVybi9JdGVyYXRvclBhdHRlcm4uaHRt" title="https://openhome.cc/Gossip/DesignPattern/IteratorPattern.htm">Iterator 模式<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly90ZWNoLm1laXR1YW4uY29tL2phdmFfaGFzaG1hcC5odG1s" title="https://tech.meituan.com/java_hashmap.html">Java 8 系列之重新认识 HashMap<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL2phdmFyZXZpc2l0ZWQuYmxvZ3Nwb3QuaGsvMjAxMC8xMC9kaWZmZXJlbmNlLWJldHdlZW4taGFzaG1hcC1hbmQuaHRtbA==" title="http://javarevisited.blogspot.hk/2010/10/difference-between-hashmap-and.html">What is difference between HashMap and Hashtable in Java?<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL3d3dy56aGFuZ2NoYW5nbGUuY29tLzIwMTgvMDIvMDcvSmF2YSVFOSU5QiU4NiVFNSU5MCU4OCVFNCVCOSU4Qkhhc2hNYXAv" title="http://www.zhangchangle.com/2018/02/07/Java%E9%9B%86%E5%90%88%E4%B9%8BHashMap/">Java 集合之 HashMap<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL3d3dy5wcm9ncmFtZXJpbmcuY29tL2EvTURPM1FETndBVE0uaHRtbA==" title="http://www.programering.com/a/MDO3QDNwATM.html">The principle of ConcurrentHashMap analysis<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuaWJtLmNvbS9kZXZlbG9wZXJ3b3Jrcy9jbi9qYXZhL2phdmEtbG8tY29uY3VycmVudGhhc2htYXAv" title="https://www.ibm.com/developerworks/cn/java/java-lo-concurrenthashmap/">探索 ConcurrentHashMap 高并发性的实现机制<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC83NWFkZjQ3OTU4YTc=" title="https://www.jianshu.com/p/75adf47958a7">HashMap 相关面试题及其解答<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL3dpa2kuamlrZXh1ZXl1YW4uY29tL3Byb2plY3QvamF2YS1lbmhhbmNlbWVudC9qYXZhLXRoaXJ0eXNpeC5odG1s" title="http://wiki.jikexueyuan.com/project/java-enhancement/java-thirtysix.html">Java 集合细节（二）：asList 的缺陷<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL2phdmFjb25jZXB0b2Z0aGVkYXkuY29tL2phdmEtY29sbGVjdGlvbi1mcmFtZXdvcmstbGlua2VkbGlzdC1jbGFzcy8=" title="http://javaconceptoftheday.com/java-collection-framework-linkedlist-class/">Java Collection Framework – The LinkedList Class<i class="fa fa-external-link"></i></span></li>
 </ul>
 
       
     </div>
+
+    
+      
+
 
     
 
@@ -1121,7 +1154,7 @@
                   
                     
                   
-                  <a href="https://github.com/Sanarous" title="GitHub &rarr; https://github.com/Sanarous" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NhbmFyb3Vz" title="GitHub &rarr; https://github.com/Sanarous"><i class="fa fa-fw fa-github"></i>GitHub</span>
                 </span>
               
                 <span class="links-of-author-item">
@@ -1132,7 +1165,7 @@
                   
                     
                   
-                  <a href="mailto:yourname@gmail.com" title="邮箱 &rarr; mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>邮箱</a>
+                  <span class="exturl" data-url="bWFpbHRvOnlvdXJuYW1lQGdtYWlsLmNvbQ==" title="邮箱 &rarr; mailto:yourname@gmail.com"><i class="fa fa-fw fa-envelope"></i>邮箱</span>
                 </span>
               
                 <span class="links-of-author-item">
@@ -1143,7 +1176,7 @@
                   
                     
                   
-                  <a href="https://weibo.com/u/5907995306" title="微博 &rarr; https://weibo.com/u/5907995306" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vdS81OTA3OTk1MzA2" title="微博 &rarr; https://weibo.com/u/5907995306"><i class="fa fa-fw fa-weibo"></i>微博</span>
                 </span>
               
                 <span class="links-of-author-item">
@@ -1154,7 +1187,7 @@
                   
                     
                   
-                  <a href="https://stackoverflow.com/" title="StackOverflow &rarr; https://stackoverflow.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  <span class="exturl" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS8=" title="StackOverflow &rarr; https://stackoverflow.com/"><i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</span>
                 </span>
               
             </div>
@@ -1172,19 +1205,19 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/" title="https://docs.spring.io/spring/docs/current/spring-framework-reference/" rel="noopener" target="_blank">Spring文档</a>
+                    <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmcvZG9jcy9jdXJyZW50L3NwcmluZy1mcmFtZXdvcmstcmVmZXJlbmNlLw==" title="https://docs.spring.io/spring/docs/current/spring-framework-reference/">Spring文档</span>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://www.breakyizhan.com/springboot/3028.html" title="https://www.breakyizhan.com/springboot/3028.html" rel="noopener" target="_blank">SpringBoot文档</a>
+                    <span class="exturl" data-url="aHR0cHM6Ly93d3cuYnJlYWt5aXpoYW4uY29tL3NwcmluZ2Jvb3QvMzAyOC5odG1s" title="https://www.breakyizhan.com/springboot/3028.html">SpringBoot文档</span>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://www.jquery123.com/" title="https://www.jquery123.com/" rel="noopener" target="_blank">jQuery文档</a>
+                    <span class="exturl" data-url="aHR0cHM6Ly93d3cuanF1ZXJ5MTIzLmNvbS8=" title="https://www.jquery123.com/">jQuery文档</span>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.mybatis.org/mybatis-3/zh/index.html" title="http://www.mybatis.org/mybatis-3/zh/index.html" rel="noopener" target="_blank">MyBatis文档</a>
+                    <span class="exturl" data-url="aHR0cDovL3d3dy5teWJhdGlzLm9yZy9teWJhdGlzLTMvemgvaW5kZXguaHRtbA==" title="http://www.mybatis.org/mybatis-3/zh/index.html">MyBatis文档</span>
                   </li>
                 
               </ul>
@@ -1238,18 +1271,6 @@
 
   
 </div>
-
-<!--
-  <div class="powered-by">由 <a class="theme-link" target="_blank">个人专属 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank">NexT.Gemini</a> v</div>
--->
 
 
 
@@ -1334,8 +1355,10 @@
   
     
     
+      
+    
   
-  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
 
 
 
@@ -1349,6 +1372,8 @@
 
 
 
+
+  
 
 
 
@@ -1362,13 +1387,16 @@
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>
 
   
   <script src="/lib/three/three.min.js"></script>
 
   
   <script src="/lib/three/three-waves.min.js"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1/reading_progress.min.js"></script>
 
 
   
@@ -1814,12 +1842,104 @@
   
 
   
+  <script src="/js/src/js.cookie.js?v=7.0.1"></script>
+  <script src="/js/src/scroll-cookie.js?v=7.0.1"></script>
+
 
   
+  <script src="/js/src/exturl.js?v=7.0.1"></script>
+
 
   
+  
+  
+    
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@1/bookmark.min.js"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
 
   
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+      
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      
+        right: 4px;
+        top: 8px;
+      
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1;
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; // Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.readOnly = true;
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, code.length);
+        ta.readOnly = false;
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); // For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
 
   
 <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
