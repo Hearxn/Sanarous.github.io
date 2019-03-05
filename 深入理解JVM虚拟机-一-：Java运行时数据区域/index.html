@@ -117,21 +117,21 @@
 
 
 
-  <meta name="description" content="Java运行时数据区域分析Java运行时数据区域结构模型如下： ![jvm运行时结构模型图](E:\blog\hexo\source_posts\深入理解JVM虚拟机-一-：Java运行时数据区域\domain.png ​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区">
+  <meta name="description" content="Java运行时数据区域分析Java运行时数据区域结构模型如下：  ​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区域之前，大多数程序员都会普遍的认为其中可以分为栈区域和堆区域两种，而这种理解比较浅显，也可以认为这其中的栈区域就是指上述的Java虚拟机栈，堆区域就是指堆">
 <meta name="keywords" content="Java,JVM,Java面试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入理解JVM虚拟机(一)：Java运行时数据区域">
 <meta property="og:url" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/index.html">
 <meta property="og:site_name" content="Zuo&#39;s Blog Makes Better life and coding">
-<meta property="og:description" content="Java运行时数据区域分析Java运行时数据区域结构模型如下： ![jvm运行时结构模型图](E:\blog\hexo\source_posts\深入理解JVM虚拟机-一-：Java运行时数据区域\domain.png ​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区">
+<meta property="og:description" content="Java运行时数据区域分析Java运行时数据区域结构模型如下：  ​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区域之前，大多数程序员都会普遍的认为其中可以分为栈区域和堆区域两种，而这种理解比较浅显，也可以认为这其中的栈区域就是指上述的Java虚拟机栈，堆区域就是指堆">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/domain.png">
 <meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/虚拟机栈.jpg">
 <meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/本地方法栈.png">
-<meta property="og:updated_time" content="2019-03-05T07:52:11.184Z">
+<meta property="og:updated_time" content="2019-03-05T07:56:08.227Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入理解JVM虚拟机(一)：Java运行时数据区域">
-<meta name="twitter:description" content="Java运行时数据区域分析Java运行时数据区域结构模型如下： ![jvm运行时结构模型图](E:\blog\hexo\source_posts\深入理解JVM虚拟机-一-：Java运行时数据区域\domain.png ​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区">
+<meta name="twitter:description" content="Java运行时数据区域分析Java运行时数据区域结构模型如下：  ​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区域之前，大多数程序员都会普遍的认为其中可以分为栈区域和堆区域两种，而这种理解比较浅显，也可以认为这其中的栈区域就是指上述的Java虚拟机栈，堆区域就是指堆">
 <meta name="twitter:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/domain.png">
 
 
@@ -479,7 +479,7 @@
                 
               
 
-              <time title="创建时间：2019-03-05 15:31:12 / 修改时间：15:52:11" itemprop="dateCreated datePublished" datetime="2019-03-05T15:31:12+08:00">2019-03-05</time>
+              <time title="创建时间：2019-03-05 15:31:12 / 修改时间：15:56:08" itemprop="dateCreated datePublished" datetime="2019-03-05T15:31:12+08:00">2019-03-05</time>
             
 
             
@@ -544,9 +544,8 @@
 
       
         <h2 id="Java运行时数据区域分析"><a href="#Java运行时数据区域分析" class="headerlink" title="Java运行时数据区域分析"></a>Java运行时数据区域分析</h2><p>Java运行时数据区域结构模型如下：</p>
-<p>![jvm运行时结构模型图](E:\blog\hexo\source_posts\深入理解JVM虚拟机-一-：Java运行时数据区域\domain.png</p>
-<p>​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区域之前，大多数程序员都会普遍的认为其中可以分为栈区域和堆区域两种，而这种理解比较浅显，也可以认为这其中的栈区域就是指上述的Java虚拟机栈，堆区域就是指堆（堆区域中实际包括不只堆）。 </p>
 <p><img src="/深入理解JVM虚拟机-一-：Java运行时数据区域/domain.png" alt="Java运行时数据区域结构模型图"></p>
+<p>​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区域之前，大多数程序员都会普遍的认为其中可以分为栈区域和堆区域两种，而这种理解比较浅显，也可以认为这其中的栈区域就是指上述的Java虚拟机栈，堆区域就是指堆（堆区域中实际包括不只堆）。 </p>
 <p>###1、程序计数器</p>
 <p>　　程序计数器（Program Counter Register）可以看作是<strong>当前线程所执行的字节码的行号指示器</strong>，字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器来完成。每个线程都需要有一个独立的程序计数器，因此PC是“线程私有”的。并且这个计数器记录的是正在执行的虚拟机字节码指令的地址（如果是Native本地方法，那么计数器值为Undifined）。 </p>
 <h3 id="2、Java虚拟机栈"><a href="#2、Java虚拟机栈" class="headerlink" title="2、Java虚拟机栈"></a>2、Java虚拟机栈</h3><p>　　与程序计数器一样，Java虚拟机栈也是线程私有的，并且其生命周期与线程相同。<strong>虚拟机栈描述的是Java方法执行的内存模型</strong>，每个 Java 方法在执行的同时会创建一个栈帧用于存储局部变量表、操作数栈、常量池引用等信息。从方法调用直至执行完成的过程，就对应着一个栈帧在 Java 虚拟机栈中入栈和出栈的过程。 </p>
