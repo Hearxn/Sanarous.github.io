@@ -74,19 +74,19 @@
 <link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/zuo32.ico?v=7.0.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/zuo.ico?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/zuo32.ico?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/zuo.ico?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/zuo16.ico?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/zuo.ico?v=7.0.1">
 
 
-  <link rel="mask-icon" href="/images/zuo32.ico?v=7.0.1" color="#222">
+  <link rel="mask-icon" href="/images/zuo.ico?v=7.0.1" color="#222">
 
 
-  <link rel="manifest" href="/images/zuo32.ico">
+  <link rel="manifest" href="/images/zuo.ico">
 
 
 
@@ -582,12 +582,12 @@
 
       
         <h2 id="Java运行时数据区域分析"><a href="#Java运行时数据区域分析" class="headerlink" title="Java运行时数据区域分析"></a>Java运行时数据区域分析</h2><p>Java运行时数据区域结构模型如下：</p>
-<p><img src="/深入理解JVM虚拟机-一-：Java运行时数据区域/domain.png" alt="Java运行时数据区域结构模型图"></p>
+<p><img src="domain.png" alt="Java运行时数据区域结构模型图"></p>
 <p>​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区域之前，大多数程序员都会普遍的认为其中可以分为栈区域和堆区域两种，而这种理解比较浅显，也可以认为这其中的栈区域就是指上述的Java虚拟机栈，堆区域就是指堆（堆区域中实际包括不只堆）。 </p>
 <p>###1、程序计数器</p>
 <p>　　程序计数器（Program Counter Register）可以看作是<strong>当前线程所执行的字节码的行号指示器</strong>，字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器来完成。每个线程都需要有一个独立的程序计数器，因此PC是“线程私有”的。并且这个计数器记录的是正在执行的虚拟机字节码指令的地址（如果是Native本地方法，那么计数器值为Undifined）。 </p>
 <h3 id="2、Java虚拟机栈"><a href="#2、Java虚拟机栈" class="headerlink" title="2、Java虚拟机栈"></a>2、Java虚拟机栈</h3><p>　　与程序计数器一样，Java虚拟机栈也是线程私有的，并且其生命周期与线程相同。<strong>虚拟机栈描述的是Java方法执行的内存模型</strong>，每个 Java 方法在执行的同时会创建一个栈帧用于存储局部变量表、操作数栈、常量池引用等信息。从方法调用直至执行完成的过程，就对应着一个栈帧在 Java 虚拟机栈中入栈和出栈的过程。 </p>
-<p><img src="/深入理解JVM虚拟机-一-：Java运行时数据区域/虚拟机栈.jpg" alt="java虚拟机栈结构模型图"></p>
+<p><img src="虚拟机栈.jpg" alt="java虚拟机栈结构模型图"></p>
 <p>可以通过 -Xss 这个虚拟机参数来指定每个线程的 Java 虚拟机栈内存大小： </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xss512M HackTheJava</span><br></pre></td></tr></table></figure>
 <p>该区域可能抛出以下异常：</p>
@@ -599,7 +599,7 @@
 </ul>
 <h3 id="3、本地方法栈"><a href="#3、本地方法栈" class="headerlink" title="3、本地方法栈"></a>3、本地方法栈</h3><p>　　本地方法栈与 Java 虚拟机栈类似，它们之间的区别只不过是本地方法栈为本地方法服务。</p>
 <p>　　本地方法一般是用其它语言（C、C++ 或汇编语言等）编写的，并且被编译为基于本机硬件和操作系统的程序，对待这些方法需要特别处理。</p>
-<p><img src="/深入理解JVM虚拟机-一-：Java运行时数据区域/本地方法栈.png" alt="本地方法栈结构模型图"></p>
+<p><img src="本地方法栈.png" alt="本地方法栈结构模型图"></p>
 <p> 　　与Java虚拟机栈一样，本地方法栈区域也会抛出StackOverFlow和OutOfMemoryError异常。 </p>
 <h3 id="4、堆"><a href="#4、堆" class="headerlink" title="4、堆"></a>4、堆</h3><p>所有对象都在这里分配内存，是垃圾收集的主要区域（”GC 堆”）。</p>
 <p>现代的垃圾收集器基本都是采用分代收集算法，其主要的思想是针对不同类型的对象采取不同的垃圾回收算法。可以将堆分成两块：</p>
@@ -747,6 +747,9 @@
   </article>
 
 
+      <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -1003,12 +1006,21 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-[object Object]"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">码农翻身</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">post.totalcount&#58;</span>
+    
+    <span title="post.totalcount">11.9k</span>
   
 </div>
 
@@ -1102,9 +1114,6 @@
 
 
 
-  
-  
-
 
 
 
@@ -1128,12 +1137,6 @@
 
   
   <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>
-
-  
-  <script src="/lib/three/three.min.js"></script>
-
-  
-  <script src="/lib/three/three-waves.min.js"></script>
 
   
   <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1/reading_progress.min.js"></script>
@@ -1691,5 +1694,5 @@
   <!-- 代码块复制功能 -->
   <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
   <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</body>
 </html>
