@@ -2194,7 +2194,7 @@ pre {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #df2d36;
+  background: #a4f6c2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2586,22 +2586,6 @@ pre {
   padding: 0 10px 0 14px;
   border: 1px solid #555;
   border-radius: 4px;
-}
-.gt-header a,
-.gt-comments a,
-.gt-popup a {
-  border-bottom: none;
-}
-.gt-container .gt-popup .gt-action.is--active:before {
-  top: 0.7em;
-}
-.gt-header a,
-.gt-comments a,
-.gt-popup a {
-  border-bottom: none;
-}
-.gt-container .gt-popup .gt-action.is--active:before {
-  top: 0.7em;
 }
 .gt-header a,
 .gt-comments a,
