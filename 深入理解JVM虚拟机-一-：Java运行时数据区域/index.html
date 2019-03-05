@@ -127,8 +127,8 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/domain.png">
 <meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/虚拟机栈.jpg">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/本地方法栈.jpg">
-<meta property="og:updated_time" content="2019-03-05T07:48:27.701Z">
+<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/本地方法栈.png">
+<meta property="og:updated_time" content="2019-03-05T07:52:11.184Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入理解JVM虚拟机(一)：Java运行时数据区域">
 <meta name="twitter:description" content="Java运行时数据区域分析Java运行时数据区域结构模型如下： ![jvm运行时结构模型图](E:\blog\hexo\source_posts\深入理解JVM虚拟机-一-：Java运行时数据区域\domain.png ​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区">
@@ -479,7 +479,7 @@
                 
               
 
-              <time title="创建时间：2019-03-05 15:31:12 / 修改时间：15:48:27" itemprop="dateCreated datePublished" datetime="2019-03-05T15:31:12+08:00">2019-03-05</time>
+              <time title="创建时间：2019-03-05 15:31:12 / 修改时间：15:52:11" itemprop="dateCreated datePublished" datetime="2019-03-05T15:31:12+08:00">2019-03-05</time>
             
 
             
@@ -562,7 +562,7 @@
 </ul>
 <h3 id="3、本地方法栈"><a href="#3、本地方法栈" class="headerlink" title="3、本地方法栈"></a>3、本地方法栈</h3><p>　　本地方法栈与 Java 虚拟机栈类似，它们之间的区别只不过是本地方法栈为本地方法服务。</p>
 <p>　　本地方法一般是用其它语言（C、C++ 或汇编语言等）编写的，并且被编译为基于本机硬件和操作系统的程序，对待这些方法需要特别处理。</p>
-<p><img src="/深入理解JVM虚拟机-一-：Java运行时数据区域/本地方法栈.jpg" alt="本地方法栈结构模型图"></p>
+<p><img src="/深入理解JVM虚拟机-一-：Java运行时数据区域/本地方法栈.png" alt="本地方法栈结构模型图"></p>
 <p> 　　与Java虚拟机栈一样，本地方法栈区域也会抛出StackOverFlow和OutOfMemoryError异常。 </p>
 <h3 id="4、堆"><a href="#4、堆" class="headerlink" title="4、堆"></a>4、堆</h3><p>所有对象都在这里分配内存，是垃圾收集的主要区域（”GC 堆”）。</p>
 <p>现代的垃圾收集器基本都是采用分代收集算法，其主要的思想是针对不同类型的对象采取不同的垃圾回收算法。可以将堆分成两块：</p>
