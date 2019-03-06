@@ -138,19 +138,19 @@
 <meta property="og:site_name" content="Zuo&#39;s Blog Makes Better life and coding">
 <meta property="og:description" content="一、概览 Collection Map   二、容器中的设计模式 迭代器模式 适配器模式   三、源码分析 ArrayList Vector CopyOnWriteArrayList LinkedList HashMap ConcurrentHashMap LinkedHashMap WeakHashMap   参考资料   一、概览容器主要包括 Collection 和 Map 两种，Col">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302205911223-656401263.png">
-<meta property="og:image" content="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210000854-451491579.png">
-<meta property="og:image" content="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210034190-1686976165.png">
-<meta property="og:image" content="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210108166-1365120874.png">
-<meta property="og:image" content="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210248730-1962923084.png">
-<meta property="og:image" content="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210321749-299187101.jpg">
-<meta property="og:image" content="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210433986-1939688373.jpg">
-<meta property="og:image" content="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210521884-908242266.jpg">
-<meta property="og:updated_time" content="2019-03-05T08:08:53.939Z">
+<meta property="og:image" content="http://yoursite.com/Java中的容器/Collection.png">
+<meta property="og:image" content="http://yoursite.com/Java中的容器/Map.png">
+<meta property="og:image" content="http://yoursite.com/Java中的容器/Iterator.png">
+<meta property="og:image" content="http://yoursite.com/Java中的容器/ArrayList.png">
+<meta property="og:image" content="http://yoursite.com/Java中的容器/LinkedList.png">
+<meta property="og:image" content="http://yoursite.com/Java中的容器/HashMap.jpg">
+<meta property="og:image" content="http://yoursite.com/Java中的容器/拉链法.jpg">
+<meta property="og:image" content="http://yoursite.com/Java中的容器/ConcurrentHasnMap.jpg">
+<meta property="og:updated_time" content="2019-03-06T01:47:08.198Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中的容器">
 <meta name="twitter:description" content="一、概览 Collection Map   二、容器中的设计模式 迭代器模式 适配器模式   三、源码分析 ArrayList Vector CopyOnWriteArrayList LinkedList HashMap ConcurrentHashMap LinkedHashMap WeakHashMap   参考资料   一、概览容器主要包括 Collection 和 Map 两种，Col">
-<meta name="twitter:image" content="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302205911223-656401263.png">
+<meta name="twitter:image" content="http://yoursite.com/Java中的容器/Collection.png">
 
 
 
@@ -330,7 +330,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">5</span></a>
 
   </li>
         
@@ -522,12 +522,24 @@
                 
               
 
-              <time title="创建时间：2019-03-05 15:59:12 / 修改时间：16:08:53" itemprop="dateCreated datePublished" datetime="2019-03-05T15:59:12+08:00">2019-03-05</time>
+              <time title="创建时间：2019-03-05 15:59:12" itemprop="dateCreated datePublished" datetime="2019-03-05T15:59:12+08:00">2019-03-05</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 09:47:08" itemprop="dateModified" datetime="2019-03-06T09:47:08+08:00">2019-03-06</time>
               
             
           </span>
@@ -545,6 +557,13 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/JavaSE/" itemprop="url" rel="index"><span itemprop="name">JavaSE</span></a></span>
 
                 
                 
@@ -613,7 +632,7 @@
 </li>
 </ul>
 <h1 id="一、概览"><a href="#一、概览" class="headerlink" title="一、概览"></a>一、概览</h1><p>容器主要包括 Collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对（两个对象）的映射表。</p>
-<h2 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h2><p><img src="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302205911223-656401263.png" alt="Java中容器框架分类图"></p>
+<h2 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h2><p><img src="Collection.png" alt="Java中容器框架分类图"></p>
 <h3 id="1-Set"><a href="#1-Set" class="headerlink" title="1. Set"></a>1. Set</h3><ul>
 <li><p>TreeSet：基于红黑树实现，支持有序性操作，例如根据一个范围查找元素的操作。但是查找效率不如 HashSet，HashSet 查找的时间复杂度为 O(1)，TreeSet 则为 O(logN)。</p>
 </li>
@@ -636,7 +655,7 @@
 <li><p>PriorityQueue：基于堆结构实现，可以用它来实现优先队列。</p>
 </li>
 </ul>
-<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p><img src="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210000854-451491579.png" alt="Java中Map集合分类"></p>
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p><img src="Map.png" alt="Java中Map集合分类"></p>
 <ul>
 <li><p>TreeMap：基于红黑树实现。</p>
 </li>
@@ -647,7 +666,7 @@
 <li><p>LinkedHashMap：使用双向链表来维护元素的顺序，顺序为插入顺序或者最近最少使用（LRU）顺序。</p>
 </li>
 </ul>
-<h1 id="二、容器中的设计模式"><a href="#二、容器中的设计模式" class="headerlink" title="二、容器中的设计模式"></a>二、容器中的设计模式</h1><h2 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h2><p><img src="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210034190-1686976165.png" alt="Java中的迭代器模式"></p>
+<h1 id="二、容器中的设计模式"><a href="#二、容器中的设计模式" class="headerlink" title="二、容器中的设计模式"></a>二、容器中的设计模式</h1><h2 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h2><p><img src="Iterator.png" alt="Java中的迭代器模式"></p>
 <p>Collection 继承了 Iterable 接口，其中的 iterator() 方法能够产生一个 Iterator 对象，通过这个对象就可以迭代遍历 Collection 中的元素。</p>
 <p>从 JDK 1.5 之后可以使用 foreach 方法来遍历实现了 Iterable 接口的聚合对象。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">list.add(<span class="string">"a"</span>);</span><br><span class="line">list.add(<span class="string">"b"</span>);</span><br><span class="line"><span class="keyword">for</span> (String item : list) &#123;</span><br><span class="line">    System.out.println(item);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -663,7 +682,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayList</span>&lt;<span class="title">E</span>&gt; <span class="keyword">extends</span> <span class="title">AbstractList</span>&lt;<span class="title">E</span>&gt;</span></span><br><span class="line"><span class="class">        <span class="keyword">implements</span> <span class="title">List</span>&lt;<span class="title">E</span>&gt;, <span class="title">RandomAccess</span>, <span class="title">Cloneable</span>, <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span></span></span><br></pre></td></tr></table></figure>
 <p>数组的默认大小为 10。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DEFAULT_CAPACITY = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210108166-1365120874.png" alt="ArrayList的默认容量是10"></p>
+<p><img src="ArrayList.png" alt="ArrayList的默认容量是10"></p>
 <h3 id="2-扩容"><a href="#2-扩容" class="headerlink" title="2. 扩容"></a>2. 扩容</h3><p>添加元素时使用 ensureCapacityInternal() 方法来保证容量足够，如果不够时，需要使用 grow() 方法进行扩容，新容量的大小为 <code>oldCapacity + (oldCapacity &gt;&gt; 1)</code>，也就是旧容量的 1.5 倍。</p>
 <p>扩容操作需要调用 <code>Arrays.copyOf()</code> 把原数组整个复制到新数组中，这个操作代价很高，因此最好在创建 ArrayList 对象时就指定大概的容量大小，减少扩容操作的次数。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span> </span>&#123;</span><br><span class="line">    ensureCapacityInternal(size + <span class="number">1</span>);  <span class="comment">// Increments modCount!!</span></span><br><span class="line">    elementData[size++] = e;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ensureCapacityInternal</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA) &#123;</span><br><span class="line">        minCapacity = Math.max(DEFAULT_CAPACITY, minCapacity);</span><br><span class="line">    &#125;</span><br><span class="line">    ensureExplicitCapacity(minCapacity);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ensureExplicitCapacity</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">    modCount++;</span><br><span class="line">    <span class="comment">// overflow-conscious code</span></span><br><span class="line">    <span class="keyword">if</span> (minCapacity - elementData.length &gt; <span class="number">0</span>)</span><br><span class="line">        grow(minCapacity);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">grow</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// overflow-conscious code</span></span><br><span class="line">    <span class="keyword">int</span> oldCapacity = elementData.length;</span><br><span class="line">    <span class="keyword">int</span> newCapacity = oldCapacity + (oldCapacity &gt;&gt; <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">if</span> (newCapacity - minCapacity &lt; <span class="number">0</span>)</span><br><span class="line">        newCapacity = minCapacity;</span><br><span class="line">    <span class="keyword">if</span> (newCapacity - MAX_ARRAY_SIZE &gt; <span class="number">0</span>)</span><br><span class="line">        newCapacity = hugeCapacity(minCapacity);</span><br><span class="line">    <span class="comment">// minCapacity is usually close to size, so this is a win:</span></span><br><span class="line">    elementData = Arrays.copyOf(elementData, newCapacity);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -706,7 +725,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span>&lt;<span class="title">E</span>&gt; </span>&#123;</span><br><span class="line">    E item;</span><br><span class="line">    Node&lt;E&gt; next;</span><br><span class="line">    Node&lt;E&gt; prev;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>每个链表存储了 first 和 last 指针：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">transient</span> Node&lt;E&gt; first;</span><br><span class="line"><span class="keyword">transient</span> Node&lt;E&gt; last;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210248730-1962923084.png" alt="LinkedList"></p>
+<p><img src="LinkedList.png" alt="LinkedList"></p>
 <h3 id="2-与-ArrayList-的比较-1"><a href="#2-与-ArrayList-的比较-1" class="headerlink" title="2. 与 ArrayList 的比较"></a>2. 与 ArrayList 的比较</h3><ul>
 <li>ArrayList 基于动态数组实现，LinkedList 基于双向链表实现；</li>
 <li>ArrayList 支持随机访问，LinkedList 不支持；</li>
@@ -716,7 +735,7 @@
 <h3 id="1-存储结构"><a href="#1-存储结构" class="headerlink" title="1. 存储结构"></a>1. 存储结构</h3><p>内部包含了一个 Entry 类型的数组 table。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">transient</span> Entry[] table;</span><br></pre></td></tr></table></figure>
 <p>Entry 存储着键值对。它包含了四个字段，从 next 字段我们可以看出 Entry 是一个链表。即数组中的每个位置被当成一个桶，一个桶存放一个链表。HashMap 使用拉链法来解决冲突，同一个链表中存放哈希值相同的 Entry。</p>
-<p><img src="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210321749-299187101.jpg" alt="Java中的HashMap"></p>
+<p><img src="HashMap.jpg" alt="Java中的HashMap"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Entry</span>&lt;<span class="title">K</span>,<span class="title">V</span>&gt; <span class="keyword">implements</span> <span class="title">Map</span>.<span class="title">Entry</span>&lt;<span class="title">K</span>,<span class="title">V</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">final</span> K key;</span><br><span class="line">    V value;</span><br><span class="line">    Entry&lt;K,V&gt; next;</span><br><span class="line">    <span class="keyword">int</span> hash;</span><br><span class="line"></span><br><span class="line">    Entry(<span class="keyword">int</span> h, K k, V v, Entry&lt;K,V&gt; n) &#123;</span><br><span class="line">        value = v;</span><br><span class="line">        next = n;</span><br><span class="line">        key = k;</span><br><span class="line">        hash = h;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">final</span> K <span class="title">getKey</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> key;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">final</span> V <span class="title">getValue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">final</span> V <span class="title">setValue</span><span class="params">(V newValue)</span> </span>&#123;</span><br><span class="line">        V oldValue = value;</span><br><span class="line">        value = newValue;</span><br><span class="line">        <span class="keyword">return</span> oldValue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!(o <span class="keyword">instanceof</span> Map.Entry))</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        Map.Entry e = (Map.Entry)o;</span><br><span class="line">        Object k1 = getKey();</span><br><span class="line">        Object k2 = e.getKey();</span><br><span class="line">        <span class="keyword">if</span> (k1 == k2 || (k1 != <span class="keyword">null</span> &amp;&amp; k1.equals(k2))) &#123;</span><br><span class="line">            Object v1 = getValue();</span><br><span class="line">            Object v2 = e.getValue();</span><br><span class="line">            <span class="keyword">if</span> (v1 == v2 || (v1 != <span class="keyword">null</span> &amp;&amp; v1.equals(v2)))</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Objects.hashCode(getKey()) ^ Objects.hashCode(getValue());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">final</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> getKey() + <span class="string">"="</span> + getValue();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="2-拉链法的工作原理"><a href="#2-拉链法的工作原理" class="headerlink" title="2. 拉链法的工作原理"></a>2. 拉链法的工作原理</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;String, String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">map.put(<span class="string">"K1"</span>, <span class="string">"V1"</span>);</span><br><span class="line">map.put(<span class="string">"K2"</span>, <span class="string">"V2"</span>);</span><br><span class="line">map.put(<span class="string">"K3"</span>, <span class="string">"V3"</span>);</span><br></pre></td></tr></table></figure>
 <ul>
@@ -731,7 +750,7 @@
 <li>计算键值对所在的桶；</li>
 <li>在链表上顺序查找，时间复杂度显然和链表的长度成正比。</li>
 </ul>
-<p><img src="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210433986-1939688373.jpg" alt></p>
+<p><img src="拉链法.jpg" alt></p>
 <h3 id="3-put-操作"><a href="#3-put-操作" class="headerlink" title="3. put 操作"></a>3. put 操作</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> V <span class="title">put</span><span class="params">(K key, V value)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (table == EMPTY_TABLE) &#123;</span><br><span class="line">        inflateTable(threshold);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 键为 null 单独处理</span></span><br><span class="line">    <span class="keyword">if</span> (key == <span class="keyword">null</span>)</span><br><span class="line">        <span class="keyword">return</span> putForNullKey(value);</span><br><span class="line">    <span class="keyword">int</span> hash = hash(key);</span><br><span class="line">    <span class="comment">// 确定桶下标</span></span><br><span class="line">    <span class="keyword">int</span> i = indexFor(hash, table.length);</span><br><span class="line">    <span class="comment">// 先找出是否已经存在键为 key 的键值对，如果存在的话就更新这个键值对的值为 value</span></span><br><span class="line">    <span class="keyword">for</span> (Entry&lt;K,V&gt; e = table[i]; e != <span class="keyword">null</span>; e = e.next) &#123;</span><br><span class="line">        Object k;</span><br><span class="line">        <span class="keyword">if</span> (e.hash == hash &amp;&amp; ((k = e.key) == key || key.equals(k))) &#123;</span><br><span class="line">            V oldValue = e.value;</span><br><span class="line">            e.value = value;</span><br><span class="line">            e.recordAccess(<span class="keyword">this</span>);</span><br><span class="line">            <span class="keyword">return</span> oldValue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    modCount++;</span><br><span class="line">    <span class="comment">// 插入新键值对</span></span><br><span class="line">    addEntry(hash, key, value, i);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>HashMap 允许插入键为 null 的键值对。但是因为无法调用 null 的 hashCode() 方法，也就无法确定该键值对的桶下标，只能通过强制指定一个桶下标来存放。HashMap 使用第 0 个桶存放键为 null 的键值对。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> V <span class="title">putForNullKey</span><span class="params">(V value)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (Entry&lt;K,V&gt; e = table[<span class="number">0</span>]; e != <span class="keyword">null</span>; e = e.next) &#123;</span><br><span class="line">        <span class="keyword">if</span> (e.key == <span class="keyword">null</span>) &#123;</span><br><span class="line">            V oldValue = e.value;</span><br><span class="line">            e.value = value;</span><br><span class="line">            e.recordAccess(<span class="keyword">this</span>);</span><br><span class="line">            <span class="keyword">return</span> oldValue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    modCount++;</span><br><span class="line">    addEntry(<span class="number">0</span>, <span class="keyword">null</span>, value, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -816,7 +835,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> Segment&lt;K,V&gt;[] segments;</span><br></pre></td></tr></table></figure>
 <p>默认的并发级别为 16，也就是说默认创建 16 个 Segment。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DEFAULT_CONCURRENCY_LEVEL = <span class="number">16</span>;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img2018.cnblogs.com/blog/1617702/201903/1617702-20190302210521884-908242266.jpg" alt></p>
+<p><img src="ConcurrentHasnMap.jpg" alt></p>
 <h3 id="2-size-操作"><a href="#2-size-操作" class="headerlink" title="2. size 操作"></a>2. size 操作</h3><p>每个 Segment 维护了一个 count 变量来统计该 Segment 中的键值对个数。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * The number of elements. Accessed only either within locks</span></span><br><span class="line"><span class="comment"> * or among other volatile reads that maintain visibility.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">transient</span> <span class="keyword">int</span> count;</span><br></pre></td></tr></table></figure>
 <p>在执行 size 操作时，需要遍历所有 Segment 然后把 count 累计起来。</p>
@@ -1095,7 +1114,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
