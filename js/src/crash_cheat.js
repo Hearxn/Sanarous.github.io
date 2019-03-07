@@ -8,7 +8,7 @@
          clearTimeout(titleTime);
      }
      else {
-         $('[rel="icon"]').attr('href', "/images/zuo32.ico");
+         $('[rel="icon"]').attr('href', "/images/zuo.ico");
          document.title = '(ฅ>ω<*ฅ) 噫又好了~' + OriginTitle;
          titleTime = setTimeout(function () {
              document.title = OriginTitle;
