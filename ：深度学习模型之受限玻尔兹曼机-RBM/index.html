@@ -130,29 +130,42 @@
   </script>
 
 
-  <meta name="description" content="Java运行时数据区域分析Java运行时数据区域结构模型如下：  ​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区域之前，大多数程序员都会普遍的认为其中可以分为栈区域和堆区域两种，而这种理解比较浅显，也可以认为这其中的栈区域就是指上述的Java虚拟机栈，堆区域就是指堆">
-<meta name="keywords" content="Java,JVM,Java面试">
+  <meta name="description" content="什么是受限玻尔兹曼机？​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进">
+<meta name="keywords" content="深度学习,RBM,受限玻尔兹曼机,概率图模型">
 <meta property="og:type" content="article">
-<meta property="og:title" content="深入理解JVM虚拟机（一）：Java运行时数据区域">
-<meta property="og:url" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/index.html">
-<meta property="og:site_name" content="Zuo&#39;s Blog Makes Better life and coding">
-<meta property="og:description" content="Java运行时数据区域分析Java运行时数据区域结构模型如下：  ​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区域之前，大多数程序员都会普遍的认为其中可以分为栈区域和堆区域两种，而这种理解比较浅显，也可以认为这其中的栈区域就是指上述的Java虚拟机栈，堆区域就是指堆">
+<meta property="og:title" content="深度学习模型之受限玻尔兹曼机(RBM)">
+<meta property="og:url" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/index.html">
+<meta property="og:site_name" content="Zuo&#39;s Blog makes better life and coding">
+<meta property="og:description" content="什么是受限玻尔兹曼机？​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/domain.png">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/虚拟机栈.jpg">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/本地方法栈.png">
-<meta property="og:updated_time" content="2019-03-07T03:53:14.747Z">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm1.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm2.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm3.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm4.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm5.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm6.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm7.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm8.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm9.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm10.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm11.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm12.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm13.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm14.png">
+<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm15.png">
+<meta property="og:updated_time" content="2019-03-05T08:59:35.667Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="深入理解JVM虚拟机（一）：Java运行时数据区域">
-<meta name="twitter:description" content="Java运行时数据区域分析Java运行时数据区域结构模型如下：  ​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区域之前，大多数程序员都会普遍的认为其中可以分为栈区域和堆区域两种，而这种理解比较浅显，也可以认为这其中的栈区域就是指上述的Java虚拟机栈，堆区域就是指堆">
-<meta name="twitter:image" content="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/domain.png">
+<meta name="twitter:title" content="深度学习模型之受限玻尔兹曼机(RBM)">
+<meta name="twitter:description" content="什么是受限玻尔兹曼机？​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进">
+<meta name="twitter:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/">
+  <link rel="canonical" href="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/">
 
 
 
@@ -162,7 +175,7 @@
   };
 </script>
 
-  <title>深入理解JVM虚拟机（一）：Java运行时数据区域 | Zuo's Blog Makes Better life and coding</title>
+  <title>深度学习模型之受限玻尔兹曼机(RBM) | Zuo's Blog makes better life and coding</title>
   
 
 
@@ -224,7 +237,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Zuo's Blog Makes Better life and coding</span>
+        <span class="site-title">Zuo's Blog makes better life and coding</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -473,7 +486,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/深入理解JVM虚拟机-一-：Java运行时数据区域/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="码农翻身">
@@ -482,7 +495,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zuo's Blog Makes Better life and coding">
+      <meta itemprop="name" content="Zuo's Blog makes better life and coding">
     </span>
 
     
@@ -490,7 +503,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">深入理解JVM虚拟机（一）：Java运行时数据区域
+          <h2 class="post-title" itemprop="name headline">深度学习模型之受限玻尔兹曼机(RBM)
 
               
             
@@ -516,24 +529,12 @@
                 
               
 
-              <time title="创建时间：2019-03-05 15:31:12" itemprop="dateCreated datePublished" datetime="2019-03-05T15:31:12+08:00">2019-03-05</time>
+              <time title="创建时间：2019-03-05 16:32:50 / 修改时间：16:59:35" itemprop="dateCreated datePublished" datetime="2019-03-05T16:32:50+08:00">2019-03-05</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-07 11:53:14" itemprop="dateModified" datetime="2019-03-07T11:53:14+08:00">2019-03-07</time>
               
             
           </span>
@@ -550,7 +551,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/深度学习/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a></span>
 
                 
                 
@@ -569,8 +570,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/深入理解JVM虚拟机-一-：Java运行时数据区域/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/深入理解JVM虚拟机-一-：Java运行时数据区域/" itemprop="commentCount"></span>
+                <a href="/：深度学习模型之受限玻尔兹曼机-RBM/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/：深度学习模型之受限玻尔兹曼机-RBM/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -605,43 +606,44 @@
       
 
       
-        <h2 id="Java运行时数据区域分析"><a href="#Java运行时数据区域分析" class="headerlink" title="Java运行时数据区域分析"></a>Java运行时数据区域分析</h2><p>Java运行时数据区域结构模型如下：</p>
-<p><img src="domain.png" alt="Java运行时数据区域结构模型图"></p>
-<p>​    我们可以看到，JVM运行时数据区域大致可以分为：程序计数器、Java虚拟机栈、本地方法栈、Java堆、方法区、运行时常量池、直接内存等区域。在未具体了解JVM运行时内存区域之前，大多数程序员都会普遍的认为其中可以分为栈区域和堆区域两种，而这种理解比较浅显，也可以认为这其中的栈区域就是指上述的Java虚拟机栈，堆区域就是指堆（堆区域中实际包括不只堆）。 </p>
-<p>###1、程序计数器</p>
-<p>　　程序计数器（Program Counter Register）可以看作是<strong>当前线程所执行的字节码的行号指示器</strong>，字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器来完成。每个线程都需要有一个独立的程序计数器，因此PC是“线程私有”的。并且这个计数器记录的是正在执行的虚拟机字节码指令的地址（如果是Native本地方法，那么计数器值为Undifined）。 </p>
-<h3 id="2、Java虚拟机栈"><a href="#2、Java虚拟机栈" class="headerlink" title="2、Java虚拟机栈"></a>2、Java虚拟机栈</h3><p>　　与程序计数器一样，Java虚拟机栈也是线程私有的，并且其生命周期与线程相同。<strong>虚拟机栈描述的是Java方法执行的内存模型</strong>，每个 Java 方法在执行的同时会创建一个栈帧用于存储局部变量表、操作数栈、常量池引用等信息。从方法调用直至执行完成的过程，就对应着一个栈帧在 Java 虚拟机栈中入栈和出栈的过程。 </p>
-<p><img src="虚拟机栈.jpg" alt="java虚拟机栈结构模型图"></p>
-<p>可以通过 -Xss 这个虚拟机参数来指定每个线程的 Java 虚拟机栈内存大小： </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xss512M HackTheJava</span><br></pre></td></tr></table></figure>
-<p>该区域可能抛出以下异常：</p>
-<ul>
-<li><p>当线程请求的栈深度超过最大值，会抛出 StackOverflowError 异常；</p>
-</li>
-<li><p>栈进行动态扩展时如果无法申请到足够内存，会抛出 OutOfMemoryError 异常。</p>
-</li>
-</ul>
-<h3 id="3、本地方法栈"><a href="#3、本地方法栈" class="headerlink" title="3、本地方法栈"></a>3、本地方法栈</h3><p>　　本地方法栈与 Java 虚拟机栈类似，它们之间的区别只不过是本地方法栈为本地方法服务。</p>
-<p>　　本地方法一般是用其它语言（C、C++ 或汇编语言等）编写的，并且被编译为基于本机硬件和操作系统的程序，对待这些方法需要特别处理。</p>
-<p><img src="本地方法栈.png" alt="本地方法栈结构模型图"></p>
-<p> 　　与Java虚拟机栈一样，本地方法栈区域也会抛出StackOverFlow和OutOfMemoryError异常。 </p>
-<h3 id="4、堆"><a href="#4、堆" class="headerlink" title="4、堆"></a>4、堆</h3><p>所有对象都在这里分配内存，是垃圾收集的主要区域（”GC 堆”）。</p>
-<p>现代的垃圾收集器基本都是采用分代收集算法，其主要的思想是针对不同类型的对象采取不同的垃圾回收算法。可以将堆分成两块：</p>
-<ul>
-<li>新生代（Young Generation）</li>
-<li>老年代（Old Generation）</li>
-</ul>
-<p>堆不需要连续内存，并且可以动态增加其内存，增加失败会抛出 OutOfMemoryError 异常。</p>
-<p>可以通过 -Xms 和 -Xmx 这两个虚拟机参数来指定一个程序的堆内存大小，第一个参数设置初始值，第二个参数设置最大值。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xms1M -Xmx2M HackTheJava</span><br></pre></td></tr></table></figure>
-<h3 id="5、方法区"><a href="#5、方法区" class="headerlink" title="5、方法区"></a>5、方法区</h3><p>　　用于存放已被加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。虽然Java虚拟机规范把方法去描述为堆的一个逻辑部分，但是它却有一个别名叫做Non0Heap（非堆），目的应该是与Java堆区分开。</p>
-<p>　　和堆一样不需要连续的内存，并且可以动态扩展，动态扩展失败一样会抛出 OutOfMemoryError 异常。</p>
-<p>　　对这块区域进行垃圾回收的主要目标是对常量池的回收和对类的卸载，但是一般比较难实现。HotSpot 虚拟机把它当成永久代来进行垃圾回收。但很难确定永久代的大小，因为它受到很多因素影响，并且每次 Full GC 之后永久代的大小都会改变，所以经常会抛出 OutOfMemoryError 异常。为了更容易管理方法区，<strong>从 JDK 1.8 开始，移除永久代，并把方法区移至元空间，它位于本地内存中，而不是虚拟机内存中。</strong></p>
-<h3 id="6、运行时常量池"><a href="#6、运行时常量池" class="headerlink" title="6、运行时常量池"></a>6、运行时常量池</h3><p>　　运行时常量池是方法区的一部分。</p>
-<p>　　Class 文件中的常量池（编译器生成的字面量和符号引用）会在类加载后被放入这个区域。</p>
-<p>　　除了在编译期生成的常量，还允许动态生成，例如 String 类的 intern( )。</p>
-<h3 id="7、直接内存"><a href="#7、直接内存" class="headerlink" title="7、直接内存"></a>7、直接内存</h3><p>　　在 JDK 1.4 中新引入了 NIO 类，它可以使用 Native 函数库直接分配堆外内存，然后通过 Java 堆里的 DirectByteBuffer 对象作为这块内存的引用进行操作。这样能在一些场景中显著提高性能，因为避免了在堆内存和堆外内存来回拷贝数据。 </p>
-<h3 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h3><p>周志明《深入理解Java虚拟机：JVM高级特性与最佳实战》</p>
+        <h3 id="什么是受限玻尔兹曼机？"><a href="#什么是受限玻尔兹曼机？" class="headerlink" title="什么是受限玻尔兹曼机？"></a>什么是受限玻尔兹曼机？</h3><p>​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进行流动，而且两个方向上的权值是相同的，但是偏置是不同的（偏置的个数与神经元的个数相同），其结构如图所示。</p>
+<p>​     <img src="rbm.png" alt></p>
+<p>​         我们可以看到上面一层神经元组成Hidden Layer，一般用h表示隐藏层神经元的值。下面一层神经元组成visiable layer，一般用v表示可见层神经元的值。连接权值我们用矩阵W表示，和DNN不同的是，RBM是不区分前向和后向的，可见层的状态可以作用于隐藏层，而隐藏层的状态可以作用于可见层。隐藏层的偏置系数是向量b，可见层的偏置系数是向量a。常见的RBM一般是二值的，即不管是隐藏层还是可见层，它们的神经元的取值是0或者1.</p>
+<p> <strong>RBM模型的结构：权重矩阵W，偏置系数a、b，隐藏神经元状态向量h和可见层神经元状态向量v</strong> </p>
+<hr>
+<p>​    如RBM这类由玻尔兹曼机发展而来的图模型都是基于能量的概率分布模型，分为两个部分：一部分是<strong>能量函数</strong>，第二部分是基于能量函数的<strong>概率分布函数</strong>。对于给定的状态向量h和v，则RBM当前的能量函数可以表示为如下</p>
+<p><img src="rbm1.png" alt></p>
+<p>其中a和b是偏置系数，W是权值矩阵，有了能量函数，v和h的联合概率分布为： </p>
+<p><img src="rbm2.png" alt></p>
+<p>其中Z被称为配分函数的归一化常数（对于概率输出一般要做归一化）： </p>
+<p><img src="rbm3.png" alt></p>
+<p>由于配分函数Z的难以处理，所以必须使用最大似然梯度来近似，首先从联合分布中导出条件分布： </p>
+<p><img src="rbm4.png" alt></p>
+<p>为了推导方便将无关值归于Z’中 </p>
+<p><img src="rbm5.png" alt></p>
+<p>可以看到就是相当于使用了sigmoid函数，现在可以写出关于隐藏层的完全分布条件： </p>
+<p><img src="rbm6.png" alt></p>
+<p>有了激活函数，我们就可以从可见层和参数推导出隐藏层的神经元取值概率了，对于0，1取值的情况，则大于0.5取1，从隐藏层和参数导出可见的神经元的取值方法也是一样的。 </p>
+<h3 id="RBM的损失函数"><a href="#RBM的损失函数" class="headerlink" title="RBM的损失函数"></a>RBM的损失函数</h3><p>​    RBM模型的关键就是求出我们模型中的参数W、a、b，首先我们得写出损失函数，RBM一般使用的是对数损失函数，即期望最小化： </p>
+<p><img src="rbm7.png" alt></p>
+<p>然后对其求偏导： </p>
+<p><img src="rbm8.png" alt></p>
+<p>虽然说梯度下降从理论上来说可以优化RBM模型，到那时实际中很难求得P(v)的概率分布的（P(v)表示可见层节点的联合概率）。计算复杂度非常大，因此采用一些随机采样的方法来得到近似的解。看这三个梯度的第二项实际上都是求期望，而我们知道，样本的均值是随机变量期望的无偏估计。因此一般都是基于对比散度方法来求解。 </p>
+<h4 id="对比散度算法（CD-k算法）"><a href="#对比散度算法（CD-k算法）" class="headerlink" title="对比散度算法（CD-k算法）"></a>对比散度算法（CD-k算法）</h4><p><img src="rbm9.png" alt></p>
+<p><img src="rbm10.png" alt></p>
+<p><img src="rbm11.png" alt></p>
+<hr>
+<h3 id="深度受限玻尔兹曼机-DBM"><a href="#深度受限玻尔兹曼机-DBM" class="headerlink" title="深度受限玻尔兹曼机(DBM)"></a>深度受限玻尔兹曼机(DBM)</h3><p>加深RBM的层数后，就变成了DBM：结构图如下： </p>
+<p><img src="rbm12.png" alt></p>
+<p>此时的能量函数变为： </p>
+<p><img src="rbm13.png" alt></p>
+<p>联合概率变为： </p>
+<p><img src="rbm14.png" alt></p>
+<p>其实DBM也可以看作是一个RBM，对上图稍加变换就可以看作是一个RBM： </p>
+<p><img src="rbm15.png" alt></p>
+<p>将可见层和偶数隐藏层放在一边，将奇数隐藏层放在另一边，我们就得到了RBM，和RBM的细微区别只是现在的RBM并不是全连接的，其实也可以看做部分权重为0的全连接RBM。RBM的算法思想可以在DBM上使用。只是此时我们的模型参数更加的多，而且迭代求解参数也更加复杂了。 </p>
+<p>以下是Hinton教授给出的RBM经典二值化的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br></pre></td><td class="code"><pre><span class="line">from __future__ import print_function</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class RBM:</span><br><span class="line"></span><br><span class="line">    def __init__(self, num_visible, num_hidden):</span><br><span class="line">        self.num_hidden = num_hidden</span><br><span class="line">        self.num_visible = num_visible</span><br><span class="line">        self.debug_print = True</span><br><span class="line"></span><br><span class="line">        # Initialize a weight matrix, of dimensions (num_visible x num_hidden), using</span><br><span class="line">        # a uniform distribution between -sqrt(6. / (num_hidden + num_visible))</span><br><span class="line">        # and sqrt(6. / (num_hidden + num_visible)). One could vary the</span><br><span class="line">        # standard deviation by multiplying the interval with appropriate value.</span><br><span class="line">        # Here we initialize the weights with mean 0 and standard deviation 0.1.</span><br><span class="line">        np_rng = np.random.RandomState(1234)</span><br><span class="line"></span><br><span class="line">        self.weights = np.asarray(np_rng.uniform(</span><br><span class="line">            low=-0.1 * np.sqrt(6. / (num_hidden + num_visible)),</span><br><span class="line">            high=0.1 * np.sqrt(6. / (num_hidden + num_visible)),</span><br><span class="line">            size=(num_visible, num_hidden)))</span><br><span class="line"></span><br><span class="line">        # Insert weights for the bias units into the first row and first column.</span><br><span class="line">        self.weights = np.insert(self.weights, 0, 0, axis=0)</span><br><span class="line">        self.weights = np.insert(self.weights, 0, 0, axis=1)</span><br><span class="line"></span><br><span class="line">    def train(self, data, max_epochs=1000, learning_rate=0.1):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Train the machine.</span><br><span class="line">        Parameters</span><br><span class="line">        ----------</span><br><span class="line">        data: A matrix where each row is a training example consisting of the states of visible units.</span><br><span class="line">        :param data:</span><br><span class="line">        :param max_epochs:</span><br><span class="line">        :param learning_rate:</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">        num_examples = data.shape[0]</span><br><span class="line"></span><br><span class="line">        # Insert bias units of 1 into the first column.</span><br><span class="line">        data = np.insert(data, 0, 1, axis=1)</span><br><span class="line"></span><br><span class="line">        for epoch in range(max_epochs):</span><br><span class="line">            # Clamp to the data and sample from the hidden units.</span><br><span class="line">            # (This is the &quot;positive CD phase&quot;, aka the reality phase.)</span><br><span class="line">            pos_hidden_activations = np.dot(data, self.weights)</span><br><span class="line">            pos_hidden_probs = self._logistic(pos_hidden_activations)</span><br><span class="line">            pos_hidden_probs[:, 0] = 1  # Fix the bias unit.</span><br><span class="line">            pos_hidden_states = pos_hidden_probs &gt; np.random.rand(num_examples, self.num_hidden + 1)</span><br><span class="line">            # Note that we&apos;re using the activation *probabilities* of the hidden states, not the hidden states</span><br><span class="line">            # themselves, when computing associations. We could also use the states; see section 3 of Hinton&apos;s</span><br><span class="line">            # &quot;A Practical Guide to Training Restricted Boltzmann Machines&quot; for more.</span><br><span class="line">            pos_associations = np.dot(data.T, pos_hidden_probs)</span><br><span class="line"></span><br><span class="line">            # Reconstruct the visible units and sample again from the hidden units.</span><br><span class="line">            # (This is the &quot;negative CD phase&quot;, aka the daydreaming phase.)</span><br><span class="line">            neg_visible_activations = np.dot(pos_hidden_states, self.weights.T)</span><br><span class="line">            neg_visible_probs = self._logistic(neg_visible_activations)</span><br><span class="line">            neg_visible_probs[:, 0] = 1  # Fix the bias unit.</span><br><span class="line">            neg_hidden_activations = np.dot(neg_visible_probs, self.weights)</span><br><span class="line">            neg_hidden_probs = self._logistic(neg_hidden_activations)</span><br><span class="line">            # Note, again, that we&apos;re using the activation *probabilities* when computing associations, not the states</span><br><span class="line">            # themselves.</span><br><span class="line">            neg_associations = np.dot(neg_visible_probs.T, neg_hidden_probs)</span><br><span class="line"></span><br><span class="line">            # Update weights</span><br><span class="line">            self.weights += learning_rate * ((pos_associations - neg_associations) / num_examples)</span><br><span class="line"></span><br><span class="line">            error = np.sum((data - neg_visible_probs) ** 2)</span><br><span class="line">            if self.debug_print:</span><br><span class="line">                print(&quot;Epoch %s: error is %s&quot; % (epoch, error))</span><br><span class="line"></span><br><span class="line">    def run_visible(self, data):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Assuming the RBM has been trained (so that weights for the network have been learned),</span><br><span class="line">        run the network on a set of visible units, to get a sample of the hidden units.</span><br><span class="line"></span><br><span class="line">        Parameters</span><br><span class="line">        ----------</span><br><span class="line">        data: A matrix where each row consists of the states of the visible units.</span><br><span class="line"></span><br><span class="line">        Returns</span><br><span class="line">        -------</span><br><span class="line">        hidden_states: A matrix where each row consists of the hidden units activated from the visible</span><br><span class="line">        units in the data matrix passed in.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">        num_examples = data.shape[0]</span><br><span class="line"></span><br><span class="line">        # Create a matrix, where each row is to be the hidden units (plus a bias unit)</span><br><span class="line">        # sampled from a training example.</span><br><span class="line">        hidden_states = np.ones((num_examples, self.num_hidden + 1))</span><br><span class="line"></span><br><span class="line">        # Insert bias units of 1 into the first column of data.</span><br><span class="line">        data = np.insert(data, 0, 1, axis=1)</span><br><span class="line"></span><br><span class="line">        # Calculate the activations of the hidden units.</span><br><span class="line">        hidden_activations = np.dot(data, self.weights)</span><br><span class="line">        # Calculate the probabilities of turning the hidden units on.</span><br><span class="line">        hidden_probs = self._logistic(hidden_activations)</span><br><span class="line">        # Turn the hidden units on with their specified probabilities.</span><br><span class="line">        hidden_states[:, :] = hidden_probs &gt; np.random.rand(num_examples, self.num_hidden + 1)</span><br><span class="line">        # Always fix the bias unit to 1.</span><br><span class="line">        # hidden_states[:,0] = 1</span><br><span class="line"></span><br><span class="line">        # Ignore the bias units.</span><br><span class="line">        hidden_states = hidden_states[:, 1:]</span><br><span class="line">        return hidden_states</span><br><span class="line"></span><br><span class="line">    # TODO: Remove the code duplication between this method and `run_visible`?</span><br><span class="line">    def run_hidden(self, data):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Assuming the RBM has been trained (so that weights for the network have been learned),</span><br><span class="line">        run the network on a set of hidden units, to get a sample of the visible units.</span><br><span class="line">        Parameters</span><br><span class="line">        ----------</span><br><span class="line">        data: A matrix where each row consists of the states of the hidden units.</span><br><span class="line">        Returns</span><br><span class="line">        -------</span><br><span class="line">        visible_states: A matrix where each row consists of the visible units activated from the hidden</span><br><span class="line">        units in the data matrix passed in.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">        num_examples = data.shape[0]</span><br><span class="line"></span><br><span class="line">        # Create a matrix, where each row is to be the visible units (plus a bias unit)</span><br><span class="line">        # sampled from a training example.</span><br><span class="line">        visible_states = np.ones((num_examples, self.num_visible + 1))</span><br><span class="line"></span><br><span class="line">        # Insert bias units of 1 into the first column of data.</span><br><span class="line">        data = np.insert(data, 0, 1, axis=1)</span><br><span class="line"></span><br><span class="line">        # Calculate the activations of the visible units.</span><br><span class="line">        visible_activations = np.dot(data, self.weights.T)</span><br><span class="line">        # Calculate the probabilities of turning the visible units on.</span><br><span class="line">        visible_probs = self._logistic(visible_activations)</span><br><span class="line">        # Turn the visible units on with their specified probabilities.</span><br><span class="line">        visible_states[:, :] = visible_probs &gt; np.random.rand(num_examples, self.num_visible + 1)</span><br><span class="line">        # Always fix the bias unit to 1.</span><br><span class="line">        # visible_states[:,0] = 1</span><br><span class="line"></span><br><span class="line">        # Ignore the bias units.</span><br><span class="line">        visible_states = visible_states[:, 1:]</span><br><span class="line">        return visible_states</span><br><span class="line"></span><br><span class="line">    def daydream(self, num_samples):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Randomly initialize the visible units once, and start running alternating Gibbs sampling steps</span><br><span class="line">        (where each step consists of updating all the hidden units, and then updating all of the visible units),</span><br><span class="line">        taking a sample of the visible units at each step.</span><br><span class="line">        Note that we only initialize the network *once*, so these samples are correlated.</span><br><span class="line">        Returns</span><br><span class="line">        -------</span><br><span class="line">        samples: A matrix, where each row is a sample of the visible units produced while the network was</span><br><span class="line">        daydreaming.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">        # Create a matrix, where each row is to be a sample of of the visible units</span><br><span class="line">        # (with an extra bias unit), initialized to all ones.</span><br><span class="line">        samples = np.ones((num_samples, self.num_visible + 1))</span><br><span class="line"></span><br><span class="line">        # Take the first sample from a uniform distribution.</span><br><span class="line">        samples[0, 1:] = np.random.rand(self.num_visible)</span><br><span class="line"></span><br><span class="line">        # Start the alternating Gibbs sampling.</span><br><span class="line">        # Note that we keep the hidden units binary states, but leave the</span><br><span class="line">        # visible units as real probabilities. See section 3 of Hinton&apos;s</span><br><span class="line">        # &quot;A Practical Guide to Training Restricted Boltzmann Machines&quot;</span><br><span class="line">        # for more on why.</span><br><span class="line">        for i in range(1, num_samples):</span><br><span class="line">            visible = samples[i - 1, :]</span><br><span class="line"></span><br><span class="line">            # Calculate the activations of the hidden units.</span><br><span class="line">            hidden_activations = np.dot(visible, self.weights)</span><br><span class="line">            # Calculate the probabilities of turning the hidden units on.</span><br><span class="line">            hidden_probs = self._logistic(hidden_activations)</span><br><span class="line">            # Turn the hidden units on with their specified probabilities.</span><br><span class="line">            hidden_states = hidden_probs &gt; np.random.rand(self.num_hidden + 1)</span><br><span class="line">            # Always fix the bias unit to 1.</span><br><span class="line">            hidden_states[0] = 1</span><br><span class="line"></span><br><span class="line">            # Recalculate the probabilities that the visible units are on.</span><br><span class="line">            visible_activations = np.dot(hidden_states, self.weights.T)</span><br><span class="line">            visible_probs = self._logistic(visible_activations)</span><br><span class="line">            visible_states = visible_probs &gt; np.random.rand(self.num_visible + 1)</span><br><span class="line">            samples[i, :] = visible_states</span><br><span class="line"></span><br><span class="line">        # Ignore the bias units (the first column), since they&apos;re always set to 1.</span><br><span class="line">        return samples[:, 1:]</span><br><span class="line"></span><br><span class="line">    @staticmethod</span><br><span class="line">    def _logistic(x):</span><br><span class="line">        return 1.0 / (1 + np.exp(-x))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">import some fake datas to validate the model</span><br><span class="line">Alice: (Harry Potter = 1, Avatar = 1, LOTR 3 = 1, Gladiator = 0, Titanic = 0, Glitter = 0). Big SF/fantasy fan（科幻超级迷妹）.</span><br><span class="line">Bob: (Harry Potter = 1, Avatar = 0, LOTR 3 = 1, Gladiator = 0, Titanic = 0, Glitter = 0). SF/fantasy fan, but doesn’t like Avatar（科幻迷，但不喜欢阿凡达）.</span><br><span class="line">Carol: (Harry Potter = 1, Avatar = 1, LOTR 3 = 1, Gladiator = 0, Titanic = 0, Glitter = 0). Big SF/fantasy fan（科幻超级迷）.</span><br><span class="line">David: (Harry Potter = 0, Avatar = 0, LOTR 3 = 1, Gladiator = 1, Titanic = 1, Glitter = 0). Big Oscar winners fan（奥斯卡超级迷）.</span><br><span class="line">Eric: (Harry Potter = 0, Avatar = 0, LOTR 3 = 1, Gladiator = 1, Titanic = 0, Glitter = 0). Oscar winners fan, except for Titanic（奥斯卡迷，但不喜欢泰坦尼克号（译者注：原文此处Titanic = 1有误））.</span><br><span class="line">Fred: (Harry Potter = 0, Avatar = 0, LOTR 3 = 1, Gladiator = 1, Titanic = 1, Glitter = 0). Big Oscar winners fan（奥斯卡超级迷）.</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    r = RBM(num_visible=6, num_hidden=2)</span><br><span class="line">    # training_data = np.array(readData(&apos;datas/0-201812180801_330.txt&apos;))</span><br><span class="line">    # print(training_data.shape)</span><br><span class="line">    training_data = np.array(</span><br><span class="line">        [[1, 1, 1, 0, 0, 0],</span><br><span class="line">         [1, 0, 1, 0, 0, 0],</span><br><span class="line">         [1, 1, 1, 0, 0, 0],</span><br><span class="line">         [0, 0, 1, 1, 1, 0],</span><br><span class="line">         [0, 0, 1, 1, 0, 0],</span><br><span class="line">         [0, 0, 1, 1, 1, 0]])</span><br><span class="line">    r.train(training_data, max_epochs=5000)</span><br><span class="line">    print(r.weights)</span><br><span class="line">    user = np.array([[0, 0, 0, 1, 1, 0]])</span><br><span class="line">    print(r.run_visible(user))</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -664,7 +666,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
+  <div>谢谢您给我糖果</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>打赏</span>
   </button>
@@ -706,11 +708,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+            <a href="/tags/深度学习/" rel="tag"><i class="fa fa-tag"></i> 深度学习</a>
           
-            <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
+            <a href="/tags/RBM/" rel="tag"><i class="fa fa-tag"></i> RBM</a>
           
-            <a href="/tags/Java面试/" rel="tag"><i class="fa fa-tag"></i> Java面试</a>
+            <a href="/tags/受限玻尔兹曼机/" rel="tag"><i class="fa fa-tag"></i> 受限玻尔兹曼机</a>
+          
+            <a href="/tags/概率图模型/" rel="tag"><i class="fa fa-tag"></i> 概率图模型</a>
           
         </div>
       
@@ -743,8 +747,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java中的锁分类/" rel="next" title="Java中的锁分类">
-                <i class="fa fa-chevron-left"></i> Java中的锁分类
+              <a href="/：Java中的容器/" rel="next" title="Java中的容器">
+                <i class="fa fa-chevron-left"></i> Java中的容器
               </a>
             
           </div>
@@ -753,8 +757,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Java中的容器/" rel="prev" title="Java中的容器">
-                Java中的容器 <i class="fa fa-chevron-right"></i>
+              <a href="/：Java中的双重检查锁/" rel="prev" title="Java中的双重检查锁">
+                Java中的双重检查锁 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1012,7 +1016,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java运行时数据区域分析"><span class="nav-number">1.</span> <span class="nav-text">Java运行时数据区域分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2、Java虚拟机栈"><span class="nav-number">1.1.</span> <span class="nav-text">2、Java虚拟机栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、本地方法栈"><span class="nav-number">1.2.</span> <span class="nav-text">3、本地方法栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、堆"><span class="nav-number">1.3.</span> <span class="nav-text">4、堆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、方法区"><span class="nav-number">1.4.</span> <span class="nav-text">5、方法区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、运行时常量池"><span class="nav-number">1.5.</span> <span class="nav-text">6、运行时常量池</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、直接内存"><span class="nav-number">1.6.</span> <span class="nav-text">7、直接内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章："><span class="nav-number">1.7.</span> <span class="nav-text">参考文章：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是受限玻尔兹曼机？"><span class="nav-number">1.</span> <span class="nav-text">什么是受限玻尔兹曼机？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RBM的损失函数"><span class="nav-number">2.</span> <span class="nav-text">RBM的损失函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对比散度算法（CD-k算法）"><span class="nav-number">2.1.</span> <span class="nav-text">对比散度算法（CD-k算法）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深度受限玻尔兹曼机-DBM"><span class="nav-number">3.</span> <span class="nav-text">深度受限玻尔兹曼机(DBM)</span></a></li></ol></div>
             
 
           </div>
@@ -1039,15 +1043,6 @@
   </span>
   <span class="author" itemprop="copyrightHolder">码农翻身</span>
 
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">post.totalcount&#58;</span>
-    
-    <span title="post.totalcount">21.9k</span>
   
 </div>
 
@@ -1268,7 +1263,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "search.xml";
+    var search_path = "";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {

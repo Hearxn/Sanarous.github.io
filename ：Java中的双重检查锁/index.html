@@ -130,25 +130,25 @@
   </script>
 
 
-  <meta name="description" content="Java中常见的锁分类​    在Java高并发中，锁是一个很重要的概念，以下有很多锁的名词，当然这些分类并不是全是指锁的状态，有的是指锁的特性，有的是指锁的设计，下面总结每种锁都有一些什么特点。  公平锁/非公平锁 可重入锁 独享锁/共享锁 互斥锁/读写锁 乐观锁/悲观锁 分段锁 偏向锁/轻量级锁/重量级锁 自旋锁    ##公平锁/非公平锁 ​        公平锁是指多个线程按照申请锁的顺序">
-<meta name="keywords" content="Java,Java高并发,Java锁">
+  <meta name="description" content="Java中的双重检查锁 Double Checked Locking在实现单例模式中，如果没有考虑多线程并发的情况下，初学者很容易写出下面的错误单例模式代码： 123456789101112public class Singleton()&amp;#123;    private static Singleton uniqueSingleton;        private Singleton()&amp;#1">
+<meta name="keywords" content="Java,JavaSE,Java高并发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java中的锁分类">
-<meta property="og:url" content="http://yoursite.com/Java中的锁分类/index.html">
-<meta property="og:site_name" content="Zuo&#39;s Blog Makes Better life and coding">
-<meta property="og:description" content="Java中常见的锁分类​    在Java高并发中，锁是一个很重要的概念，以下有很多锁的名词，当然这些分类并不是全是指锁的状态，有的是指锁的特性，有的是指锁的设计，下面总结每种锁都有一些什么特点。  公平锁/非公平锁 可重入锁 独享锁/共享锁 互斥锁/读写锁 乐观锁/悲观锁 分段锁 偏向锁/轻量级锁/重量级锁 自旋锁    ##公平锁/非公平锁 ​        公平锁是指多个线程按照申请锁的顺序">
+<meta property="og:title" content="Java中的双重检查锁">
+<meta property="og:url" content="http://yoursite.com/：Java中的双重检查锁/index.html">
+<meta property="og:site_name" content="Zuo&#39;s Blog makes better life and coding">
+<meta property="og:description" content="Java中的双重检查锁 Double Checked Locking在实现单例模式中，如果没有考虑多线程并发的情况下，初学者很容易写出下面的错误单例模式代码： 123456789101112public class Singleton()&amp;#123;    private static Singleton uniqueSingleton;        private Singleton()&amp;#1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-05T07:27:56.638Z">
+<meta property="og:updated_time" content="2019-03-06T12:55:13.390Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java中的锁分类">
-<meta name="twitter:description" content="Java中常见的锁分类​    在Java高并发中，锁是一个很重要的概念，以下有很多锁的名词，当然这些分类并不是全是指锁的状态，有的是指锁的特性，有的是指锁的设计，下面总结每种锁都有一些什么特点。  公平锁/非公平锁 可重入锁 独享锁/共享锁 互斥锁/读写锁 乐观锁/悲观锁 分段锁 偏向锁/轻量级锁/重量级锁 自旋锁    ##公平锁/非公平锁 ​        公平锁是指多个线程按照申请锁的顺序">
+<meta name="twitter:title" content="Java中的双重检查锁">
+<meta name="twitter:description" content="Java中的双重检查锁 Double Checked Locking在实现单例模式中，如果没有考虑多线程并发的情况下，初学者很容易写出下面的错误单例模式代码： 123456789101112public class Singleton()&amp;#123;    private static Singleton uniqueSingleton;        private Singleton()&amp;#1">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/Java中的锁分类/">
+  <link rel="canonical" href="http://yoursite.com/：Java中的双重检查锁/">
 
 
 
@@ -158,7 +158,7 @@
   };
 </script>
 
-  <title>Java中的锁分类 | Zuo's Blog Makes Better life and coding</title>
+  <title>Java中的双重检查锁 | Zuo's Blog makes better life and coding</title>
   
 
 
@@ -220,7 +220,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Zuo's Blog Makes Better life and coding</span>
+        <span class="site-title">Zuo's Blog makes better life and coding</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -469,7 +469,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Java中的锁分类/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/：Java中的双重检查锁/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="码农翻身">
@@ -478,7 +478,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zuo's Blog Makes Better life and coding">
+      <meta itemprop="name" content="Zuo's Blog makes better life and coding">
     </span>
 
     
@@ -486,7 +486,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java中的锁分类
+          <h2 class="post-title" itemprop="name headline">Java中的双重检查锁
 
               
             
@@ -512,7 +512,7 @@
                 
               
 
-              <time title="创建时间：2019-03-05 14:53:11 / 修改时间：15:27:56" itemprop="dateCreated datePublished" datetime="2019-03-05T14:53:11+08:00">2019-03-05</time>
+              <time title="创建时间：2019-03-06 13:08:08 / 修改时间：20:55:13" itemprop="dateCreated datePublished" datetime="2019-03-06T13:08:08+08:00">2019-03-06</time>
             
 
             
@@ -538,6 +538,13 @@
 
                 
                 
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/JavaSE/" itemprop="url" rel="index"><span itemprop="name">JavaSE</span></a></span>
+
+                
+                
               
             </span>
           
@@ -553,8 +560,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/Java中的锁分类/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Java中的锁分类/" itemprop="commentCount"></span>
+                <a href="/：Java中的双重检查锁/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/：Java中的双重检查锁/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -589,32 +596,149 @@
       
 
       
-        <h1 id="Java中常见的锁分类"><a href="#Java中常见的锁分类" class="headerlink" title="Java中常见的锁分类"></a>Java中常见的锁分类</h1><p>​    在Java高并发中，锁是一个很重要的概念，以下有很多锁的名词，当然这些分类并不是全是指锁的状态，有的是指锁的特性，有的是指锁的设计，下面总结每种锁都有一些什么特点。</p>
-<ul>
-<li>公平锁/非公平锁</li>
-<li>可重入锁</li>
-<li>独享锁/共享锁</li>
-<li>互斥锁/读写锁</li>
-<li>乐观锁/悲观锁</li>
-<li>分段锁</li>
-<li>偏向锁/轻量级锁/重量级锁</li>
-<li>自旋锁 </li>
-</ul>
+        <h2 id="Java中的双重检查锁-Double-Checked-Locking"><a href="#Java中的双重检查锁-Double-Checked-Locking" class="headerlink" title="Java中的双重检查锁 Double Checked Locking"></a>Java中的双重检查锁 Double Checked Locking</h2><p>在实现单例模式中，如果没有考虑多线程并发的情况下，初学者很容易写出下面的错误单例模式代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> class <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton uniqueSingleton;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">null</span> == uniqueSingleton)&#123;</span><br><span class="line">            uniqueSingleton = <span class="keyword">new</span> Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> uniqueSingleton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>很显然，在多线程的情况下，这样写可能会导致<code>uniqueSingleton</code>被创建出多个实例，比如下面的情况考虑有两个线程同时调用<code>getInstance()</code>方法时：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Time</th>
+<th style="text-align:center">Thread A  记为线程A</th>
+<th style="text-align:center">Thread B 记为线程B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T1</td>
+<td style="text-align:center">检查到<code>uniqueSingleton</code>为空</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">T2</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">检查到<code>uniqueSingleton</code>为空</td>
+</tr>
+<tr>
+<td style="text-align:center">T3</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">初始化对象A</td>
+</tr>
+<tr>
+<td style="text-align:center">T4</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">返回对象A</td>
+</tr>
+<tr>
+<td style="text-align:center">T5</td>
+<td style="text-align:center">初始化对象B</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">T6</td>
+<td style="text-align:center">返回对象B</td>
+</tr>
+</tbody>
+</table>
+<p>用文字表述如下：</p>
+<p>如果线程A和B同时执行了<code>getInstance()</code>方法，然后以如下方式执行：</p>
+<ol>
+<li>线程A进入if判断，此时instance为null，因此可以进入if内</li>
+<li>线程B进入if判断，此时A还没有创建instance，因此instance也为null，因此线程B也进入了if内</li>
+<li>线程B初始化了一个对象并返回</li>
+<li>线程B也初始化了一个对象并返回</li>
+</ol>
+<p>因此此时一个对象实际上还是可以被创建多次，并没有达到单例的效果。</p>
 <hr>
-<p>##公平锁/非公平锁</p>
-<p>​        <strong>公平锁是指多个线程按照申请锁的顺序来获取锁。非公平锁是指多个线程获取锁的顺序并不是按照申请锁的顺序</strong>，有可能后申请的线程比先申请的线程优先获取锁。有可能，会造成优先级反转或者饥饿现象。对于Java中的 <code>ReentrantLock</code>而言，通过构造函数指定该锁是否是公平锁，默认是非公平锁。非公平锁的优点在于吞吐量比公平锁大。对于<code>Synchronized</code>而言，也是一种非公平锁。由于其并不像<code>ReentrantLock</code>是通过AQS的来实现线程调度，所以并没有任何办法使其变成公平锁。 </p>
-<h2 id="可重入锁"><a href="#可重入锁" class="headerlink" title="可重入锁"></a>可重入锁</h2><p>​        <strong>可重入锁又名递归锁，是指在同一个线程在外层方法获取锁的时候，在进入内层方法会自动获取锁</strong>。说的有点抽象，下面会有一个代码的示例。对于Java中的 <code>ReentrantLock</code>而言, 他的名字就可以看出是一个可重入锁，其名字是<code>ReentrantLock</code>重新进入锁。对于<code>Synchronized</code>而言,也是一个可重入锁。可重入锁的一个好处是可一定程度避免死锁。 </p>
-<h2 id="独享锁-共享锁"><a href="#独享锁-共享锁" class="headerlink" title="独享锁/共享锁"></a>独享锁/共享锁</h2><p>​       <strong>独享锁是指该锁一次只能被一个线程所持有</strong>。共享锁是指该锁可被多个线程所持有。对于Java 中的<code>ReentrantLock</code>而言，其是独享锁。但是对于Lock的另一个实现类<code>ReadWriteLock</code>，其读锁是共享锁，其写锁是独享锁。读锁的共享锁可保证并发读是非常高效的，读写，写读 ，写写的过程是互斥的。独享锁与共享锁也是通过AQS来实现的，通过实现不同的方法，来实现独享或者共享。对于<code>Synchronized</code>而言，当然是独享锁。 </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">setA</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">    setB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">setB</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​       上面的代码就是一个可重入锁的一个特点，如果不是可重入锁的话，setB可能不会被当前线程执行，可能造成死锁。 </p>
-<h2 id="互斥锁-读写锁"><a href="#互斥锁-读写锁" class="headerlink" title="互斥锁/读写锁"></a>互斥锁/读写锁</h2><p>上面讲的独享锁/共享锁就是一种广义的说法，互斥锁/读写锁就是具体的实现。</p>
-<p>互斥锁在Java中的具体实现就是<code>ReentrantLock</code></p>
-<p>读写锁在Java中的具体实现就是<code>ReadWriteLock</code></p>
-<h2 id="乐观锁-悲观锁"><a href="#乐观锁-悲观锁" class="headerlink" title="乐观锁/悲观锁"></a>乐观锁/悲观锁</h2><p>​        乐观锁与悲观锁不是指具体的什么类型的锁，而是指看待并发同步的角度。<strong>悲观锁认为对于同一个数据的并发操作，一定是会发生修改的，哪怕没有修改，也会认为修改</strong>。因此对于同一个数据的并发操作，悲观锁采取加锁的形式。悲观的认为，不加锁的并发操作一定会出问题。<strong>乐观锁则认为对于同一个数据的并发操作，是不会发生修改的。在更新数据的时候，会采用尝试更新，不断重新的方式更新数据</strong>。乐观的认为，不加锁的并发操作是没有事情的。从上面的描述我们可以看出，悲观锁适合写操作非常多的场景，乐观锁适合读操作非常多的场景，不加锁会带来大量的性能提升。悲观锁在Java中的使用，就是利用各种锁。乐观锁在Java中的使用，是无锁编程，常常采用的是CAS算法，典型的例子就是原子类，通过CAS自旋实现原子操作的更新。 </p>
-<h2 id="分段锁"><a href="#分段锁" class="headerlink" title="分段锁"></a>分段锁</h2><p>​        分段锁其实是一种锁的设计，并不是具体的一种锁，对于<code>ConcurrentHashMap</code>而言，其并发的实现就是通过分段锁的形式来实现高效的并发操作。我们以<code>ConcurrentHashMap</code>来说一下分段锁的含义以及设计思想，<code>ConcurrentHashMap</code>中的分段锁称为Segment，它即类似于<code>HashMap</code>（JDK7与JDK8中HashMap的实现）的结构，即内部拥有一个Entry数组，数组中的每个元素又是一个链表；同时又是一个<code>ReentrantLock</code>（Segment继承了<code>ReentrantLock</code>)。当需要put元素的时候，并不是对整个<code>hashmap</code>进行加锁，而是先通过<code>hashcode</code>来知道他要放在那一个分段中，然后对这个分段进行加锁，所以当多线程put的时候，只要不是放在一个分段中，就实现了真正的并行的插入。但是，在统计size的时候，可就是获取hashmap全局信息的时候，就需要获取所有的分段锁才能统计。<strong>分段锁的设计目的是细化锁的粒度，当操作不需要更新整个数组的时候，就仅仅针对数组中的一项进行加锁操作。</strong> </p>
-<h2 id="偏向锁-轻量级锁-重量级锁"><a href="#偏向锁-轻量级锁-重量级锁" class="headerlink" title="偏向锁/轻量级锁/重量级锁"></a>偏向锁/轻量级锁/重量级锁</h2><p>​       这三种锁是指锁的状态，并且是针对<code>Synchronized</code>。在Java 5通过引入锁升级的机制来实现高效<code>Synchronized</code>。这三种锁的状态是通过<strong><em>对象监视器在对象头中的字段</em></strong>来表明的。</p>
-<p>​    <strong>偏向锁是指一段同步代码一直被一个线程所访问，那么该线程会自动获取锁以降低获取锁的代价</strong>。  <strong>轻量级锁是指当锁是偏向锁的时候，被另一个线程所访问，偏向锁就会升级为轻量级锁，其他线程会通过自旋的形式尝试获取锁，不会阻塞，提高性能</strong>.<strong>重量级锁是指当锁为轻量级锁的时候，另一个线程虽然是自旋，但自旋不会一直持续下去，当自旋一定次数的时候，还没有获取到锁，就会进入阻塞，该锁膨胀为重量级锁</strong>。重量级锁会让其他申请的线程进入阻塞，性能降低。 </p>
-<h2 id="自旋锁"><a href="#自旋锁" class="headerlink" title="自旋锁"></a>自旋锁</h2><p>​      在Java中，自旋锁是指尝试获取锁的线程不会立即阻塞，而是采用循环的方式去尝试获取锁，这样的好处是减少线程上下文切换的消耗，缺点是循环会消耗CPU。 </p>
+<p>###加锁</p>
+<p>那么出现这种情况，第一反应肯定是加锁，因此可以将上述代码更改如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> class <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton uniqueSingleton;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//加锁</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">synchronized</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">null</span> == uniqueSingleton)&#123;</span><br><span class="line">            uniqueSingleton = <span class="keyword">new</span> Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> uniqueSingleton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样虽然解决了问题，但是因为用到了<code>synchronized</code>会导致比较大的开销，并且加锁实际中只需要在第一次初始化的时候用到，之后的调用并不需要再进行加锁，因此这种方法实际上需要改进。</p>
+<h3 id="双重检查锁"><a href="#双重检查锁" class="headerlink" title="双重检查锁"></a>双重检查锁</h3><p>双重检查锁是对上述加锁问题的一种优化，先判断对象是否已经被初始化，再决定是否加锁。</p>
+<h5 id="错误的双重检查锁"><a href="#错误的双重检查锁" class="headerlink" title="错误的双重检查锁"></a>错误的双重检查锁</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton uniqueSingleton;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SIngleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">null</span> == uniqueSingleton)&#123;</span><br><span class="line">            <span class="keyword">synchronized</span>(Singleton.class)&#123;</span><br><span class="line">                <span class="keyword">if</span>(<span class="keyword">null</span> == uniqueSingleton)&#123;</span><br><span class="line">                    uniqueSingleton = <span class="keyword">new</span> Singleton(); <span class="comment">//错误示范</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> uniqueSingleton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果这样写的话，运行顺序就变成了：</p>
+<p>1.检查变量是否被初始化（不去获得锁），如果已经被初始化就直接返回</p>
+<p>2.获得锁</p>
+<p>3.再次检查变量是否已经被初始化，如果还没有初始化就初始化一个对象</p>
+<p>执行双重检查是因为，如果多个线程同时通过了第一次检查，并且其中的一个线程首先通过了第二次检查并实例化了对象，那么剩余通过了第一次检查的线程就不会再去实例化对象。</p>
+<p>这样，除了初始化的时候会出现加锁的情况，后续的调用都会避免加锁而直接返回，解决了性能消耗的问题。</p>
+<h5 id="隐患"><a href="#隐患" class="headerlink" title="隐患"></a>隐患</h5><p>上述的写法看似解决了问题，实际上有个很大的隐患。实例化对象的那一行代码，实际上可以分解为三个步骤：</p>
+<ol>
+<li>分配内存空间</li>
+<li>初始化对象</li>
+<li>将对象指向刚分配的内存空间</li>
+</ol>
+<p>但是有些编译器为了提升性能，会采用指令重排序，因此可能会将第二步和第三步进行重排序（在某些<strong>JIT</strong>编译器中这种情况是会真实发生的），顺序就变成了：</p>
+<ol>
+<li>分配内存空间</li>
+<li>将对象指向刚分配的内存空间</li>
+<li>初始化对象</li>
+</ol>
+<p>而当考虑重排序后，两个线程发生了以下的调用：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Time</th>
+<th style="text-align:center">Thread A 线程A</th>
+<th style="text-align:center">Thread B 线程B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T1</td>
+<td style="text-align:center">检查到<code>uniqueSingleton</code>为空</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">T2</td>
+<td style="text-align:center">获得锁</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">T3</td>
+<td style="text-align:center">再次检查到<code>uniqueSingleton</code>为空</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">T4</td>
+<td style="text-align:center">为<code>uniqueSingleton</code>分配内存空间</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">T5</td>
+<td style="text-align:center">将<code>uniqueSingleton</code>指向内存空间</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">T6</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">检查到<code>uniqueSingleton</code>不为空</td>
+</tr>
+<tr>
+<td style="text-align:center">T7</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">访问<code>uniqueSingleton</code>（此时对象还未完成初始化）</td>
+</tr>
+<tr>
+<td style="text-align:center">T8</td>
+<td style="text-align:center">初始化<code>uniqueSingleton</code></td>
+</tr>
+</tbody>
+</table>
+<p>文字表述如下：</p>
+<p>（1） A、B线程同时进入了第一个if判断</p>
+<p>（2） A首先初始化<code>synchronized</code>块，由于<code>uniqueSingleton</code>为null，所以它执行了<code>uniqueSingleton = new Singleton();</code></p>
+<p>（3） 由于JVM内部的优化机制，JVM先划出一些分配给Singleton实例的空白内存，并赋值给instance成员，注意此时JVM还没有开始初始化这个实例，然后A离开了这个<code>synchronized</code>块。</p>
+<p>（4） B进入<code>synchronized</code>块，由于<code>uniqueSingleton</code>此时不是null，因此它马上离开了<code>synchronized</code>块              并将结果返回给调用该方法的程序。</p>
+<p>（5） 此时B线程打算使用Singleton实例，却发现它没有被初始化，于是错误发生了。</p>
+<p>在知晓了问题发生的根源之后，我们可以想出两种办法来实现线程安全的单例模式，</p>
+<p>1）不允许2和3重排序。</p>
+<p>2）允许2和3重排序，但是不允许其它线程“看到”这个重排序。</p>
+<h5 id="正确的双重检查锁"><a href="#正确的双重检查锁" class="headerlink" title="正确的双重检查锁"></a>正确的双重检查锁</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> Singleton uniqueSingleton;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> == uniqueSingleton) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (Singleton.class) &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">null</span> == uniqueSingleton) &#123;</span><br><span class="line">                    uniqueSingleton = <span class="keyword">new</span> Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> uniqueSingleton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>为了解决隐患问题，我们需要在<code>uniqueSingleton</code>前加上关键字<code>volatile</code>。使用了<code>volatile</code>关键词后，编译器的指令重排序被禁止，所有对加上该关键字的共享变量的写（write）操作都发生在读（read）操作之前。至此，双重检查锁就可以完美工作了！</p>
+<h5 id="基于类初始化的解决方案"><a href="#基于类初始化的解决方案" class="headerlink" title="基于类初始化的解决方案"></a>基于类初始化的解决方案</h5><p> JVM在类的初始化阶段（即在Class被加载后，且被线程使用之前），会执行类的 初始化。在执行类的初始化期间，JVM会尝试去获取一个锁。这个锁可以同步多个线程对同一个类的初始化。</p>
+<p>基于这个特性，可以实现另外一种线程安全的延迟加载初始化方案：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonFactory</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">InstanceHolder</span></span>&#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> Instance instance = <span class="keyword">new</span> Instance();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Instance <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> InstanceHolder.instance; <span class="comment">//这里将导致InstanceHodler类被初始化</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个方案的实质是：允许重排序，但是不允许非构造线程“看到”这个排序。</p>
 
       
     </div>
@@ -637,7 +761,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
+  <div>谢谢您给我糖果</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>打赏</span>
   </button>
@@ -681,9 +805,9 @@
           
             <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
-            <a href="/tags/Java高并发/" rel="tag"><i class="fa fa-tag"></i> Java高并发</a>
+            <a href="/tags/JavaSE/" rel="tag"><i class="fa fa-tag"></i> JavaSE</a>
           
-            <a href="/tags/Java锁/" rel="tag"><i class="fa fa-tag"></i> Java锁</a>
+            <a href="/tags/Java高并发/" rel="tag"><i class="fa fa-tag"></i> Java高并发</a>
           
         </div>
       
@@ -716,8 +840,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/我的第一篇测试博客/" rel="next" title="我的第一篇测试博客">
-                <i class="fa fa-chevron-left"></i> 我的第一篇测试博客
+              <a href="/：深度学习模型之受限玻尔兹曼机-RBM/" rel="next" title="深度学习模型之受限玻尔兹曼机(RBM)">
+                <i class="fa fa-chevron-left"></i> 深度学习模型之受限玻尔兹曼机(RBM)
               </a>
             
           </div>
@@ -726,8 +850,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/深入理解JVM虚拟机-一-：Java运行时数据区域/" rel="prev" title="深入理解JVM虚拟机（一）：Java运行时数据区域">
-                深入理解JVM虚拟机（一）：Java运行时数据区域 <i class="fa fa-chevron-right"></i>
+              <a href="/：深入理解JVM虚拟机（二）：垃圾收集/" rel="prev" title="深入理解JVM虚拟机（二）：垃圾收集、内存分配与回收策略">
+                深入理解JVM虚拟机（二）：垃圾收集、内存分配与回收策略 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -985,7 +1109,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java中常见的锁分类"><span class="nav-number">1.</span> <span class="nav-text">Java中常见的锁分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#可重入锁"><span class="nav-number">1.1.</span> <span class="nav-text">可重入锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#独享锁-共享锁"><span class="nav-number">1.2.</span> <span class="nav-text">独享锁/共享锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互斥锁-读写锁"><span class="nav-number">1.3.</span> <span class="nav-text">互斥锁/读写锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#乐观锁-悲观锁"><span class="nav-number">1.4.</span> <span class="nav-text">乐观锁/悲观锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分段锁"><span class="nav-number">1.5.</span> <span class="nav-text">分段锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#偏向锁-轻量级锁-重量级锁"><span class="nav-number">1.6.</span> <span class="nav-text">偏向锁/轻量级锁/重量级锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自旋锁"><span class="nav-number">1.7.</span> <span class="nav-text">自旋锁</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中的双重检查锁-Double-Checked-Locking"><span class="nav-number">1.</span> <span class="nav-text">Java中的双重检查锁 Double Checked Locking</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#双重检查锁"><span class="nav-number">1.1.</span> <span class="nav-text">双重检查锁</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#错误的双重检查锁"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">错误的双重检查锁</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#隐患"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">隐患</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#正确的双重检查锁"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">正确的双重检查锁</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#基于类初始化的解决方案"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">基于类初始化的解决方案</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1012,15 +1136,6 @@
   </span>
   <span class="author" itemprop="copyrightHolder">码农翻身</span>
 
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">post.totalcount&#58;</span>
-    
-    <span title="post.totalcount">21.9k</span>
   
 </div>
 
@@ -1241,7 +1356,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "search.xml";
+    var search_path = "";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {

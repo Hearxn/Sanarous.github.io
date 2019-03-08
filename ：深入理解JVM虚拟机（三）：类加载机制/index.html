@@ -130,42 +130,28 @@
   </script>
 
 
-  <meta name="description" content="什么是受限玻尔兹曼机？​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进">
-<meta name="keywords" content="深度学习,RBM,受限玻尔兹曼机,概率图模型">
+  <meta name="description" content="类是在运行期间第一次使用时动态加载的，而不是一次性加载。因为如果一次性加载，那么会占用很多的内存。  一、类的声明周期 包括以下 7 个阶段：   加载（Loading） 验证（Verification） 准备（Preparation） 解析（Resolution） 初始化（Initialization） 使用（Using） 卸载（Unloading）  二、类加载过程包含了加载、验证、准备、解析">
+<meta name="keywords" content="Java,JVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="深度学习模型之受限玻尔兹曼机(RBM)">
-<meta property="og:url" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/index.html">
-<meta property="og:site_name" content="Zuo&#39;s Blog Makes Better life and coding">
-<meta property="og:description" content="什么是受限玻尔兹曼机？​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进">
+<meta property="og:title" content="深入理解JVM虚拟机（三）：类加载机制">
+<meta property="og:url" content="http://yoursite.com/：深入理解JVM虚拟机（三）：类加载机制/index.html">
+<meta property="og:site_name" content="Zuo&#39;s Blog makes better life and coding">
+<meta property="og:description" content="类是在运行期间第一次使用时动态加载的，而不是一次性加载。因为如果一次性加载，那么会占用很多的内存。  一、类的声明周期 包括以下 7 个阶段：   加载（Loading） 验证（Verification） 准备（Preparation） 解析（Resolution） 初始化（Initialization） 使用（Using） 卸载（Unloading）  二、类加载过程包含了加载、验证、准备、解析">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm1.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm2.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm3.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm4.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm5.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm6.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm7.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm8.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm9.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm10.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm11.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm12.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm13.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm14.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm15.png">
-<meta property="og:updated_time" content="2019-03-05T08:59:35.667Z">
+<meta property="og:image" content="http://yoursite.com/：深入理解JVM虚拟机（三）：类加载机制/类的声明周期.jpg">
+<meta property="og:image" content="http://yoursite.com/：深入理解JVM虚拟机（三）：类加载机制/双亲委派.png">
+<meta property="og:updated_time" content="2019-03-08T05:01:28.174Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="深度学习模型之受限玻尔兹曼机(RBM)">
-<meta name="twitter:description" content="什么是受限玻尔兹曼机？​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进">
-<meta name="twitter:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm.png">
+<meta name="twitter:title" content="深入理解JVM虚拟机（三）：类加载机制">
+<meta name="twitter:description" content="类是在运行期间第一次使用时动态加载的，而不是一次性加载。因为如果一次性加载，那么会占用很多的内存。  一、类的声明周期 包括以下 7 个阶段：   加载（Loading） 验证（Verification） 准备（Preparation） 解析（Resolution） 初始化（Initialization） 使用（Using） 卸载（Unloading）  二、类加载过程包含了加载、验证、准备、解析">
+<meta name="twitter:image" content="http://yoursite.com/：深入理解JVM虚拟机（三）：类加载机制/类的声明周期.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/">
+  <link rel="canonical" href="http://yoursite.com/：深入理解JVM虚拟机（三）：类加载机制/">
 
 
 
@@ -175,7 +161,7 @@
   };
 </script>
 
-  <title>深度学习模型之受限玻尔兹曼机(RBM) | Zuo's Blog Makes Better life and coding</title>
+  <title>深入理解JVM虚拟机（三）：类加载机制 | Zuo's Blog makes better life and coding</title>
   
 
 
@@ -237,7 +223,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Zuo's Blog Makes Better life and coding</span>
+        <span class="site-title">Zuo's Blog makes better life and coding</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -486,7 +472,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/：深入理解JVM虚拟机（三）：类加载机制/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="码农翻身">
@@ -495,7 +481,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zuo's Blog Makes Better life and coding">
+      <meta itemprop="name" content="Zuo's Blog makes better life and coding">
     </span>
 
     
@@ -503,7 +489,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">深度学习模型之受限玻尔兹曼机(RBM)
+          <h2 class="post-title" itemprop="name headline">深入理解JVM虚拟机（三）：类加载机制
 
               
             
@@ -529,7 +515,7 @@
                 
               
 
-              <time title="创建时间：2019-03-05 16:32:50 / 修改时间：16:59:35" itemprop="dateCreated datePublished" datetime="2019-03-05T16:32:50+08:00">2019-03-05</time>
+              <time title="创建时间：2019-03-08 12:53:26 / 修改时间：13:01:28" itemprop="dateCreated datePublished" datetime="2019-03-08T12:53:26+08:00">2019-03-08</time>
             
 
             
@@ -551,7 +537,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/深度学习/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
 
                 
                 
@@ -570,8 +556,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/深度学习模型之受限玻尔兹曼机-RBM/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/深度学习模型之受限玻尔兹曼机-RBM/" itemprop="commentCount"></span>
+                <a href="/：深入理解JVM虚拟机（三）：类加载机制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/：深入理解JVM虚拟机（三）：类加载机制/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -606,44 +592,110 @@
       
 
       
-        <h3 id="什么是受限玻尔兹曼机？"><a href="#什么是受限玻尔兹曼机？" class="headerlink" title="什么是受限玻尔兹曼机？"></a>什么是受限玻尔兹曼机？</h3><p>​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进行流动，而且两个方向上的权值是相同的，但是偏置是不同的（偏置的个数与神经元的个数相同），其结构如图所示。</p>
-<p>​     <img src="rbm.png" alt></p>
-<p>​         我们可以看到上面一层神经元组成Hidden Layer，一般用h表示隐藏层神经元的值。下面一层神经元组成visiable layer，一般用v表示可见层神经元的值。连接权值我们用矩阵W表示，和DNN不同的是，RBM是不区分前向和后向的，可见层的状态可以作用于隐藏层，而隐藏层的状态可以作用于可见层。隐藏层的偏置系数是向量b，可见层的偏置系数是向量a。常见的RBM一般是二值的，即不管是隐藏层还是可见层，它们的神经元的取值是0或者1.</p>
-<p> <strong>RBM模型的结构：权重矩阵W，偏置系数a、b，隐藏神经元状态向量h和可见层神经元状态向量v</strong> </p>
-<hr>
-<p>​    如RBM这类由玻尔兹曼机发展而来的图模型都是基于能量的概率分布模型，分为两个部分：一部分是<strong>能量函数</strong>，第二部分是基于能量函数的<strong>概率分布函数</strong>。对于给定的状态向量h和v，则RBM当前的能量函数可以表示为如下</p>
-<p><img src="rbm1.png" alt></p>
-<p>其中a和b是偏置系数，W是权值矩阵，有了能量函数，v和h的联合概率分布为： </p>
-<p><img src="rbm2.png" alt></p>
-<p>其中Z被称为配分函数的归一化常数（对于概率输出一般要做归一化）： </p>
-<p><img src="rbm3.png" alt></p>
-<p>由于配分函数Z的难以处理，所以必须使用最大似然梯度来近似，首先从联合分布中导出条件分布： </p>
-<p><img src="rbm4.png" alt></p>
-<p>为了推导方便将无关值归于Z’中 </p>
-<p><img src="rbm5.png" alt></p>
-<p>可以看到就是相当于使用了sigmoid函数，现在可以写出关于隐藏层的完全分布条件： </p>
-<p><img src="rbm6.png" alt></p>
-<p>有了激活函数，我们就可以从可见层和参数推导出隐藏层的神经元取值概率了，对于0，1取值的情况，则大于0.5取1，从隐藏层和参数导出可见的神经元的取值方法也是一样的。 </p>
-<h3 id="RBM的损失函数"><a href="#RBM的损失函数" class="headerlink" title="RBM的损失函数"></a>RBM的损失函数</h3><p>​    RBM模型的关键就是求出我们模型中的参数W、a、b，首先我们得写出损失函数，RBM一般使用的是对数损失函数，即期望最小化： </p>
-<p><img src="rbm7.png" alt></p>
-<p>然后对其求偏导： </p>
-<p><img src="rbm8.png" alt></p>
-<p>虽然说梯度下降从理论上来说可以优化RBM模型，到那时实际中很难求得P(v)的概率分布的（P(v)表示可见层节点的联合概率）。计算复杂度非常大，因此采用一些随机采样的方法来得到近似的解。看这三个梯度的第二项实际上都是求期望，而我们知道，样本的均值是随机变量期望的无偏估计。因此一般都是基于对比散度方法来求解。 </p>
-<h4 id="对比散度算法（CD-k算法）"><a href="#对比散度算法（CD-k算法）" class="headerlink" title="对比散度算法（CD-k算法）"></a>对比散度算法（CD-k算法）</h4><p><img src="rbm9.png" alt></p>
-<p><img src="rbm10.png" alt></p>
-<p><img src="rbm11.png" alt></p>
-<hr>
-<h3 id="深度受限玻尔兹曼机-DBM"><a href="#深度受限玻尔兹曼机-DBM" class="headerlink" title="深度受限玻尔兹曼机(DBM)"></a>深度受限玻尔兹曼机(DBM)</h3><p>加深RBM的层数后，就变成了DBM：结构图如下： </p>
-<p><img src="rbm12.png" alt></p>
-<p>此时的能量函数变为： </p>
-<p><img src="rbm13.png" alt></p>
-<p>联合概率变为： </p>
-<p><img src="rbm14.png" alt></p>
-<p>其实DBM也可以看作是一个RBM，对上图稍加变换就可以看作是一个RBM： </p>
-<p><img src="rbm15.png" alt></p>
-<p>将可见层和偶数隐藏层放在一边，将奇数隐藏层放在另一边，我们就得到了RBM，和RBM的细微区别只是现在的RBM并不是全连接的，其实也可以看做部分权重为0的全连接RBM。RBM的算法思想可以在DBM上使用。只是此时我们的模型参数更加的多，而且迭代求解参数也更加复杂了。 </p>
-<p>以下是Hinton教授给出的RBM经典二值化的代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br></pre></td><td class="code"><pre><span class="line">from __future__ import print_function</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class RBM:</span><br><span class="line"></span><br><span class="line">    def __init__(self, num_visible, num_hidden):</span><br><span class="line">        self.num_hidden = num_hidden</span><br><span class="line">        self.num_visible = num_visible</span><br><span class="line">        self.debug_print = True</span><br><span class="line"></span><br><span class="line">        # Initialize a weight matrix, of dimensions (num_visible x num_hidden), using</span><br><span class="line">        # a uniform distribution between -sqrt(6. / (num_hidden + num_visible))</span><br><span class="line">        # and sqrt(6. / (num_hidden + num_visible)). One could vary the</span><br><span class="line">        # standard deviation by multiplying the interval with appropriate value.</span><br><span class="line">        # Here we initialize the weights with mean 0 and standard deviation 0.1.</span><br><span class="line">        np_rng = np.random.RandomState(1234)</span><br><span class="line"></span><br><span class="line">        self.weights = np.asarray(np_rng.uniform(</span><br><span class="line">            low=-0.1 * np.sqrt(6. / (num_hidden + num_visible)),</span><br><span class="line">            high=0.1 * np.sqrt(6. / (num_hidden + num_visible)),</span><br><span class="line">            size=(num_visible, num_hidden)))</span><br><span class="line"></span><br><span class="line">        # Insert weights for the bias units into the first row and first column.</span><br><span class="line">        self.weights = np.insert(self.weights, 0, 0, axis=0)</span><br><span class="line">        self.weights = np.insert(self.weights, 0, 0, axis=1)</span><br><span class="line"></span><br><span class="line">    def train(self, data, max_epochs=1000, learning_rate=0.1):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Train the machine.</span><br><span class="line">        Parameters</span><br><span class="line">        ----------</span><br><span class="line">        data: A matrix where each row is a training example consisting of the states of visible units.</span><br><span class="line">        :param data:</span><br><span class="line">        :param max_epochs:</span><br><span class="line">        :param learning_rate:</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">        num_examples = data.shape[0]</span><br><span class="line"></span><br><span class="line">        # Insert bias units of 1 into the first column.</span><br><span class="line">        data = np.insert(data, 0, 1, axis=1)</span><br><span class="line"></span><br><span class="line">        for epoch in range(max_epochs):</span><br><span class="line">            # Clamp to the data and sample from the hidden units.</span><br><span class="line">            # (This is the &quot;positive CD phase&quot;, aka the reality phase.)</span><br><span class="line">            pos_hidden_activations = np.dot(data, self.weights)</span><br><span class="line">            pos_hidden_probs = self._logistic(pos_hidden_activations)</span><br><span class="line">            pos_hidden_probs[:, 0] = 1  # Fix the bias unit.</span><br><span class="line">            pos_hidden_states = pos_hidden_probs &gt; np.random.rand(num_examples, self.num_hidden + 1)</span><br><span class="line">            # Note that we&apos;re using the activation *probabilities* of the hidden states, not the hidden states</span><br><span class="line">            # themselves, when computing associations. We could also use the states; see section 3 of Hinton&apos;s</span><br><span class="line">            # &quot;A Practical Guide to Training Restricted Boltzmann Machines&quot; for more.</span><br><span class="line">            pos_associations = np.dot(data.T, pos_hidden_probs)</span><br><span class="line"></span><br><span class="line">            # Reconstruct the visible units and sample again from the hidden units.</span><br><span class="line">            # (This is the &quot;negative CD phase&quot;, aka the daydreaming phase.)</span><br><span class="line">            neg_visible_activations = np.dot(pos_hidden_states, self.weights.T)</span><br><span class="line">            neg_visible_probs = self._logistic(neg_visible_activations)</span><br><span class="line">            neg_visible_probs[:, 0] = 1  # Fix the bias unit.</span><br><span class="line">            neg_hidden_activations = np.dot(neg_visible_probs, self.weights)</span><br><span class="line">            neg_hidden_probs = self._logistic(neg_hidden_activations)</span><br><span class="line">            # Note, again, that we&apos;re using the activation *probabilities* when computing associations, not the states</span><br><span class="line">            # themselves.</span><br><span class="line">            neg_associations = np.dot(neg_visible_probs.T, neg_hidden_probs)</span><br><span class="line"></span><br><span class="line">            # Update weights</span><br><span class="line">            self.weights += learning_rate * ((pos_associations - neg_associations) / num_examples)</span><br><span class="line"></span><br><span class="line">            error = np.sum((data - neg_visible_probs) ** 2)</span><br><span class="line">            if self.debug_print:</span><br><span class="line">                print(&quot;Epoch %s: error is %s&quot; % (epoch, error))</span><br><span class="line"></span><br><span class="line">    def run_visible(self, data):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Assuming the RBM has been trained (so that weights for the network have been learned),</span><br><span class="line">        run the network on a set of visible units, to get a sample of the hidden units.</span><br><span class="line"></span><br><span class="line">        Parameters</span><br><span class="line">        ----------</span><br><span class="line">        data: A matrix where each row consists of the states of the visible units.</span><br><span class="line"></span><br><span class="line">        Returns</span><br><span class="line">        -------</span><br><span class="line">        hidden_states: A matrix where each row consists of the hidden units activated from the visible</span><br><span class="line">        units in the data matrix passed in.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">        num_examples = data.shape[0]</span><br><span class="line"></span><br><span class="line">        # Create a matrix, where each row is to be the hidden units (plus a bias unit)</span><br><span class="line">        # sampled from a training example.</span><br><span class="line">        hidden_states = np.ones((num_examples, self.num_hidden + 1))</span><br><span class="line"></span><br><span class="line">        # Insert bias units of 1 into the first column of data.</span><br><span class="line">        data = np.insert(data, 0, 1, axis=1)</span><br><span class="line"></span><br><span class="line">        # Calculate the activations of the hidden units.</span><br><span class="line">        hidden_activations = np.dot(data, self.weights)</span><br><span class="line">        # Calculate the probabilities of turning the hidden units on.</span><br><span class="line">        hidden_probs = self._logistic(hidden_activations)</span><br><span class="line">        # Turn the hidden units on with their specified probabilities.</span><br><span class="line">        hidden_states[:, :] = hidden_probs &gt; np.random.rand(num_examples, self.num_hidden + 1)</span><br><span class="line">        # Always fix the bias unit to 1.</span><br><span class="line">        # hidden_states[:,0] = 1</span><br><span class="line"></span><br><span class="line">        # Ignore the bias units.</span><br><span class="line">        hidden_states = hidden_states[:, 1:]</span><br><span class="line">        return hidden_states</span><br><span class="line"></span><br><span class="line">    # TODO: Remove the code duplication between this method and `run_visible`?</span><br><span class="line">    def run_hidden(self, data):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Assuming the RBM has been trained (so that weights for the network have been learned),</span><br><span class="line">        run the network on a set of hidden units, to get a sample of the visible units.</span><br><span class="line">        Parameters</span><br><span class="line">        ----------</span><br><span class="line">        data: A matrix where each row consists of the states of the hidden units.</span><br><span class="line">        Returns</span><br><span class="line">        -------</span><br><span class="line">        visible_states: A matrix where each row consists of the visible units activated from the hidden</span><br><span class="line">        units in the data matrix passed in.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">        num_examples = data.shape[0]</span><br><span class="line"></span><br><span class="line">        # Create a matrix, where each row is to be the visible units (plus a bias unit)</span><br><span class="line">        # sampled from a training example.</span><br><span class="line">        visible_states = np.ones((num_examples, self.num_visible + 1))</span><br><span class="line"></span><br><span class="line">        # Insert bias units of 1 into the first column of data.</span><br><span class="line">        data = np.insert(data, 0, 1, axis=1)</span><br><span class="line"></span><br><span class="line">        # Calculate the activations of the visible units.</span><br><span class="line">        visible_activations = np.dot(data, self.weights.T)</span><br><span class="line">        # Calculate the probabilities of turning the visible units on.</span><br><span class="line">        visible_probs = self._logistic(visible_activations)</span><br><span class="line">        # Turn the visible units on with their specified probabilities.</span><br><span class="line">        visible_states[:, :] = visible_probs &gt; np.random.rand(num_examples, self.num_visible + 1)</span><br><span class="line">        # Always fix the bias unit to 1.</span><br><span class="line">        # visible_states[:,0] = 1</span><br><span class="line"></span><br><span class="line">        # Ignore the bias units.</span><br><span class="line">        visible_states = visible_states[:, 1:]</span><br><span class="line">        return visible_states</span><br><span class="line"></span><br><span class="line">    def daydream(self, num_samples):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Randomly initialize the visible units once, and start running alternating Gibbs sampling steps</span><br><span class="line">        (where each step consists of updating all the hidden units, and then updating all of the visible units),</span><br><span class="line">        taking a sample of the visible units at each step.</span><br><span class="line">        Note that we only initialize the network *once*, so these samples are correlated.</span><br><span class="line">        Returns</span><br><span class="line">        -------</span><br><span class="line">        samples: A matrix, where each row is a sample of the visible units produced while the network was</span><br><span class="line">        daydreaming.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">        # Create a matrix, where each row is to be a sample of of the visible units</span><br><span class="line">        # (with an extra bias unit), initialized to all ones.</span><br><span class="line">        samples = np.ones((num_samples, self.num_visible + 1))</span><br><span class="line"></span><br><span class="line">        # Take the first sample from a uniform distribution.</span><br><span class="line">        samples[0, 1:] = np.random.rand(self.num_visible)</span><br><span class="line"></span><br><span class="line">        # Start the alternating Gibbs sampling.</span><br><span class="line">        # Note that we keep the hidden units binary states, but leave the</span><br><span class="line">        # visible units as real probabilities. See section 3 of Hinton&apos;s</span><br><span class="line">        # &quot;A Practical Guide to Training Restricted Boltzmann Machines&quot;</span><br><span class="line">        # for more on why.</span><br><span class="line">        for i in range(1, num_samples):</span><br><span class="line">            visible = samples[i - 1, :]</span><br><span class="line"></span><br><span class="line">            # Calculate the activations of the hidden units.</span><br><span class="line">            hidden_activations = np.dot(visible, self.weights)</span><br><span class="line">            # Calculate the probabilities of turning the hidden units on.</span><br><span class="line">            hidden_probs = self._logistic(hidden_activations)</span><br><span class="line">            # Turn the hidden units on with their specified probabilities.</span><br><span class="line">            hidden_states = hidden_probs &gt; np.random.rand(self.num_hidden + 1)</span><br><span class="line">            # Always fix the bias unit to 1.</span><br><span class="line">            hidden_states[0] = 1</span><br><span class="line"></span><br><span class="line">            # Recalculate the probabilities that the visible units are on.</span><br><span class="line">            visible_activations = np.dot(hidden_states, self.weights.T)</span><br><span class="line">            visible_probs = self._logistic(visible_activations)</span><br><span class="line">            visible_states = visible_probs &gt; np.random.rand(self.num_visible + 1)</span><br><span class="line">            samples[i, :] = visible_states</span><br><span class="line"></span><br><span class="line">        # Ignore the bias units (the first column), since they&apos;re always set to 1.</span><br><span class="line">        return samples[:, 1:]</span><br><span class="line"></span><br><span class="line">    @staticmethod</span><br><span class="line">    def _logistic(x):</span><br><span class="line">        return 1.0 / (1 + np.exp(-x))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">import some fake datas to validate the model</span><br><span class="line">Alice: (Harry Potter = 1, Avatar = 1, LOTR 3 = 1, Gladiator = 0, Titanic = 0, Glitter = 0). Big SF/fantasy fan（科幻超级迷妹）.</span><br><span class="line">Bob: (Harry Potter = 1, Avatar = 0, LOTR 3 = 1, Gladiator = 0, Titanic = 0, Glitter = 0). SF/fantasy fan, but doesn’t like Avatar（科幻迷，但不喜欢阿凡达）.</span><br><span class="line">Carol: (Harry Potter = 1, Avatar = 1, LOTR 3 = 1, Gladiator = 0, Titanic = 0, Glitter = 0). Big SF/fantasy fan（科幻超级迷）.</span><br><span class="line">David: (Harry Potter = 0, Avatar = 0, LOTR 3 = 1, Gladiator = 1, Titanic = 1, Glitter = 0). Big Oscar winners fan（奥斯卡超级迷）.</span><br><span class="line">Eric: (Harry Potter = 0, Avatar = 0, LOTR 3 = 1, Gladiator = 1, Titanic = 0, Glitter = 0). Oscar winners fan, except for Titanic（奥斯卡迷，但不喜欢泰坦尼克号（译者注：原文此处Titanic = 1有误））.</span><br><span class="line">Fred: (Harry Potter = 0, Avatar = 0, LOTR 3 = 1, Gladiator = 1, Titanic = 1, Glitter = 0). Big Oscar winners fan（奥斯卡超级迷）.</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    r = RBM(num_visible=6, num_hidden=2)</span><br><span class="line">    # training_data = np.array(readData(&apos;datas/0-201812180801_330.txt&apos;))</span><br><span class="line">    # print(training_data.shape)</span><br><span class="line">    training_data = np.array(</span><br><span class="line">        [[1, 1, 1, 0, 0, 0],</span><br><span class="line">         [1, 0, 1, 0, 0, 0],</span><br><span class="line">         [1, 1, 1, 0, 0, 0],</span><br><span class="line">         [0, 0, 1, 1, 1, 0],</span><br><span class="line">         [0, 0, 1, 1, 0, 0],</span><br><span class="line">         [0, 0, 1, 1, 1, 0]])</span><br><span class="line">    r.train(training_data, max_epochs=5000)</span><br><span class="line">    print(r.weights)</span><br><span class="line">    user = np.array([[0, 0, 0, 1, 1, 0]])</span><br><span class="line">    print(r.run_visible(user))</span><br></pre></td></tr></table></figure>
+        <p>类是在运行期间第一次使用时动态加载的，而不是一次性加载。因为如果一次性加载，那么会占用很多的内存。 </p>
+<h3 id="一、类的声明周期"><a href="#一、类的声明周期" class="headerlink" title="一、类的声明周期"></a>一、类的声明周期</h3><p><img src="类的声明周期.jpg" alt></p>
+<p>包括以下 7 个阶段： </p>
+<ul>
+<li><strong>加载（Loading）</strong></li>
+<li><strong>验证（Verification）</strong></li>
+<li><strong>准备（Preparation）</strong></li>
+<li><strong>解析（Resolution）</strong></li>
+<li><strong>初始化（Initialization）</strong></li>
+<li>使用（Using）</li>
+<li>卸载（Unloading）</li>
+</ul>
+<h3 id="二、类加载过程"><a href="#二、类加载过程" class="headerlink" title="二、类加载过程"></a>二、类加载过程</h3><p>包含了加载、验证、准备、解析和初始化这 5 个阶段。 </p>
+<h4 id="1-加载"><a href="#1-加载" class="headerlink" title="1. 加载"></a>1. 加载</h4><p>加载是类加载的一个阶段，注意不要混淆。</p>
+<p>加载过程完成以下三件事：</p>
+<ul>
+<li>通过类的完全限定名称获取定义该类的二进制字节流。</li>
+<li>将该字节流表示的静态存储结构转换为方法区的运行时存储结构。</li>
+<li>在内存中生成一个代表该类的 Class 对象，作为方法区中该类各种数据的访问入口。</li>
+</ul>
+<p>其中二进制字节流可以从以下方式中获取：</p>
+<ul>
+<li>从 ZIP 包读取，成为 JAR、EAR、WAR 格式的基础。</li>
+<li>从网络中获取，最典型的应用是 Applet。</li>
+<li>运行时计算生成，例如动态代理技术，在 java.lang.reflect.Proxy 使用 ProxyGenerator.generateProxyClass 的代理类的二进制字节流。</li>
+<li>由其他文件生成，例如由 JSP 文件生成对应的 Class 类。</li>
+</ul>
+<h4 id="2-验证"><a href="#2-验证" class="headerlink" title="2. 验证"></a>2. 验证</h4><p>确保 Class 文件的字节流中包含的信息符合当前虚拟机的要求，并且不会危害虚拟机自身的安全。</p>
+<h4 id="3-准备"><a href="#3-准备" class="headerlink" title="3. 准备"></a>3. 准备</h4><p>类变量是被 static 修饰的变量，准备阶段为类变量分配内存并设置初始值，使用的是方法区的内存。</p>
+<p>实例变量不会在这阶段分配内存，它会在对象实例化时随着对象一起被分配在堆中。应该注意到，实例化不是类加载的一个过程，类加载发生在所有实例化操作之前，并且类加载只进行一次，实例化可以进行多次。</p>
+<p>初始值一般为 0 值，例如下面的类变量 value 被初始化为 0 而不是 123。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> value = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>
+<p>如果类变量是常量，那么它将初始化为表达式所定义的值而不是 0。例如下面的常量 value 被初始化为 123 而不是 0。 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> value = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="4-解析"><a href="#4-解析" class="headerlink" title="4. 解析"></a>4. 解析</h4><p>将常量池的符号引用替换为直接引用的过程。</p>
+<p>其中解析过程在某些情况下可以在初始化阶段之后再开始，这是为了支持 Java 的动态绑定。</p>
+<h4 id="5-初始化"><a href="#5-初始化" class="headerlink" title="5. 初始化"></a>5. 初始化</h4><p>初始化阶段才真正开始执行类中定义的 Java 程序代码。初始化阶段是虚拟机执行类构造器 <clinit>() 方法的过程。在准备阶段，类变量已经赋过一次系统要求的初始值，而在初始化阶段，根据程序员通过程序制定的主观计划去初始化类变量和其它资源。</clinit></p>
+<p>在准备阶段，已经为类变量分配了系统所需的初始值，并且在初始化阶段，根据程序员通过程序进行的主观计划来初始化类变量和其他资源。</p>
+<p><clinit>() 是由编译器自动收集类中所有类变量的赋值动作和静态语句块中的语句合并产生的，编译器收集的顺序由语句在源文件中出现的顺序决定。特别注意的是，静态语句块只能访问到定义在它之前的类变量，定义在它之后的类变量只能赋值，不能访问。例如以下代码：</clinit></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        i = <span class="number">0</span>;                <span class="comment">// 给变量赋值可以正常编译通过</span></span><br><span class="line">        System.out.print(i);  <span class="comment">// 这句编译器会提示“非法向前引用”</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>由于父类的 <clinit>() 方法先执行，也就意味着父类中定义的静态语句块的执行要优先于子类。例如以下代码： </clinit></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Parent</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> A = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        A = <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Sub</span> <span class="keyword">extends</span> <span class="title">Parent</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> B = A;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">     System.out.println(Sub.B);  <span class="comment">// 2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接口中不可以使用静态语句块，但仍然有类变量初始化的赋值操作，因此接口与类一样都会生成 <clinit>() 方法。但接口与类不同的是，执行接口的 <clinit>() 方法不需要先执行父接口的 <clinit>() 方法。只有当父接口中定义的变量使用时，父接口才会初始化。另外，接口的实现类在初始化时也一样不会执行接口的 <clinit>() 方法。</clinit></clinit></clinit></clinit></p>
+<p>虚拟机会保证一个类的 <clinit>() 方法在多线程环境下被正确的加锁和同步，如果多个线程同时初始化一个类，只会有一个线程执行这个类的 <clinit>() 方法，其它线程都会阻塞等待，直到活动线程执行 <clinit>() 方法完毕。如果在一个类的 <clinit>() 方法中有耗时的操作，就可能造成多个线程阻塞，在实际过程中此种阻塞很隐蔽。</clinit></clinit></clinit></clinit></p>
+<h3 id="三、类初始化时机"><a href="#三、类初始化时机" class="headerlink" title="三、类初始化时机"></a>三、类初始化时机</h3><h4 id="1-主动引用"><a href="#1-主动引用" class="headerlink" title="1.主动引用"></a>1.主动引用</h4><p>虚拟机规范中并没有强制约束何时进行加载，但是规范严格规定了有且只有下列五种情况必须对类进行初始化（加载、验证、准备都会随之发生）：</p>
+<ul>
+<li>遇到 new、getstatic、putstatic、invokestatic 这四条字节码指令时，如果类没有进行过初始化，则必须先触发其初始化。最常见的生成这 4 条指令的场景是：使用 new 关键字实例化对象的时候；读取或设置一个类的静态字段（被 final 修饰、已在编译期把结果放入常量池的静态字段除外）的时候；以及调用一个类的静态方法的时候。</li>
+<li>使用 java.lang.reflect 包的方法对类进行反射调用的时候，如果类没有进行初始化，则需要先触发其初始化。</li>
+<li>当初始化一个类的时候，如果发现其父类还没有进行过初始化，则需要先触发其父类的初始化。</li>
+<li>当虚拟机启动时，用户需要指定一个要执行的主类（包含 main() 方法的那个类），虚拟机会先初始化这个主类；</li>
+<li>当使用 JDK 1.7 的动态语言支持时，如果一个 java.lang.invoke.MethodHandle 实例最后的解析结果为 REF_getStatic, REF_putStatic, REF_invokeStatic 的方法句柄，并且这个方法句柄所对应的类没有进行过初始化，则需要先触发其初始化；</li>
+</ul>
+<h4 id="2-被动引用"><a href="#2-被动引用" class="headerlink" title="2.被动引用"></a>2.被动引用</h4><p>以上 5 种场景中的行为称为对一个类进行主动引用。除此之外，所有引用类的方式都不会触发初始化，称为被动引用。被动引用的常见例子包括：</p>
+<ul>
+<li>通过子类引用父类的静态字段，不会导致子类初始化。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(SubClass.value);  <span class="comment">// value 字段在 SuperClass 中定义</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>通过数组定义来引用类，不会触发此类的初始化。该过程会对数组类进行初始化，数组类是一个由虚拟机自动生成的、直接继承自 Object 的子类，其中包含了数组的属性和方法。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SuperClass[] sca = <span class="keyword">new</span> SuperClass[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>常量在编译阶段会存入调用类的常量池中，本质上并没有直接引用到定义常量的类，因此不会触发定义常量的类的初始化。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(ConstClass.HELLOWORLD);</span><br></pre></td></tr></table></figure>
+<h3 id="四、类与类加载器"><a href="#四、类与类加载器" class="headerlink" title="四、类与类加载器"></a>四、类与类加载器</h3><p>两个类相等，需要类本身相等，并且使用同一个类加载器进行加载。这是因为每一个类加载器都拥有一个独立的类名称空间。</p>
+<p>这里的相等，包括类的 Class 对象的 equals() 方法、isAssignableFrom() 方法、isInstance() 方法的返回结果为 true，也包括使用 instanceof 关键字做对象所属关系判定结果为 true。</p>
+<h3 id="五、类加载分类"><a href="#五、类加载分类" class="headerlink" title="五、类加载分类"></a>五、类加载分类</h3><p>从 Java 虚拟机的角度来讲，只存在以下两种不同的类加载器：</p>
+<ul>
+<li>启动类加载器（Bootstrap ClassLoader），使用 C++ 实现，是虚拟机自身的一部分；</li>
+<li>所有其它类的加载器，使用 Java 实现，独立于虚拟机，继承自抽象类 java.lang.ClassLoader。</li>
+</ul>
+<p>从 Java 开发人员的角度看，类加载器可以划分得更细致一些：</p>
+<ul>
+<li>启动类加载器（Bootstrap ClassLoader）此类加载器负责将存放在 &lt;JRE_HOME&gt;\lib 目录中的，或者被 -Xbootclasspath 参数所指定的路径中的，并且是虚拟机识别的（仅按照文件名识别，如 rt.jar，名字不符合的类库即使放在 lib 目录中也不会被加载）类库加载到虚拟机内存中。启动类加载器无法被 Java 程序直接引用，用户在编写自定义类加载器时，如果需要把加载请求委派给启动类加载器，直接使用 null 代替即可。</li>
+<li>扩展类加载器（Extension ClassLoader）这个类加载器是由 ExtClassLoader（sun.misc.Launcher$ExtClassLoader）实现的。它负责将 &lt;JAVA_HOME&gt;/lib/ext 或者被 java.ext.dir 系统变量所指定路径中的所有类库加载到内存中，开发者可以直接使用扩展类加载器。</li>
+<li>应用程序类加载器（Application ClassLoader）这个类加载器是由 AppClassLoader（sun.misc.Launcher$AppClassLoader）实现的。由于这个类加载器是 ClassLoader 中的 getSystemClassLoader() 方法的返回值，因此一般称为系统类加载器。它负责加载用户类路径（ClassPath）上所指定的类库，开发者可以直接使用这个类加载器，如果应用程序中没有自定义过自己的类加载器，一般情况下这个就是程序中默认的类加载器。</li>
+</ul>
+<h3 id="六、双亲委派模型"><a href="#六、双亲委派模型" class="headerlink" title="六、双亲委派模型"></a>六、双亲委派模型</h3><p>应用程序是由三种类加载器互相配合从而实现类加载，除此之外还可以加入自己定义的类加载器。</p>
+<p>下图展示了类加载器之间的层次关系，称为双亲委派模型（Parents Delegation Model）。该模型要求除了顶层的启动类加载器外，其它的类加载器都要有自己的父类加载器。类加载器之间的父子关系一般通过组合关系（Composition）来实现，而不是继承关系（Inheritance）。</p>
+<p><img src="双亲委派.png" alt></p>
+<h4 id="1-工作过程"><a href="#1-工作过程" class="headerlink" title="1. 工作过程"></a>1. 工作过程</h4><p>一个类加载器首先将类加载请求转发到父类加载器，只有当父类加载器无法完成时才尝试自己加载。</p>
+<h4 id="2-好处"><a href="#2-好处" class="headerlink" title="2. 好处"></a>2. 好处</h4><p>使得 Java 类随着它的类加载器一起具有一种带有优先级的层次关系，从而使得基础类得到统一。</p>
+<p>例如 java.lang.Object 存放在 rt.jar 中，如果编写另外一个 java.lang.Object 并放到 ClassPath 中，程序可以编译通过。由于双亲委派模型的存在，所以在 rt.jar 中的 Object 比在 ClassPath 中的 Object 优先级更高，这是因为 rt.jar 中的 Object 使用的是启动类加载器，而 ClassPath 中的 Object 使用的是应用程序类加载器。rt.jar 中的 Object 优先级更高，那么程序中所有的 Object 都是这个 Object。</p>
+<h4 id="3-实现"><a href="#3-实现" class="headerlink" title="3. 实现"></a>3. 实现</h4><p>以下是抽象类 java.lang.ClassLoader 的代码片段，其中的 loadClass() 方法运行过程如下：先检查类是否已经加载过，如果没有则让父类加载器去加载。当父类加载器加载失败时抛出 ClassNotFoundException，此时尝试自己去加载。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassLoader</span> </span>&#123;</span><br><span class="line">    <span class="comment">// The parent class loader for delegation</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> ClassLoader parent;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Class&lt;?&gt; loadClass(String name) <span class="keyword">throws</span> ClassNotFoundException &#123;</span><br><span class="line">        <span class="keyword">return</span> loadClass(name, <span class="keyword">false</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">protected</span> Class&lt;?&gt; loadClass(String name, <span class="keyword">boolean</span> resolve) <span class="keyword">throws</span> ClassNotFoundException &#123;</span><br><span class="line">        <span class="keyword">synchronized</span> (getClassLoadingLock(name)) &#123;</span><br><span class="line">            <span class="comment">// First, check if the class has already been loaded</span></span><br><span class="line">            Class&lt;?&gt; c = findLoadedClass(name);</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    <span class="keyword">if</span> (parent != <span class="keyword">null</span>) &#123;</span><br><span class="line">                        c = parent.loadClass(name, <span class="keyword">false</span>);</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        c = findBootstrapClassOrNull(name);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">                    <span class="comment">// ClassNotFoundException thrown if class not found</span></span><br><span class="line">                    <span class="comment">// from the non-null parent class loader</span></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (c == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    <span class="comment">// If still not found, then invoke findClass in order</span></span><br><span class="line">                    <span class="comment">// to find the class.</span></span><br><span class="line">                    c = findClass(name);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (resolve) &#123;</span><br><span class="line">                resolveClass(c);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> c;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">protected</span> Class&lt;?&gt; findClass(String name) <span class="keyword">throws</span> ClassNotFoundException &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> ClassNotFoundException(name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="七、自定义类加载器的实现"><a href="#七、自定义类加载器的实现" class="headerlink" title="七、自定义类加载器的实现"></a>七、自定义类加载器的实现</h3><p>FileSystemClassLoader 是自定义类加载器，继承自 java.lang.ClassLoader，用于加载文件系统上的类。它首先根据类的全名在文件系统上查找类的字节代码文件（.class 文件），然后读取该文件内容，最后通过 defineClass() 方法来把这些字节代码转换成 java.lang.Class 类的实例。</p>
+<p>java.lang.ClassLoader 的 loadClass() 实现了双亲委派模型的逻辑，自定义类加载器一般不去重写它，但是需要重写 findClass() 方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileSystemClassLoader</span> <span class="keyword">extends</span> <span class="title">ClassLoader</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String rootDir;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FileSystemClassLoader</span><span class="params">(String rootDir)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.rootDir = rootDir;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">protected</span> Class&lt;?&gt; findClass(String name) <span class="keyword">throws</span> ClassNotFoundException &#123;</span><br><span class="line">        <span class="keyword">byte</span>[] classData = getClassData(name);</span><br><span class="line">        <span class="keyword">if</span> (classData == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ClassNotFoundException();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> defineClass(name, classData, <span class="number">0</span>, classData.length);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">byte</span>[] getClassData(String className) &#123;</span><br><span class="line">        String path = classNameToPath(className);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            InputStream ins = <span class="keyword">new</span> FileInputStream(path);</span><br><span class="line">            ByteArrayOutputStream baos = <span class="keyword">new</span> ByteArrayOutputStream();</span><br><span class="line">            <span class="keyword">int</span> bufferSize = <span class="number">4096</span>;</span><br><span class="line">            <span class="keyword">byte</span>[] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[bufferSize];</span><br><span class="line">            <span class="keyword">int</span> bytesNumRead;</span><br><span class="line">            <span class="keyword">while</span> ((bytesNumRead = ins.read(buffer)) != -<span class="number">1</span>) &#123;</span><br><span class="line">                baos.write(buffer, <span class="number">0</span>, bytesNumRead);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> baos.toByteArray();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> String <span class="title">classNameToPath</span><span class="params">(String className)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> rootDir + File.separatorChar</span><br><span class="line">                + className.replace(<span class="string">'.'</span>, File.separatorChar) + <span class="string">".class"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li>周志明. 深入理解 Java 虚拟机 [M]. 机械工业出版社, 2011.</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm9yYWNsZS5jb20vamF2YXNlL3NwZWNzL2p2bXMvc2U4L2h0bWwvanZtcy0yLmh0bWwjanZtcy0yLjUuNA==" title="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.5.4">Chapter 2. The Structure of the Java Virtual Machine<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuc2xpZGVzaGFyZS5uZXQvYmVuZXd1L2p2bS1tZW1vcnk=" title="https://www.slideshare.net/benewu/jvm-memory">Jvm memory<i class="fa fa-external-link"></i></span> <span class="exturl" data-url="aHR0cDovL3d3dy5vcmFjbGUuY29tL3dlYmZvbGRlci90ZWNobmV0d29yay90dXRvcmlhbHMvb2JlL2phdmEvRzFHZXR0aW5nU3RhcnRlZC9pbmRleC5odG1s" title="http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/G1GettingStarted/index.html">Getting Started with the G1 Garbage Collector<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL2VsZWN0cm9mcmllbmRzLmNvbS9hcnRpY2xlcy9qbmkvam5pLXBhcnQxLWphdmEtbmF0aXZlLWludGVyZmFjZS8=" title="http://electrofriends.com/articles/jni/jni-part1-java-native-interface/">JNI Part1: Java Native Interface Introduction and “Hello World” application<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9oYWNrdGhlamF2YS53b3JkcHJlc3MuY29tLzIwMTUvMDEvMDkvbWVtb3J5LWFyY2hpdGVjdHVyZS1ieS1qdm1ydW50aW1lLWRhdGEtYXJlYXMv" title="https://hackthejava.wordpress.com/2015/01/09/memory-architecture-by-jvmruntime-data-areas/">Memory Architecture Of JVM(Runtime Data Areas)<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cucHJvZ3JhbWNyZWVrLmNvbS8yMDEzLzA0L2p2bS1ydW4tdGltZS1kYXRhLWFyZWFzLw==" title="https://www.programcreek.com/2013/04/jvm-run-time-data-areas/">JVM Run-Time Data Areas<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL3d3dy5kcmRvYmJzLmNvbS9hcmNoaXRlY3R1cmUtYW5kLWRlc2lnbi9hbmRyb2lkLW9uLXg4Ni1qYXZhLW5hdGl2ZS1pbnRlcmZhY2UtYW5kLzI0MDE2NjI3MQ==" title="http://www.drdobbs.com/architecture-and-design/android-on-x86-java-native-interface-and/240166271">Android on x86: Java Native Interface and the Android Native Development Kit<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9jcm93aGF3ay5naXRodWIuaW8vMjAxNy8wOC8xMC9qdm1fMi8=" title="https://crowhawk.github.io/2017/08/10/jvm_2/">深入理解 JVM(2)——GC 算法与内存分配策略<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9jcm93aGF3ay5naXRodWIuaW8vMjAxNy8wOC8xNS9qdm1fMy8=" title="https://crowhawk.github.io/2017/08/15/jvm_3/">深入理解 JVM(3)——7 种垃圾收集器<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL2Jsb2cuamFtZXNkYmxvb20uY29tL0pWTUludGVybmFscy5odG1s" title="http://blog.jamesdbloom.com/JVMInternals.html">JVM Internals<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuaWJtLmNvbS9kZXZlbG9wZXJ3b3Jrcy9jbi9qYXZhL2otbG8tY2xhc3Nsb2FkZXIvaW5kZXguaHRtbCNjb2RlNg==" title="https://www.ibm.com/developerworks/cn/java/j-lo-classloader/index.html#code6">深入探讨 Java 类加载器<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL3d3dy5iYWVsZHVuZy5jb20vamF2YS13ZWFraGFzaG1hcA==" title="http://www.baeldung.com/java-weakhashmap">Guide to WeakHashMap in Java<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9hbHZpbmFsZXhhbmRlci5jb20vamF2YS9qd2FyZWhvdXNlL2FwYWNoZS10b21jYXQtNi4wLjE2L2phdmEvb3JnL2FwYWNoZS9lbC91dGlsL0NvbmN1cnJlbnRDYWNoZS5qYXZhLnNodG1s" title="https://alvinalexander.com/java/jwarehouse/apache-tomcat-6.0.16/java/org/apache/el/util/ConcurrentCache.java.shtml">Tomcat example source code file (ConcurrentCache.java)<i class="fa fa-external-link"></i></span></li>
+</ul>
 
       
     </div>
@@ -666,7 +718,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
+  <div>谢谢您给我糖果</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>打赏</span>
   </button>
@@ -708,13 +760,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/深度学习/" rel="tag"><i class="fa fa-tag"></i> 深度学习</a>
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
-            <a href="/tags/RBM/" rel="tag"><i class="fa fa-tag"></i> RBM</a>
-          
-            <a href="/tags/受限玻尔兹曼机/" rel="tag"><i class="fa fa-tag"></i> 受限玻尔兹曼机</a>
-          
-            <a href="/tags/概率图模型/" rel="tag"><i class="fa fa-tag"></i> 概率图模型</a>
+            <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
           
         </div>
       
@@ -747,8 +795,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java中的容器/" rel="next" title="Java中的容器">
-                <i class="fa fa-chevron-left"></i> Java中的容器
+              <a href="/：深入理解JVM虚拟机（二）：垃圾收集/" rel="next" title="深入理解JVM虚拟机（二）：垃圾收集、内存分配与回收策略">
+                <i class="fa fa-chevron-left"></i> 深入理解JVM虚拟机（二）：垃圾收集、内存分配与回收策略
               </a>
             
           </div>
@@ -756,10 +804,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Java中的双重检查锁/" rel="prev" title="Java中的双重检查锁">
-                Java中的双重检查锁 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1016,7 +1060,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是受限玻尔兹曼机？"><span class="nav-number">1.</span> <span class="nav-text">什么是受限玻尔兹曼机？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RBM的损失函数"><span class="nav-number">2.</span> <span class="nav-text">RBM的损失函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对比散度算法（CD-k算法）"><span class="nav-number">2.1.</span> <span class="nav-text">对比散度算法（CD-k算法）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深度受限玻尔兹曼机-DBM"><span class="nav-number">3.</span> <span class="nav-text">深度受限玻尔兹曼机(DBM)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、类的声明周期"><span class="nav-number">1.</span> <span class="nav-text">一、类的声明周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、类加载过程"><span class="nav-number">2.</span> <span class="nav-text">二、类加载过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-加载"><span class="nav-number">2.1.</span> <span class="nav-text">1. 加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-验证"><span class="nav-number">2.2.</span> <span class="nav-text">2. 验证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-准备"><span class="nav-number">2.3.</span> <span class="nav-text">3. 准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-解析"><span class="nav-number">2.4.</span> <span class="nav-text">4. 解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-初始化"><span class="nav-number">2.5.</span> <span class="nav-text">5. 初始化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、类初始化时机"><span class="nav-number">3.</span> <span class="nav-text">三、类初始化时机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-主动引用"><span class="nav-number">3.1.</span> <span class="nav-text">1.主动引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-被动引用"><span class="nav-number">3.2.</span> <span class="nav-text">2.被动引用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、类与类加载器"><span class="nav-number">4.</span> <span class="nav-text">四、类与类加载器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、类加载分类"><span class="nav-number">5.</span> <span class="nav-text">五、类加载分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、双亲委派模型"><span class="nav-number">6.</span> <span class="nav-text">六、双亲委派模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-工作过程"><span class="nav-number">6.1.</span> <span class="nav-text">1. 工作过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-好处"><span class="nav-number">6.2.</span> <span class="nav-text">2. 好处</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-实现"><span class="nav-number">6.3.</span> <span class="nav-text">3. 实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七、自定义类加载器的实现"><span class="nav-number">7.</span> <span class="nav-text">七、自定义类加载器的实现</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number"></span> <span class="nav-text">参考资料</span></a></li></div>
             
 
           </div>
@@ -1043,15 +1087,6 @@
   </span>
   <span class="author" itemprop="copyrightHolder">码农翻身</span>
 
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">post.totalcount&#58;</span>
-    
-    <span title="post.totalcount">21.9k</span>
   
 </div>
 
@@ -1272,7 +1307,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "search.xml";
+    var search_path = "";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
