@@ -158,7 +158,7 @@
 <meta property="og:image" content="http://yoursite.com/：Redis学习笔记/18.png">
 <meta property="og:image" content="http://yoursite.com/：Redis学习笔记/19.png">
 <meta property="og:image" content="http://yoursite.com/：Redis学习笔记/20.png">
-<meta property="og:updated_time" content="2019-03-10T10:44:45.418Z">
+<meta property="og:updated_time" content="2019-03-10T10:46:55.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis学习笔记">
 <meta name="twitter:description" content="一、NoSQL1.为什么用NoSQL? 单机MySQL的美好年代 Memcached（缓存）+MySQL+垂直拆分 MySQL主从读写分离 分表分库+水平拆分+MySQL集群 MySQL的扩展性瓶颈     ​          在memcached的高速缓存,MySQL的主从复制，读写分离的基础上，这时MySQL主库的写压力开始出现瓶颈，而数据量的持续猛增，由于MyISAM使用表锁，在高并发下会">
@@ -533,7 +533,7 @@
                 
               
 
-              <time title="创建时间：2019-03-10 17:42:09 / 修改时间：18:44:45" itemprop="dateCreated datePublished" datetime="2019-03-10T17:42:09+08:00">2019-03-10</time>
+              <time title="创建时间：2019-03-10 17:42:09 / 修改时间：18:46:55" itemprop="dateCreated datePublished" datetime="2019-03-10T17:42:09+08:00">2019-03-10</time>
             
 
             
@@ -833,8 +833,8 @@
 <li>Redis自带的PUB/SUB机制，即发布-订阅模式。这种模式生产者(producer)和消费者(consumer)是1-M的关系，即一条消息会被多个消费者消费，当只有一个消费者时即可以看做一个1-1的消息队列，但这种方式并不适合题主的场景。首先，数据可靠性的无法保障，题主的数据最终需要落库，如果消息丢失、Redis宕机部分数据没有持久化甚至突然的网络抖动都可能带来数据的丢失，应该是无法忍受的。其次，扩展不灵活，没法通过多加consumer来加快消费的进度，如果前端写入数据太多，同步会比较慢，数据不同步的状态越久，风险越大，可以通过channel拆分的方式来解决，虽然不灵活，但可以规避。这种方案更适合于对数据可靠性要求不高，比如一些统计日志打点。    </li>
 <li>Redis的PUSH/POP机制，利用的Redis的列表(lists)数据结构。比较好的使用模式是，生产者lpush消息，消费者brpop消息，并设定超时时间，可以减少redis的压力。这种方案相对于第一种方案是数据可靠性提高了，只有在Redis宕机且数据没有持久化的情况下丢失数据，可以根据业务通过AOF和缩短持久化间隔来保证很高的可靠性，而且也可以通过多个client来提高消费速度。但相对于专业的消息队列来说，该方案消息的状态过于简单(没有状态)，且没有ack机制，消息取出后消费失败依赖于client记录日志或者重新push到队列里面。 </li>
 </ul>
-<h3 id="10-Redis的主从复制"><a href="#10-Redis的主从复制" class="headerlink" title="10.Redis的主从复制"></a>10.Redis的主从复制</h3><pre><code>主机数据更新后根据配置和策略，自动同步到备机的master/slaver机制，Master以写为主，Slave以读为主    
-</code></pre><p>主要是读写分离（主库可以写/读，从库只能读不能写）、容灾恢复 </p>
+<h3 id="10-Redis的主从复制"><a href="#10-Redis的主从复制" class="headerlink" title="10.Redis的主从复制"></a>10.Redis的主从复制</h3><p>主机数据更新后根据配置和策略，自动同步到备机的master/slaver机制，Master以写为主，Slave以读为主</p>
+<p>主要是读写分离（主库可以写/读，从库只能读不能写）、容灾恢复 </p>
 <h4 id="怎么玩"><a href="#怎么玩" class="headerlink" title="怎么玩"></a>怎么玩</h4><p>1.配从（库）不配主（库）</p>
 <p>2.从库配置：slaveof 主库ip 主库端口        </p>
 <p>(1) 每次与master断开之后，都需要重新连接，除非你配置进redis.conf文件        </p>
