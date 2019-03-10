@@ -130,42 +130,25 @@
   </script>
 
 
-  <meta name="description" content="什么是受限玻尔兹曼机？​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进">
-<meta name="keywords" content="深度学习,RBM,受限玻尔兹曼机,概率图模型">
+  <meta name="description" content="Java中常见的锁分类​    在Java高并发中，锁是一个很重要的概念，以下有很多锁的名词，当然这些分类并不是全是指锁的状态，有的是指锁的特性，有的是指锁的设计，下面总结每种锁都有一些什么特点。  公平锁/非公平锁 可重入锁 独享锁/共享锁 互斥锁/读写锁 乐观锁/悲观锁 分段锁 偏向锁/轻量级锁/重量级锁 自旋锁    ##公平锁/非公平锁 ​        公平锁是指多个线程按照申请锁的顺序">
+<meta name="keywords" content="Java,Java高并发,Java锁">
 <meta property="og:type" content="article">
-<meta property="og:title" content="深度学习模型之受限玻尔兹曼机(RBM)">
-<meta property="og:url" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/index.html">
+<meta property="og:title" content="Java中的锁分类">
+<meta property="og:url" content="http://yoursite.com/Java中的锁分类/index.html">
 <meta property="og:site_name" content="Zuo&#39;s Blog makes better life and coding">
-<meta property="og:description" content="什么是受限玻尔兹曼机？​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进">
+<meta property="og:description" content="Java中常见的锁分类​    在Java高并发中，锁是一个很重要的概念，以下有很多锁的名词，当然这些分类并不是全是指锁的状态，有的是指锁的特性，有的是指锁的设计，下面总结每种锁都有一些什么特点。  公平锁/非公平锁 可重入锁 独享锁/共享锁 互斥锁/读写锁 乐观锁/悲观锁 分段锁 偏向锁/轻量级锁/重量级锁 自旋锁    ##公平锁/非公平锁 ​        公平锁是指多个线程按照申请锁的顺序">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm1.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm2.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm3.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm4.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm5.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm6.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm7.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm8.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm9.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm10.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm11.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm12.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm13.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm14.png">
-<meta property="og:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm15.png">
-<meta property="og:updated_time" content="2019-03-05T08:59:35.667Z">
+<meta property="og:updated_time" content="2019-03-05T07:27:56.638Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="深度学习模型之受限玻尔兹曼机(RBM)">
-<meta name="twitter:description" content="什么是受限玻尔兹曼机？​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进">
-<meta name="twitter:image" content="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/rbm.png">
+<meta name="twitter:title" content="Java中的锁分类">
+<meta name="twitter:description" content="Java中常见的锁分类​    在Java高并发中，锁是一个很重要的概念，以下有很多锁的名词，当然这些分类并不是全是指锁的状态，有的是指锁的特性，有的是指锁的设计，下面总结每种锁都有一些什么特点。  公平锁/非公平锁 可重入锁 独享锁/共享锁 互斥锁/读写锁 乐观锁/悲观锁 分段锁 偏向锁/轻量级锁/重量级锁 自旋锁    ##公平锁/非公平锁 ​        公平锁是指多个线程按照申请锁的顺序">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/">
+  <link rel="canonical" href="http://yoursite.com/Java中的锁分类/">
 
 
 
@@ -175,7 +158,7 @@
   };
 </script>
 
-  <title>深度学习模型之受限玻尔兹曼机(RBM) | Zuo's Blog makes better life and coding</title>
+  <title>Java中的锁分类 | Zuo's Blog makes better life and coding</title>
   
 
 
@@ -486,7 +469,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/：深度学习模型之受限玻尔兹曼机-RBM/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Java中的锁分类/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="码农翻身">
@@ -503,7 +486,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">深度学习模型之受限玻尔兹曼机(RBM)
+          <h2 class="post-title" itemprop="name headline">Java中的锁分类
 
               
             
@@ -529,7 +512,7 @@
                 
               
 
-              <time title="创建时间：2019-03-05 16:32:50 / 修改时间：16:59:35" itemprop="dateCreated datePublished" datetime="2019-03-05T16:32:50+08:00">2019-03-05</time>
+              <time title="创建时间：2019-03-05 14:53:11 / 修改时间：15:27:56" itemprop="dateCreated datePublished" datetime="2019-03-05T14:53:11+08:00">2019-03-05</time>
             
 
             
@@ -551,7 +534,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/深度学习/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
                 
                 
@@ -570,8 +553,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/：深度学习模型之受限玻尔兹曼机-RBM/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/：深度学习模型之受限玻尔兹曼机-RBM/" itemprop="commentCount"></span>
+                <a href="/Java中的锁分类/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Java中的锁分类/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -606,44 +589,32 @@
       
 
       
-        <h3 id="什么是受限玻尔兹曼机？"><a href="#什么是受限玻尔兹曼机？" class="headerlink" title="什么是受限玻尔兹曼机？"></a>什么是受限玻尔兹曼机？</h3><p>​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进行流动，而且两个方向上的权值是相同的，但是偏置是不同的（偏置的个数与神经元的个数相同），其结构如图所示。</p>
-<p>​     <img src="rbm.png" alt></p>
-<p>​         我们可以看到上面一层神经元组成Hidden Layer，一般用h表示隐藏层神经元的值。下面一层神经元组成visiable layer，一般用v表示可见层神经元的值。连接权值我们用矩阵W表示，和DNN不同的是，RBM是不区分前向和后向的，可见层的状态可以作用于隐藏层，而隐藏层的状态可以作用于可见层。隐藏层的偏置系数是向量b，可见层的偏置系数是向量a。常见的RBM一般是二值的，即不管是隐藏层还是可见层，它们的神经元的取值是0或者1.</p>
-<p> <strong>RBM模型的结构：权重矩阵W，偏置系数a、b，隐藏神经元状态向量h和可见层神经元状态向量v</strong> </p>
+        <h1 id="Java中常见的锁分类"><a href="#Java中常见的锁分类" class="headerlink" title="Java中常见的锁分类"></a>Java中常见的锁分类</h1><p>​    在Java高并发中，锁是一个很重要的概念，以下有很多锁的名词，当然这些分类并不是全是指锁的状态，有的是指锁的特性，有的是指锁的设计，下面总结每种锁都有一些什么特点。</p>
+<ul>
+<li>公平锁/非公平锁</li>
+<li>可重入锁</li>
+<li>独享锁/共享锁</li>
+<li>互斥锁/读写锁</li>
+<li>乐观锁/悲观锁</li>
+<li>分段锁</li>
+<li>偏向锁/轻量级锁/重量级锁</li>
+<li>自旋锁 </li>
+</ul>
 <hr>
-<p>​    如RBM这类由玻尔兹曼机发展而来的图模型都是基于能量的概率分布模型，分为两个部分：一部分是<strong>能量函数</strong>，第二部分是基于能量函数的<strong>概率分布函数</strong>。对于给定的状态向量h和v，则RBM当前的能量函数可以表示为如下</p>
-<p><img src="rbm1.png" alt></p>
-<p>其中a和b是偏置系数，W是权值矩阵，有了能量函数，v和h的联合概率分布为： </p>
-<p><img src="rbm2.png" alt></p>
-<p>其中Z被称为配分函数的归一化常数（对于概率输出一般要做归一化）： </p>
-<p><img src="rbm3.png" alt></p>
-<p>由于配分函数Z的难以处理，所以必须使用最大似然梯度来近似，首先从联合分布中导出条件分布： </p>
-<p><img src="rbm4.png" alt></p>
-<p>为了推导方便将无关值归于Z’中 </p>
-<p><img src="rbm5.png" alt></p>
-<p>可以看到就是相当于使用了sigmoid函数，现在可以写出关于隐藏层的完全分布条件： </p>
-<p><img src="rbm6.png" alt></p>
-<p>有了激活函数，我们就可以从可见层和参数推导出隐藏层的神经元取值概率了，对于0，1取值的情况，则大于0.5取1，从隐藏层和参数导出可见的神经元的取值方法也是一样的。 </p>
-<h3 id="RBM的损失函数"><a href="#RBM的损失函数" class="headerlink" title="RBM的损失函数"></a>RBM的损失函数</h3><p>​    RBM模型的关键就是求出我们模型中的参数W、a、b，首先我们得写出损失函数，RBM一般使用的是对数损失函数，即期望最小化： </p>
-<p><img src="rbm7.png" alt></p>
-<p>然后对其求偏导： </p>
-<p><img src="rbm8.png" alt></p>
-<p>虽然说梯度下降从理论上来说可以优化RBM模型，到那时实际中很难求得P(v)的概率分布的（P(v)表示可见层节点的联合概率）。计算复杂度非常大，因此采用一些随机采样的方法来得到近似的解。看这三个梯度的第二项实际上都是求期望，而我们知道，样本的均值是随机变量期望的无偏估计。因此一般都是基于对比散度方法来求解。 </p>
-<h4 id="对比散度算法（CD-k算法）"><a href="#对比散度算法（CD-k算法）" class="headerlink" title="对比散度算法（CD-k算法）"></a>对比散度算法（CD-k算法）</h4><p><img src="rbm9.png" alt></p>
-<p><img src="rbm10.png" alt></p>
-<p><img src="rbm11.png" alt></p>
-<hr>
-<h3 id="深度受限玻尔兹曼机-DBM"><a href="#深度受限玻尔兹曼机-DBM" class="headerlink" title="深度受限玻尔兹曼机(DBM)"></a>深度受限玻尔兹曼机(DBM)</h3><p>加深RBM的层数后，就变成了DBM：结构图如下： </p>
-<p><img src="rbm12.png" alt></p>
-<p>此时的能量函数变为： </p>
-<p><img src="rbm13.png" alt></p>
-<p>联合概率变为： </p>
-<p><img src="rbm14.png" alt></p>
-<p>其实DBM也可以看作是一个RBM，对上图稍加变换就可以看作是一个RBM： </p>
-<p><img src="rbm15.png" alt></p>
-<p>将可见层和偶数隐藏层放在一边，将奇数隐藏层放在另一边，我们就得到了RBM，和RBM的细微区别只是现在的RBM并不是全连接的，其实也可以看做部分权重为0的全连接RBM。RBM的算法思想可以在DBM上使用。只是此时我们的模型参数更加的多，而且迭代求解参数也更加复杂了。 </p>
-<p>以下是Hinton教授给出的RBM经典二值化的代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br></pre></td><td class="code"><pre><span class="line">from __future__ import print_function</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class RBM:</span><br><span class="line"></span><br><span class="line">    def __init__(self, num_visible, num_hidden):</span><br><span class="line">        self.num_hidden = num_hidden</span><br><span class="line">        self.num_visible = num_visible</span><br><span class="line">        self.debug_print = True</span><br><span class="line"></span><br><span class="line">        # Initialize a weight matrix, of dimensions (num_visible x num_hidden), using</span><br><span class="line">        # a uniform distribution between -sqrt(6. / (num_hidden + num_visible))</span><br><span class="line">        # and sqrt(6. / (num_hidden + num_visible)). One could vary the</span><br><span class="line">        # standard deviation by multiplying the interval with appropriate value.</span><br><span class="line">        # Here we initialize the weights with mean 0 and standard deviation 0.1.</span><br><span class="line">        np_rng = np.random.RandomState(1234)</span><br><span class="line"></span><br><span class="line">        self.weights = np.asarray(np_rng.uniform(</span><br><span class="line">            low=-0.1 * np.sqrt(6. / (num_hidden + num_visible)),</span><br><span class="line">            high=0.1 * np.sqrt(6. / (num_hidden + num_visible)),</span><br><span class="line">            size=(num_visible, num_hidden)))</span><br><span class="line"></span><br><span class="line">        # Insert weights for the bias units into the first row and first column.</span><br><span class="line">        self.weights = np.insert(self.weights, 0, 0, axis=0)</span><br><span class="line">        self.weights = np.insert(self.weights, 0, 0, axis=1)</span><br><span class="line"></span><br><span class="line">    def train(self, data, max_epochs=1000, learning_rate=0.1):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Train the machine.</span><br><span class="line">        Parameters</span><br><span class="line">        ----------</span><br><span class="line">        data: A matrix where each row is a training example consisting of the states of visible units.</span><br><span class="line">        :param data:</span><br><span class="line">        :param max_epochs:</span><br><span class="line">        :param learning_rate:</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">        num_examples = data.shape[0]</span><br><span class="line"></span><br><span class="line">        # Insert bias units of 1 into the first column.</span><br><span class="line">        data = np.insert(data, 0, 1, axis=1)</span><br><span class="line"></span><br><span class="line">        for epoch in range(max_epochs):</span><br><span class="line">            # Clamp to the data and sample from the hidden units.</span><br><span class="line">            # (This is the &quot;positive CD phase&quot;, aka the reality phase.)</span><br><span class="line">            pos_hidden_activations = np.dot(data, self.weights)</span><br><span class="line">            pos_hidden_probs = self._logistic(pos_hidden_activations)</span><br><span class="line">            pos_hidden_probs[:, 0] = 1  # Fix the bias unit.</span><br><span class="line">            pos_hidden_states = pos_hidden_probs &gt; np.random.rand(num_examples, self.num_hidden + 1)</span><br><span class="line">            # Note that we&apos;re using the activation *probabilities* of the hidden states, not the hidden states</span><br><span class="line">            # themselves, when computing associations. We could also use the states; see section 3 of Hinton&apos;s</span><br><span class="line">            # &quot;A Practical Guide to Training Restricted Boltzmann Machines&quot; for more.</span><br><span class="line">            pos_associations = np.dot(data.T, pos_hidden_probs)</span><br><span class="line"></span><br><span class="line">            # Reconstruct the visible units and sample again from the hidden units.</span><br><span class="line">            # (This is the &quot;negative CD phase&quot;, aka the daydreaming phase.)</span><br><span class="line">            neg_visible_activations = np.dot(pos_hidden_states, self.weights.T)</span><br><span class="line">            neg_visible_probs = self._logistic(neg_visible_activations)</span><br><span class="line">            neg_visible_probs[:, 0] = 1  # Fix the bias unit.</span><br><span class="line">            neg_hidden_activations = np.dot(neg_visible_probs, self.weights)</span><br><span class="line">            neg_hidden_probs = self._logistic(neg_hidden_activations)</span><br><span class="line">            # Note, again, that we&apos;re using the activation *probabilities* when computing associations, not the states</span><br><span class="line">            # themselves.</span><br><span class="line">            neg_associations = np.dot(neg_visible_probs.T, neg_hidden_probs)</span><br><span class="line"></span><br><span class="line">            # Update weights</span><br><span class="line">            self.weights += learning_rate * ((pos_associations - neg_associations) / num_examples)</span><br><span class="line"></span><br><span class="line">            error = np.sum((data - neg_visible_probs) ** 2)</span><br><span class="line">            if self.debug_print:</span><br><span class="line">                print(&quot;Epoch %s: error is %s&quot; % (epoch, error))</span><br><span class="line"></span><br><span class="line">    def run_visible(self, data):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Assuming the RBM has been trained (so that weights for the network have been learned),</span><br><span class="line">        run the network on a set of visible units, to get a sample of the hidden units.</span><br><span class="line"></span><br><span class="line">        Parameters</span><br><span class="line">        ----------</span><br><span class="line">        data: A matrix where each row consists of the states of the visible units.</span><br><span class="line"></span><br><span class="line">        Returns</span><br><span class="line">        -------</span><br><span class="line">        hidden_states: A matrix where each row consists of the hidden units activated from the visible</span><br><span class="line">        units in the data matrix passed in.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">        num_examples = data.shape[0]</span><br><span class="line"></span><br><span class="line">        # Create a matrix, where each row is to be the hidden units (plus a bias unit)</span><br><span class="line">        # sampled from a training example.</span><br><span class="line">        hidden_states = np.ones((num_examples, self.num_hidden + 1))</span><br><span class="line"></span><br><span class="line">        # Insert bias units of 1 into the first column of data.</span><br><span class="line">        data = np.insert(data, 0, 1, axis=1)</span><br><span class="line"></span><br><span class="line">        # Calculate the activations of the hidden units.</span><br><span class="line">        hidden_activations = np.dot(data, self.weights)</span><br><span class="line">        # Calculate the probabilities of turning the hidden units on.</span><br><span class="line">        hidden_probs = self._logistic(hidden_activations)</span><br><span class="line">        # Turn the hidden units on with their specified probabilities.</span><br><span class="line">        hidden_states[:, :] = hidden_probs &gt; np.random.rand(num_examples, self.num_hidden + 1)</span><br><span class="line">        # Always fix the bias unit to 1.</span><br><span class="line">        # hidden_states[:,0] = 1</span><br><span class="line"></span><br><span class="line">        # Ignore the bias units.</span><br><span class="line">        hidden_states = hidden_states[:, 1:]</span><br><span class="line">        return hidden_states</span><br><span class="line"></span><br><span class="line">    # TODO: Remove the code duplication between this method and `run_visible`?</span><br><span class="line">    def run_hidden(self, data):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Assuming the RBM has been trained (so that weights for the network have been learned),</span><br><span class="line">        run the network on a set of hidden units, to get a sample of the visible units.</span><br><span class="line">        Parameters</span><br><span class="line">        ----------</span><br><span class="line">        data: A matrix where each row consists of the states of the hidden units.</span><br><span class="line">        Returns</span><br><span class="line">        -------</span><br><span class="line">        visible_states: A matrix where each row consists of the visible units activated from the hidden</span><br><span class="line">        units in the data matrix passed in.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">        num_examples = data.shape[0]</span><br><span class="line"></span><br><span class="line">        # Create a matrix, where each row is to be the visible units (plus a bias unit)</span><br><span class="line">        # sampled from a training example.</span><br><span class="line">        visible_states = np.ones((num_examples, self.num_visible + 1))</span><br><span class="line"></span><br><span class="line">        # Insert bias units of 1 into the first column of data.</span><br><span class="line">        data = np.insert(data, 0, 1, axis=1)</span><br><span class="line"></span><br><span class="line">        # Calculate the activations of the visible units.</span><br><span class="line">        visible_activations = np.dot(data, self.weights.T)</span><br><span class="line">        # Calculate the probabilities of turning the visible units on.</span><br><span class="line">        visible_probs = self._logistic(visible_activations)</span><br><span class="line">        # Turn the visible units on with their specified probabilities.</span><br><span class="line">        visible_states[:, :] = visible_probs &gt; np.random.rand(num_examples, self.num_visible + 1)</span><br><span class="line">        # Always fix the bias unit to 1.</span><br><span class="line">        # visible_states[:,0] = 1</span><br><span class="line"></span><br><span class="line">        # Ignore the bias units.</span><br><span class="line">        visible_states = visible_states[:, 1:]</span><br><span class="line">        return visible_states</span><br><span class="line"></span><br><span class="line">    def daydream(self, num_samples):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Randomly initialize the visible units once, and start running alternating Gibbs sampling steps</span><br><span class="line">        (where each step consists of updating all the hidden units, and then updating all of the visible units),</span><br><span class="line">        taking a sample of the visible units at each step.</span><br><span class="line">        Note that we only initialize the network *once*, so these samples are correlated.</span><br><span class="line">        Returns</span><br><span class="line">        -------</span><br><span class="line">        samples: A matrix, where each row is a sample of the visible units produced while the network was</span><br><span class="line">        daydreaming.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">        # Create a matrix, where each row is to be a sample of of the visible units</span><br><span class="line">        # (with an extra bias unit), initialized to all ones.</span><br><span class="line">        samples = np.ones((num_samples, self.num_visible + 1))</span><br><span class="line"></span><br><span class="line">        # Take the first sample from a uniform distribution.</span><br><span class="line">        samples[0, 1:] = np.random.rand(self.num_visible)</span><br><span class="line"></span><br><span class="line">        # Start the alternating Gibbs sampling.</span><br><span class="line">        # Note that we keep the hidden units binary states, but leave the</span><br><span class="line">        # visible units as real probabilities. See section 3 of Hinton&apos;s</span><br><span class="line">        # &quot;A Practical Guide to Training Restricted Boltzmann Machines&quot;</span><br><span class="line">        # for more on why.</span><br><span class="line">        for i in range(1, num_samples):</span><br><span class="line">            visible = samples[i - 1, :]</span><br><span class="line"></span><br><span class="line">            # Calculate the activations of the hidden units.</span><br><span class="line">            hidden_activations = np.dot(visible, self.weights)</span><br><span class="line">            # Calculate the probabilities of turning the hidden units on.</span><br><span class="line">            hidden_probs = self._logistic(hidden_activations)</span><br><span class="line">            # Turn the hidden units on with their specified probabilities.</span><br><span class="line">            hidden_states = hidden_probs &gt; np.random.rand(self.num_hidden + 1)</span><br><span class="line">            # Always fix the bias unit to 1.</span><br><span class="line">            hidden_states[0] = 1</span><br><span class="line"></span><br><span class="line">            # Recalculate the probabilities that the visible units are on.</span><br><span class="line">            visible_activations = np.dot(hidden_states, self.weights.T)</span><br><span class="line">            visible_probs = self._logistic(visible_activations)</span><br><span class="line">            visible_states = visible_probs &gt; np.random.rand(self.num_visible + 1)</span><br><span class="line">            samples[i, :] = visible_states</span><br><span class="line"></span><br><span class="line">        # Ignore the bias units (the first column), since they&apos;re always set to 1.</span><br><span class="line">        return samples[:, 1:]</span><br><span class="line"></span><br><span class="line">    @staticmethod</span><br><span class="line">    def _logistic(x):</span><br><span class="line">        return 1.0 / (1 + np.exp(-x))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">import some fake datas to validate the model</span><br><span class="line">Alice: (Harry Potter = 1, Avatar = 1, LOTR 3 = 1, Gladiator = 0, Titanic = 0, Glitter = 0). Big SF/fantasy fan（科幻超级迷妹）.</span><br><span class="line">Bob: (Harry Potter = 1, Avatar = 0, LOTR 3 = 1, Gladiator = 0, Titanic = 0, Glitter = 0). SF/fantasy fan, but doesn’t like Avatar（科幻迷，但不喜欢阿凡达）.</span><br><span class="line">Carol: (Harry Potter = 1, Avatar = 1, LOTR 3 = 1, Gladiator = 0, Titanic = 0, Glitter = 0). Big SF/fantasy fan（科幻超级迷）.</span><br><span class="line">David: (Harry Potter = 0, Avatar = 0, LOTR 3 = 1, Gladiator = 1, Titanic = 1, Glitter = 0). Big Oscar winners fan（奥斯卡超级迷）.</span><br><span class="line">Eric: (Harry Potter = 0, Avatar = 0, LOTR 3 = 1, Gladiator = 1, Titanic = 0, Glitter = 0). Oscar winners fan, except for Titanic（奥斯卡迷，但不喜欢泰坦尼克号（译者注：原文此处Titanic = 1有误））.</span><br><span class="line">Fred: (Harry Potter = 0, Avatar = 0, LOTR 3 = 1, Gladiator = 1, Titanic = 1, Glitter = 0). Big Oscar winners fan（奥斯卡超级迷）.</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    r = RBM(num_visible=6, num_hidden=2)</span><br><span class="line">    # training_data = np.array(readData(&apos;datas/0-201812180801_330.txt&apos;))</span><br><span class="line">    # print(training_data.shape)</span><br><span class="line">    training_data = np.array(</span><br><span class="line">        [[1, 1, 1, 0, 0, 0],</span><br><span class="line">         [1, 0, 1, 0, 0, 0],</span><br><span class="line">         [1, 1, 1, 0, 0, 0],</span><br><span class="line">         [0, 0, 1, 1, 1, 0],</span><br><span class="line">         [0, 0, 1, 1, 0, 0],</span><br><span class="line">         [0, 0, 1, 1, 1, 0]])</span><br><span class="line">    r.train(training_data, max_epochs=5000)</span><br><span class="line">    print(r.weights)</span><br><span class="line">    user = np.array([[0, 0, 0, 1, 1, 0]])</span><br><span class="line">    print(r.run_visible(user))</span><br></pre></td></tr></table></figure>
+<p>##公平锁/非公平锁</p>
+<p>​        <strong>公平锁是指多个线程按照申请锁的顺序来获取锁。非公平锁是指多个线程获取锁的顺序并不是按照申请锁的顺序</strong>，有可能后申请的线程比先申请的线程优先获取锁。有可能，会造成优先级反转或者饥饿现象。对于Java中的 <code>ReentrantLock</code>而言，通过构造函数指定该锁是否是公平锁，默认是非公平锁。非公平锁的优点在于吞吐量比公平锁大。对于<code>Synchronized</code>而言，也是一种非公平锁。由于其并不像<code>ReentrantLock</code>是通过AQS的来实现线程调度，所以并没有任何办法使其变成公平锁。 </p>
+<h2 id="可重入锁"><a href="#可重入锁" class="headerlink" title="可重入锁"></a>可重入锁</h2><p>​        <strong>可重入锁又名递归锁，是指在同一个线程在外层方法获取锁的时候，在进入内层方法会自动获取锁</strong>。说的有点抽象，下面会有一个代码的示例。对于Java中的 <code>ReentrantLock</code>而言, 他的名字就可以看出是一个可重入锁，其名字是<code>ReentrantLock</code>重新进入锁。对于<code>Synchronized</code>而言,也是一个可重入锁。可重入锁的一个好处是可一定程度避免死锁。 </p>
+<h2 id="独享锁-共享锁"><a href="#独享锁-共享锁" class="headerlink" title="独享锁/共享锁"></a>独享锁/共享锁</h2><p>​       <strong>独享锁是指该锁一次只能被一个线程所持有</strong>。共享锁是指该锁可被多个线程所持有。对于Java 中的<code>ReentrantLock</code>而言，其是独享锁。但是对于Lock的另一个实现类<code>ReadWriteLock</code>，其读锁是共享锁，其写锁是独享锁。读锁的共享锁可保证并发读是非常高效的，读写，写读 ，写写的过程是互斥的。独享锁与共享锁也是通过AQS来实现的，通过实现不同的方法，来实现独享或者共享。对于<code>Synchronized</code>而言，当然是独享锁。 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">setA</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">    setB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">setB</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​       上面的代码就是一个可重入锁的一个特点，如果不是可重入锁的话，setB可能不会被当前线程执行，可能造成死锁。 </p>
+<h2 id="互斥锁-读写锁"><a href="#互斥锁-读写锁" class="headerlink" title="互斥锁/读写锁"></a>互斥锁/读写锁</h2><p>上面讲的独享锁/共享锁就是一种广义的说法，互斥锁/读写锁就是具体的实现。</p>
+<p>互斥锁在Java中的具体实现就是<code>ReentrantLock</code></p>
+<p>读写锁在Java中的具体实现就是<code>ReadWriteLock</code></p>
+<h2 id="乐观锁-悲观锁"><a href="#乐观锁-悲观锁" class="headerlink" title="乐观锁/悲观锁"></a>乐观锁/悲观锁</h2><p>​        乐观锁与悲观锁不是指具体的什么类型的锁，而是指看待并发同步的角度。<strong>悲观锁认为对于同一个数据的并发操作，一定是会发生修改的，哪怕没有修改，也会认为修改</strong>。因此对于同一个数据的并发操作，悲观锁采取加锁的形式。悲观的认为，不加锁的并发操作一定会出问题。<strong>乐观锁则认为对于同一个数据的并发操作，是不会发生修改的。在更新数据的时候，会采用尝试更新，不断重新的方式更新数据</strong>。乐观的认为，不加锁的并发操作是没有事情的。从上面的描述我们可以看出，悲观锁适合写操作非常多的场景，乐观锁适合读操作非常多的场景，不加锁会带来大量的性能提升。悲观锁在Java中的使用，就是利用各种锁。乐观锁在Java中的使用，是无锁编程，常常采用的是CAS算法，典型的例子就是原子类，通过CAS自旋实现原子操作的更新。 </p>
+<h2 id="分段锁"><a href="#分段锁" class="headerlink" title="分段锁"></a>分段锁</h2><p>​        分段锁其实是一种锁的设计，并不是具体的一种锁，对于<code>ConcurrentHashMap</code>而言，其并发的实现就是通过分段锁的形式来实现高效的并发操作。我们以<code>ConcurrentHashMap</code>来说一下分段锁的含义以及设计思想，<code>ConcurrentHashMap</code>中的分段锁称为Segment，它即类似于<code>HashMap</code>（JDK7与JDK8中HashMap的实现）的结构，即内部拥有一个Entry数组，数组中的每个元素又是一个链表；同时又是一个<code>ReentrantLock</code>（Segment继承了<code>ReentrantLock</code>)。当需要put元素的时候，并不是对整个<code>hashmap</code>进行加锁，而是先通过<code>hashcode</code>来知道他要放在那一个分段中，然后对这个分段进行加锁，所以当多线程put的时候，只要不是放在一个分段中，就实现了真正的并行的插入。但是，在统计size的时候，可就是获取hashmap全局信息的时候，就需要获取所有的分段锁才能统计。<strong>分段锁的设计目的是细化锁的粒度，当操作不需要更新整个数组的时候，就仅仅针对数组中的一项进行加锁操作。</strong> </p>
+<h2 id="偏向锁-轻量级锁-重量级锁"><a href="#偏向锁-轻量级锁-重量级锁" class="headerlink" title="偏向锁/轻量级锁/重量级锁"></a>偏向锁/轻量级锁/重量级锁</h2><p>​       这三种锁是指锁的状态，并且是针对<code>Synchronized</code>。在Java 5通过引入锁升级的机制来实现高效<code>Synchronized</code>。这三种锁的状态是通过<strong><em>对象监视器在对象头中的字段</em></strong>来表明的。</p>
+<p>​    <strong>偏向锁是指一段同步代码一直被一个线程所访问，那么该线程会自动获取锁以降低获取锁的代价</strong>。  <strong>轻量级锁是指当锁是偏向锁的时候，被另一个线程所访问，偏向锁就会升级为轻量级锁，其他线程会通过自旋的形式尝试获取锁，不会阻塞，提高性能</strong>.<strong>重量级锁是指当锁为轻量级锁的时候，另一个线程虽然是自旋，但自旋不会一直持续下去，当自旋一定次数的时候，还没有获取到锁，就会进入阻塞，该锁膨胀为重量级锁</strong>。重量级锁会让其他申请的线程进入阻塞，性能降低。 </p>
+<h2 id="自旋锁"><a href="#自旋锁" class="headerlink" title="自旋锁"></a>自旋锁</h2><p>​      在Java中，自旋锁是指尝试获取锁的线程不会立即阻塞，而是采用循环的方式去尝试获取锁，这样的好处是减少线程上下文切换的消耗，缺点是循环会消耗CPU。 </p>
 
       
     </div>
@@ -708,13 +679,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/深度学习/" rel="tag"><i class="fa fa-tag"></i> 深度学习</a>
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
-            <a href="/tags/RBM/" rel="tag"><i class="fa fa-tag"></i> RBM</a>
+            <a href="/tags/Java高并发/" rel="tag"><i class="fa fa-tag"></i> Java高并发</a>
           
-            <a href="/tags/受限玻尔兹曼机/" rel="tag"><i class="fa fa-tag"></i> 受限玻尔兹曼机</a>
-          
-            <a href="/tags/概率图模型/" rel="tag"><i class="fa fa-tag"></i> 概率图模型</a>
+            <a href="/tags/Java锁/" rel="tag"><i class="fa fa-tag"></i> Java锁</a>
           
         </div>
       
@@ -747,8 +716,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/：Java中的容器/" rel="next" title="Java中的容器">
-                <i class="fa fa-chevron-left"></i> Java中的容器
+              <a href="/我的第一篇测试博客/" rel="next" title="我的第一篇测试博客">
+                <i class="fa fa-chevron-left"></i> 我的第一篇测试博客
               </a>
             
           </div>
@@ -757,8 +726,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/：Java中的双重检查锁/" rel="prev" title="Java中的双重检查锁">
-                Java中的双重检查锁 <i class="fa fa-chevron-right"></i>
+              <a href="/深入理解JVM虚拟机-一-：Java运行时数据区域/" rel="prev" title="深入理解JVM虚拟机（一）：Java运行时数据区域">
+                深入理解JVM虚拟机（一）：Java运行时数据区域 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1020,7 +989,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是受限玻尔兹曼机？"><span class="nav-number">1.</span> <span class="nav-text">什么是受限玻尔兹曼机？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RBM的损失函数"><span class="nav-number">2.</span> <span class="nav-text">RBM的损失函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对比散度算法（CD-k算法）"><span class="nav-number">2.1.</span> <span class="nav-text">对比散度算法（CD-k算法）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深度受限玻尔兹曼机-DBM"><span class="nav-number">3.</span> <span class="nav-text">深度受限玻尔兹曼机(DBM)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java中常见的锁分类"><span class="nav-number">1.</span> <span class="nav-text">Java中常见的锁分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#可重入锁"><span class="nav-number">1.1.</span> <span class="nav-text">可重入锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#独享锁-共享锁"><span class="nav-number">1.2.</span> <span class="nav-text">独享锁/共享锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互斥锁-读写锁"><span class="nav-number">1.3.</span> <span class="nav-text">互斥锁/读写锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#乐观锁-悲观锁"><span class="nav-number">1.4.</span> <span class="nav-text">乐观锁/悲观锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分段锁"><span class="nav-number">1.5.</span> <span class="nav-text">分段锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#偏向锁-轻量级锁-重量级锁"><span class="nav-number">1.6.</span> <span class="nav-text">偏向锁/轻量级锁/重量级锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自旋锁"><span class="nav-number">1.7.</span> <span class="nav-text">自旋锁</span></a></li></ol></li></ol></div>
             
 
           </div>
