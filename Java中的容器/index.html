@@ -146,7 +146,7 @@
 <meta property="og:image" content="http://yoursite.com/Java中的容器/HashMap.jpg">
 <meta property="og:image" content="http://yoursite.com/Java中的容器/拉链法.jpg">
 <meta property="og:image" content="http://yoursite.com/Java中的容器/ConcurrentHasnMap.jpg">
-<meta property="og:updated_time" content="2019-03-06T01:47:08.198Z">
+<meta property="og:updated_time" content="2019-03-19T09:21:01.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中的容器">
 <meta name="twitter:description" content="一、概览 Collection Map   二、容器中的设计模式 迭代器模式 适配器模式   三、源码分析 ArrayList Vector CopyOnWriteArrayList LinkedList HashMap ConcurrentHashMap LinkedHashMap WeakHashMap   参考资料   一、概览容器主要包括 Collection 和 Map 两种，Col">
@@ -426,15 +426,20 @@
         
 
         <div class="post-meta">
+          
+		<font color="red"><i class="fa fa-thumbs-up"></i></font>
+		<font color="red">&nbsp;置顶</font>
+	        <span class="post-meta-divider">|</span>
+            
           <span class="post-time">
 
             
             
             
-
+	 
             
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <font color="blue"><i class="fa fa-calendar-o"></i></font>
               </span>
               
                 <span class="post-meta-item-text">发表于</span>
@@ -456,12 +461,12 @@
                 
 
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <font color="#40E0D0"><i class="fa fa-calendar-check-o"></i></font>
                 </span>
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-06 09:47:08" itemprop="dateModified" datetime="2019-03-06T09:47:08+08:00">2019-03-06</time>
+                <time title="修改时间：2019-03-19 17:21:01" itemprop="dateModified" datetime="2019-03-19T17:21:01+08:00">2019-03-19</time>
               
             
           </span>
@@ -472,20 +477,20 @@
               <span class="post-meta-divider">|</span>
             
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <font color="red"><i class="fa fa-folder-o"></i></font>
               </span>
               
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+                <font color="black"><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span></font>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/JavaSE/" itemprop="url" rel="index"><span itemprop="name">JavaSE</span></a></span>
+                <font color="black"><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/JavaSE/" itemprop="url" rel="index"><span itemprop="name">JavaSE</span></a></span></font>
 
                 
                 
@@ -500,7 +505,7 @@
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
+                  <font color="green"><i class="fa fa-comments"></i></font>
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
@@ -512,6 +517,17 @@
           
 
           
+          
+            <span id="/Java中的容器/" class="leancloud_visitors" data-flag-title="Java中的容器">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -1790,6 +1806,66 @@
 
 
   
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + '0nUaNADpXEa2Tu2Gcah0T5X2-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': '0nUaNADpXEa2Tu2Gcah0T5X2-gzGzoHsz',
+                'X-LC-Key': 'nL9SO3dSbS7dey2x7kQ3kf58',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
 
   
 
@@ -1929,15 +2005,12 @@
   </script>
 
 
-  
-<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
-   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
-   <script type="text/javascript" src="/js/src/fireworks.js"></script>
-
 <!--崩溃欺骗-->
 <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
   <!-- 代码块复制功能 -->
   <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
   <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+</body>
 </html>
