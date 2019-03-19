@@ -2270,7 +2270,7 @@ pre {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a6ffc8;
+  background: #716554;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3381,10 +3381,10 @@ a#hexo-douban-tab3.hexo-douban-tab.hexo-douban-active {
 }
 #rewardButton span {
   height: 35px;
-  width: 35px;
+  width: 50px;
   font-size: 15px;
   font-family: "PingFang SC", "Microsoft YaHei", Georgia, sans-serif;
-  background: #34495e;
+  background: #b22222;
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
