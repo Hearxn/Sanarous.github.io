@@ -134,38 +134,38 @@
 <meta name="keywords" content="深度学习,RBM,受限玻尔兹曼机,概率图模型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深度学习模型之受限玻尔兹曼机(RBM)">
-<meta property="og:url" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/index.html">
+<meta property="og:url" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/index.html">
 <meta property="og:site_name" content="Zuo&#39;s Blog makes better life and coding">
 <meta property="og:description" content="什么是受限玻尔兹曼机？​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm1.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm2.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm3.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm4.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm5.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm6.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm7.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm8.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm9.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm10.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm11.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm12.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm13.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm14.png">
-<meta property="og:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm15.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm1.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm2.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm3.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm4.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm5.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm6.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm7.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm8.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm9.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm10.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm11.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm12.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm13.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm14.png">
+<meta property="og:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm15.png">
 <meta property="og:updated_time" content="2019-03-05T08:59:35.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深度学习模型之受限玻尔兹曼机(RBM)">
 <meta name="twitter:description" content="什么是受限玻尔兹曼机？​        玻尔兹曼机是一大类的神经网络模型，但是在实际中运用的最多的还是RBM，RBM是一个随机神经网络（即当网络的神经元节点被激活时会有随机行为，随机取值）。它包含一层可视层和一层隐藏层，其中可视层的节点用v表示，隐藏层节点用h表示。在同一层的神经元之间是相互独立的，而在不同的网络层之间的神经元是相互连接的（双向连接）。在网络进行训练以及使用信息的时候会在两个方向进">
-<meta name="twitter:image" content="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/rbm.png">
+<meta name="twitter:image" content="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/rbm.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/">
+  <link rel="canonical" href="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/">
 
 
 
@@ -385,7 +385,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/深度学习模型之受限玻尔兹曼机-RBM/">
+    <link itemprop="mainEntityOfPage" href="http://bestzuo.cn/深度学习模型之受限玻尔兹曼机-RBM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sanarous">
@@ -1523,6 +1523,16 @@
   
 
   
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
 
   
 

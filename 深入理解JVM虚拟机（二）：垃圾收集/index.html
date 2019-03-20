@@ -134,35 +134,35 @@
 <meta name="keywords" content="Java,JVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入理解JVM虚拟机（二）：垃圾收集、内存分配与回收策略">
-<meta property="og:url" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/index.html">
+<meta property="og:url" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/index.html">
 <meta property="og:site_name" content="Zuo&#39;s Blog makes better life and coding">
 <meta property="og:description" content="​        垃圾回收主要是针对堆和方法区进行的。因为栈区域中的程序计数器、虚拟机栈和本地方法栈这三个区域属于线程私有的，只存在于线程的生命周期内，线程结束后就会消失，因此不需要对这三个区域进行垃圾回收。 ​        具体而言，栈中的栈帧随着方法的进入和退出而有条不紊的执行着入栈和出栈操作，每一个栈帧中分配多少内存基本上是在类结构确定下来的时候就已知的（尽管在运行期会由JIT编译器进行一">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/可达性分析.png">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/标记清除.png">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/标记整理.png">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/复制.png">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/垃圾收集器.jpg">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/serial.jpg">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/parNew.jpg">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/serial%20old.jpg">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/parallel%20old.jpg">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/cms.jpg">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/g11.png">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/g12.png">
-<meta property="og:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/g13.jpg">
+<meta property="og:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/可达性分析.png">
+<meta property="og:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/标记清除.png">
+<meta property="og:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/标记整理.png">
+<meta property="og:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/复制.png">
+<meta property="og:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/垃圾收集器.jpg">
+<meta property="og:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/serial.jpg">
+<meta property="og:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/parNew.jpg">
+<meta property="og:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/serial%20old.jpg">
+<meta property="og:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/parallel%20old.jpg">
+<meta property="og:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/cms.jpg">
+<meta property="og:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/g11.png">
+<meta property="og:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/g12.png">
+<meta property="og:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/g13.jpg">
 <meta property="og:updated_time" content="2019-03-08T04:52:26.259Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入理解JVM虚拟机（二）：垃圾收集、内存分配与回收策略">
 <meta name="twitter:description" content="​        垃圾回收主要是针对堆和方法区进行的。因为栈区域中的程序计数器、虚拟机栈和本地方法栈这三个区域属于线程私有的，只存在于线程的生命周期内，线程结束后就会消失，因此不需要对这三个区域进行垃圾回收。 ​        具体而言，栈中的栈帧随着方法的进入和退出而有条不紊的执行着入栈和出栈操作，每一个栈帧中分配多少内存基本上是在类结构确定下来的时候就已知的（尽管在运行期会由JIT编译器进行一">
-<meta name="twitter:image" content="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/可达性分析.png">
+<meta name="twitter:image" content="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/可达性分析.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/">
+  <link rel="canonical" href="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/">
 
 
 
@@ -382,7 +382,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/深入理解JVM虚拟机（二）：垃圾收集/">
+    <link itemprop="mainEntityOfPage" href="http://bestzuo.cn/深入理解JVM虚拟机（二）：垃圾收集/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sanarous">
@@ -1644,6 +1644,16 @@
   
 
   
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
 
   
 
