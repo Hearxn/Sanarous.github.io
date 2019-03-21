@@ -132,20 +132,25 @@
   </script>
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Zuo&#39;s Blog makes better life and coding">
-<meta property="og:url" content="https://bestzuo.cn/archives/2019/03/index.html">
+  <meta name="description" content="一、单例模式在标准的23种设计模式种，单例设计模式在应用中是非常常见的，而我们在学习单例模式中，一定要考虑到和多线程结合起来时可能存在的各种问题以及其解决办法，这样我们才能写出一个在多线程环境下安全、正确的单例模式。 单例模式常见的有六种写法：  饿汉式（静态常量） 饿汉式（静态代码块） 懒汉式（线程不安全） 懒汉式（线程安全，同步方法） 懒汉式（线程安全，同步代码块） 双重检查锁 静态内部类 枚">
+<meta name="keywords" content="单例模式,设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每天一个设计模式：单例模式">
+<meta property="og:url" content="https://bestzuo.cn/每天一个设计模式：单例模式/index.html">
 <meta property="og:site_name" content="Zuo&#39;s Blog makes better life and coding">
+<meta property="og:description" content="一、单例模式在标准的23种设计模式种，单例设计模式在应用中是非常常见的，而我们在学习单例模式中，一定要考虑到和多线程结合起来时可能存在的各种问题以及其解决办法，这样我们才能写出一个在多线程环境下安全、正确的单例模式。 单例模式常见的有六种写法：  饿汉式（静态常量） 饿汉式（静态代码块） 懒汉式（线程不安全） 懒汉式（线程安全，同步方法） 懒汉式（线程安全，同步代码块） 双重检查锁 静态内部类 枚">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-21T03:24:23.368Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zuo&#39;s Blog makes better life and coding">
+<meta name="twitter:title" content="每天一个设计模式：单例模式">
+<meta name="twitter:description" content="一、单例模式在标准的23种设计模式种，单例设计模式在应用中是非常常见的，而我们在学习单例模式中，一定要考虑到和多线程结合起来时可能存在的各种问题以及其解决办法，这样我们才能写出一个在多线程环境下安全、正确的单例模式。 单例模式常见的有六种写法：  饿汉式（静态常量） 饿汉式（静态代码块） 懒汉式（线程不安全） 懒汉式（线程安全，同步方法） 懒汉式（线程安全，同步代码块） 双重检查锁 静态内部类 枚">
 
 
 
 
 
 
-  <link rel="canonical" href="https://bestzuo.cn/archives/2019/03/">
+  <link rel="canonical" href="https://bestzuo.cn/每天一个设计模式：单例模式/">
 
 
 
@@ -155,7 +160,7 @@
   };
 </script>
 
-  <title>归档 | Zuo's Blog makes better life and coding</title>
+  <title>每天一个设计模式：单例模式 | Zuo's Blog makes better life and coding</title>
   
 
 
@@ -206,7 +211,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -256,7 +261,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> 文章归档</a>
   </li>
@@ -292,25 +297,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -366,178 +352,319 @@
           <div id="content" class="content">
             
 
-<div id="posts" class="posts-expand">
-  <div class="post-block page"> 
-    <div class="post-body">
-      <h2 class="post-title" style=" border-left:none;padding-left:0;text-align:center;padding-top:0;">文章归档</h2><br>
-      <div class="category-all-page">
-        <div class="category-all-title">
-          
-          
-            
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://bestzuo.cn/每天一个设计模式：单例模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sanarous">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/touxiang.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zuo's Blog makes better life and coding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">每天一个设计模式：单例模式
+
               
             
+          </h2>
+        
+
+        <div class="post-meta">
           
+          <span class="post-time">
+
+            
+            
+            
+	 
+            
+              <span class="post-meta-item-icon">
+                <font color="blue"><i class="fa fa-calendar-o"></i></font>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-21 10:39:53 / 修改时间：11:24:23" itemprop="dateCreated datePublished" datetime="2019-03-21T10:39:53+08:00">2019-03-21</time>
+            
+
             
               
-            
-          
-            
+
               
             
+          </span>
+
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <font color="red"><i class="fa fa-folder-o"></i></font>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <font color="black"><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/设计模式/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a></span></font>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
             
               
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <font color="green"><i class="fa fa-comments"></i></font>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/每天一个设计模式：单例模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/每天一个设计模式：单例模式/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
-            
-              
-            
+
           
-            
-              
-            
           
-            
-              
-            
+
           
-            
-              
-            
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
           
-            
-              
-            
+
           
-            
-              
-            
+
           
-            
-              
-            
-          
-            
-              
-            
-          
-          目前共计 12 个分类
+
         </div>
-        <div class="category-all">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JVM/">JVM</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/JavaSE/">JavaSE</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NoSQL/">NoSQL</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/NoSQL/Redis/">Redis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/深度学习/">深度学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机网络/">计算机网络</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a><span class="category-list-count">1</span></li></ul>
-        </div>
-      </div>
-      <hr>
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-          
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-          目前共计 23 个标签
-        </div><br>
-        <div class="tag-cloud-tags">
-          <a href="/tags/Docker/" style="font-size: 12px; color: #ccc">Docker</a> <a href="/tags/Http/" style="font-size: 12px; color: #ccc">Http</a> <a href="/tags/Https/" style="font-size: 12px; color: #ccc">Https</a> <a href="/tags/JVM/" style="font-size: 24px; color: #4f4f4f">JVM</a> <a href="/tags/Java/" style="font-size: 30px; color: #111">Java</a> <a href="/tags/JavaSE/" style="font-size: 18px; color: #8e8e8e">JavaSE</a> <a href="/tags/Java锁/" style="font-size: 12px; color: #ccc">Java锁</a> <a href="/tags/Java面试/" style="font-size: 18px; color: #8e8e8e">Java面试</a> <a href="/tags/Java高并发/" style="font-size: 18px; color: #8e8e8e">Java高并发</a> <a href="/tags/NoSQL/" style="font-size: 12px; color: #ccc">NoSQL</a> <a href="/tags/RBM/" style="font-size: 12px; color: #ccc">RBM</a> <a href="/tags/Redis/" style="font-size: 12px; color: #ccc">Redis</a> <a href="/tags/SpringBoot/" style="font-size: 12px; color: #ccc">SpringBoot</a> <a href="/tags/Ubantu/" style="font-size: 12px; color: #ccc">Ubantu</a> <a href="/tags/linux/" style="font-size: 12px; color: #ccc">linux</a> <a href="/tags/test/" style="font-size: 12px; color: #ccc">test</a> <a href="/tags/单例模式/" style="font-size: 12px; color: #ccc">单例模式</a> <a href="/tags/受限玻尔兹曼机/" style="font-size: 12px; color: #ccc">受限玻尔兹曼机</a> <a href="/tags/容器/" style="font-size: 12px; color: #ccc">容器</a> <a href="/tags/概率图模型/" style="font-size: 12px; color: #ccc">概率图模型</a> <a href="/tags/深度学习/" style="font-size: 12px; color: #ccc">深度学习</a> <a href="/tags/计算机网络/" style="font-size: 12px; color: #ccc">计算机网络</a> <a href="/tags/设计模式/" style="font-size: 12px; color: #ccc">设计模式</a>
-        </div>
-      </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="一、单例模式"><a href="#一、单例模式" class="headerlink" title="一、单例模式"></a>一、单例模式</h3><p>在标准的23种设计模式种，单例设计模式在应用中是非常常见的，而我们在学习单例模式中，一定要考虑到和多线程结合起来时可能存在的各种问题以及其解决办法，这样我们才能写出一个在多线程环境下安全、正确的单例模式。</p>
+<p>单例模式常见的有六种写法：</p>
+<ul>
+<li>饿汉式（静态常量）</li>
+<li>饿汉式（静态代码块）</li>
+<li>懒汉式（线程不安全）</li>
+<li>懒汉式（线程安全，同步方法）</li>
+<li>懒汉式（线程安全，同步代码块）</li>
+<li>双重检查锁</li>
+<li>静态内部类</li>
+<li>枚举</li>
+</ul>
+<hr>
+<h3 id="二、单例模式的基本实现思路："><a href="#二、单例模式的基本实现思路：" class="headerlink" title="二、单例模式的基本实现思路："></a>二、单例模式的基本实现思路：</h3><p>单例模式要求类能够有返回对象的一个引用（并且永远是同一个）和一个获得该实例的方法（必须是静态方法，通过使用getInstance这个名称）</p>
+<p>单例模式的实现主要通过以下步骤：</p>
+<p>（1）将该类的构造方法定义为私有方法，这样其它的代码就无法通过调用该类的构造方法来实例化该类的对象，只有通过该类提供的静态方法来得到该类的唯一实例；</p>
+<p>（2）在该类种提供一个静态方法，当我们调用这个方法时，如果类持有的引用不为空就返回这个引用，如果类保持的引用为空就创建该类的实例并将实例的引用赋值给该类保持的引用。</p>
+<p><strong>注意事项</strong>：单例模式在多线程的环境下必须小心使用，如果当唯一实例尚未创建时，有两个线程同时调用创建方法，那么它们同时没有检测到唯一实例的存在，从而同时各自创建了一个实例，这样就有两个实例被创建了出来，从而违反了单例模式种实例唯一的原则，解决的办法显而易见是加锁。</p>
+<h3 id="三、单例模式的八种写法"><a href="#三、单例模式的八种写法" class="headerlink" title="三、单例模式的八种写法"></a>三、单例模式的八种写法</h3><h4 id="1、饿汉式（静态常量）"><a href="#1、饿汉式（静态常量）" class="headerlink" title="1、饿汉式（静态常量）"></a>1、饿汉式（静态常量）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> class <span class="title">singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> Singleton INSTANCE = <span class="keyword">new</span> Singleton();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//注意构造方法必须私有</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优点：写法简单，就是在类加载的时候完成实例化，避免了线程同步问题。</p>
+<p>缺点：没有达到懒加载的效果，如果从始至终都未使用过这个实例，会造成内存的浪费。</p>
+<h4 id="2、饿汉式（静态代码块）"><a href="#2、饿汉式（静态代码块）" class="headerlink" title="2、饿汉式（静态代码块）"></a>2、饿汉式（静态代码块）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">static</span>&#123;</span><br><span class="line">        instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种方式跟第一种方式类似，都是在类加载的时候完成的，只不过将实例化的过程放在了静态代码块种，优缺点跟上面一样。</p>
+<h4 id="3、懒汉式（线程不安全）"><a href="#3、懒汉式（线程不安全）" class="headerlink" title="3、懒汉式（线程不安全）"></a>3、懒汉式（线程不安全）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(instance == <span class="keyword">null</span>)&#123;</span><br><span class="line">            instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种写法在单线程环境下可以使用，但是多线程环境下显然会产生多个实例。</p>
+<h4 id="4、懒汉式（线程安全，同步方法）"><a href="#4、懒汉式（线程安全，同步方法）" class="headerlink" title="4、懒汉式（线程安全，同步方法）"></a>4、懒汉式（线程安全，同步方法）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(instance == <span class="keyword">null</span>)&#123;</span><br><span class="line">            instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种方法是对上面的线程不安全的懒汉式的改进。</p>
+<p>由于每次去获取实例的时候都会进入<code>synchronized</code>代码块而不管实例是否为null，而其实这个方法只需要执行一次实例化代码就可以，因此这样的开销非常大，所以不推荐使用。</p>
+<h4 id="5、懒汉式（线程安全，同步代码块）"><a href="#5、懒汉式（线程安全，同步代码块）" class="headerlink" title="5、懒汉式（线程安全，同步代码块）"></a>5、懒汉式（线程安全，同步代码块）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(instance == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">synchronized</span>(Singleton.class)&#123;</span><br><span class="line">                instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>并不能起到线程同步的作用，跟第三种方式遇到的情形一致。假如两个线程同时进入了<code>if(instance == null)</code>代码块，那么还是会产生多个实例，因此同样不推荐使用。</p>
+<h4 id="6、双重检查锁"><a href="#6、双重检查锁" class="headerlink" title="6、双重检查锁"></a>6、双重检查锁</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> Singleton singleton;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(singleton == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">synchronized</span>(Singleton.class)&#123;</span><br><span class="line">                <span class="keyword">if</span>(singleton == <span class="keyword">null</span>)&#123;</span><br><span class="line">                    singleton = <span class="keyword">new</span> Singleton():</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> singleton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>双重检查锁对于多线程开发者来说并不陌生，我们进行了两次<code>if(singleton == null)</code>判断，并通过将实例singleton设置为<code>volatile</code>变量，这样可以实现变量的可见性并且禁止编译器指令重排序造成的其它问题。关于双重检查锁的其它问题可以详见我的另外一篇博客<a href="https://bestzuo.cn/Java%E4%B8%AD%E7%9A%84%E5%8F%8C%E9%87%8D%E6%A3%80%E6%9F%A5%E9%94%81/">Java中的双重检查锁</a>。</p>
+<p>优点：线程安全，延迟加载，效率较高。</p>
+<h4 id="7、静态内部类"><a href="#7、静态内部类" class="headerlink" title="7、静态内部类"></a>7、静态内部类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonInstance</span></span>&#123;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton INSTANCE = <span class="keyword">new</span> Singleton();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> SingletonInstance.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种方式跟饿汉式方式采用的机制类似，但又有不同。两者都是采用了类装载的机制来保证初始化实例时只有一个线程。不同的地方在饿汉式方式是只要Singleton类被装载就会实例化，没有Lazy-Loading的作用，而静态内部类方式在Singleton类被装载时并不会立即实例化，而是在需要实例化时，调用getInstance方法，才会装载SingletonInstance类，从而完成Singleton的实例化。</p>
+<p>类的静态属性只会在第一次加载类的时候初始化，所以在这里，JVM帮助我们保证了线程的安全性，在类进行初始化时，别的线程是无法进入的。</p>
+<p>优点：避免了线程不安全，延迟加载，效率高。</p>
+<h4 id="8、枚举"><a href="#8、枚举" class="headerlink" title="8、枚举"></a>8、枚举</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Singleton&#123;</span><br><span class="line">    INSTANCE;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">whateverMethod</span><span class="params">()</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>借助JDK1.5中添加的枚举来实现单例模式。不仅能避免多线程同步问题，而且还能防止反序列化重新创建新的对象。可能是因为枚举在JDK1.5中才添加，所以在实际项目开发中，很少见人这么写过。 </p>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>谢谢您给我糖果</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Sanarous 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Sanarous 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
   </div>
 </div>
+
+      </div>
+    
+
+    
+	<div>
+	
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------　　　　本文结束　<i class="fa fa-heart"></i>　感谢您的阅读　　　　-------------</div>
+    
+</div>
+	
+	</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/单例模式/" rel="tag"><i class="fa fa-tag"></i> 单例模式</a>
+          
+            <a href="/tags/设计模式/" rel="tag"><i class="fa fa-tag"></i> 设计模式</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Ubantu系统常用操作指令/" rel="next" title="Ubantu系统常用操作指令">
+                <i class="fa fa-chevron-left"></i> Ubantu系统常用操作指令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+      <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -557,8 +684,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -780,6 +916,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、单例模式"><span class="nav-number">1.</span> <span class="nav-text">一、单例模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、单例模式的基本实现思路："><span class="nav-number">2.</span> <span class="nav-text">二、单例模式的基本实现思路：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、单例模式的八种写法"><span class="nav-number">3.</span> <span class="nav-text">三、单例模式的八种写法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、饿汉式（静态常量）"><span class="nav-number">3.1.</span> <span class="nav-text">1、饿汉式（静态常量）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、饿汉式（静态代码块）"><span class="nav-number">3.2.</span> <span class="nav-text">2、饿汉式（静态代码块）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、懒汉式（线程不安全）"><span class="nav-number">3.3.</span> <span class="nav-text">3、懒汉式（线程不安全）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、懒汉式（线程安全，同步方法）"><span class="nav-number">3.4.</span> <span class="nav-text">4、懒汉式（线程安全，同步方法）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、懒汉式（线程安全，同步代码块）"><span class="nav-number">3.5.</span> <span class="nav-text">5、懒汉式（线程安全，同步代码块）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、双重检查锁"><span class="nav-number">3.6.</span> <span class="nav-text">6、双重检查锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7、静态内部类"><span class="nav-number">3.7.</span> <span class="nav-text">7、静态内部类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8、枚举"><span class="nav-number">3.8.</span> <span class="nav-text">8、枚举</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -947,6 +1100,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -986,6 +1143,8 @@
 
 
 
+
+  
 
 
 
@@ -1406,7 +1565,7 @@
   <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@1/bookmark.min.js"></script>
   <script>
   
-    bookmark.loadBookmark();
+    bookmark.scrollToMark('auto', "#更多");
   
   </script>
 
