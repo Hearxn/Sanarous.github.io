@@ -135,7 +135,7 @@
   <meta name="description" content="一、HTTP的缺点 通信使用明文传输（不加密），内容可能会被窃听。 不验证通信方的身份，因此可能遭遇伪装。 无法证明报文的完整性，所以有可能已经遭遇篡改。  这些问题不仅在HTTP上出现，其它未经加密的协议种也会存在这类问题。除此之外，HTTP本身还有很多缺点，而且，还有像某些特定的Web服务器和特定的Web浏览器在实际应用种存在的不足（也可以说成是脆弱性或安全漏洞），另外，用Java和PHP等编">
 <meta name="keywords" content="计算机网络,Http,Https">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Http与Https">
+<meta property="og:title" content="HTTP与HTTPS">
 <meta property="og:url" content="https://bestzuo.cn/Http与Https/index.html">
 <meta property="og:site_name" content="Zuo&#39;s Blog makes better life and coding">
 <meta property="og:description" content="一、HTTP的缺点 通信使用明文传输（不加密），内容可能会被窃听。 不验证通信方的身份，因此可能遭遇伪装。 无法证明报文的完整性，所以有可能已经遭遇篡改。  这些问题不仅在HTTP上出现，其它未经加密的协议种也会存在这类问题。除此之外，HTTP本身还有很多缺点，而且，还有像某些特定的Web服务器和特定的Web浏览器在实际应用种存在的不足（也可以说成是脆弱性或安全漏洞），另外，用Java和PHP等编">
@@ -151,9 +151,13 @@
 <meta property="og:image" content="https://bestzuo.cn/Http与Https/https通信.png">
 <meta property="og:image" content="https://bestzuo.cn/Http与Https/https网站.png">
 <meta property="og:image" content="https://bestzuo.cn/Http与Https/6.png">
-<meta property="og:updated_time" content="2019-03-19T07:54:47.672Z">
+<meta property="og:image" content="https://bestzuo.cn/Http与Https/对称密钥加密.png">
+<meta property="og:image" content="https://bestzuo.cn/Http与Https/非对称密钥加密.png">
+<meta property="og:image" content="https://bestzuo.cn/Http与Https/HTTPS加密.png">
+<meta property="og:image" content="https://bestzuo.cn/Http与Https/认证.png">
+<meta property="og:updated_time" content="2019-03-25T02:09:45.364Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Http与Https">
+<meta name="twitter:title" content="HTTP与HTTPS">
 <meta name="twitter:description" content="一、HTTP的缺点 通信使用明文传输（不加密），内容可能会被窃听。 不验证通信方的身份，因此可能遭遇伪装。 无法证明报文的完整性，所以有可能已经遭遇篡改。  这些问题不仅在HTTP上出现，其它未经加密的协议种也会存在这类问题。除此之外，HTTP本身还有很多缺点，而且，还有像某些特定的Web服务器和特定的Web浏览器在实际应用种存在的不足（也可以说成是脆弱性或安全漏洞），另外，用Java和PHP等编">
 <meta name="twitter:image" content="https://bestzuo.cn/Http与Https/http遭遇窃听.png">
 
@@ -172,7 +176,7 @@
   };
 </script>
 
-  <title>Http与Https | Zuo's Blog makes better life and coding</title>
+  <title>HTTP与HTTPS | Zuo's Blog makes better life and coding</title>
   
 
 
@@ -399,7 +403,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Http与Https
+          <h2 class="post-title" itemprop="name headline">HTTP与HTTPS
 
               
             
@@ -426,12 +430,24 @@
                 
               
 
-              <time title="创建时间：2019-03-19 15:09:14 / 修改时间：15:54:47" itemprop="dateCreated datePublished" datetime="2019-03-19T15:09:14+08:00">2019-03-19</time>
+              <time title="创建时间：2019-03-19 15:09:14" itemprop="dateCreated datePublished" datetime="2019-03-19T15:09:14+08:00">2019-03-19</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <font color="#40E0D0"><i class="fa fa-calendar-check-o"></i></font>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-25 10:09:45" itemprop="dateModified" datetime="2019-03-25T10:09:45+08:00">2019-03-25</time>
               
             
           </span>
@@ -547,7 +563,7 @@
 <h5 id="（2）如何防止篡改"><a href="#（2）如何防止篡改" class="headerlink" title="（2）如何防止篡改"></a>（2）如何防止篡改</h5><p>虽然有使用 HTTP 协议确定报文完整性的方法，但事实上并不便捷、可靠。其中常用的是 MD5 和 SHA-1 等散列值校验的方法，以及用来确认文件的数字签名方法。</p>
 <p><img src="5.png" alt></p>
 <p>提供文件下载服务的 Web 网站也会提供相应的以 PGP（PrettyGood Privacy，完美隐私）创建的数字签名及 MD5 算法生成的散列值。PGP 是用来证明创建文件的数字签名，MD5 是由单向函数生成的散列值。不论使用哪一种方法，都需要操纵客户端的用户本人亲自检查验证下载的文件是否就是原来服务器上的文件。浏览器无法自动帮用户检查。可惜的是，用这些方法也依然无法百分百保证确认结果正确。因为 PGP 和 MD5 本身被改写的话，用户是没有办法意识到的。为了有效防止这些弊端，有必要使用 HTTPS。SSL提供认证和加密处理及摘要功能。仅靠 HTTP 确保完整性是非常困难的，因此通过和其他协议组合使用来实现这个目标。下节我们介绍HTTPS 的相关内容。</p>
-<h3 id="二、HTTP-加密-认证-完整性保-HTTPS"><a href="#二、HTTP-加密-认证-完整性保-HTTPS" class="headerlink" title="二、HTTP+ 加密 + 认证 + 完整性保=HTTPS"></a>二、HTTP+ 加密 + 认证 + 完整性保=HTTPS</h3><p>如果在 HTTP 协议通信过程中使用未经加密的明文，比如在 Web 页面中输入信用卡号，如果这条通信线路遭到窃听，那么信用卡号就暴露了。另外，对于 HTTP 来说，服务器也好，客户端也好，都是没有办法确认通信方的。因为很有可能并不是和原本预想的通信方在实际通信。并且还需要考虑到接收到的报文在通信途中已经遭到篡改这一可能性。为了统一解决上述这些问题，需要在 HTTP 上再加入加密处理和认证等机制。我们把添加了加密及认证机制的 HTTP 称为 HTTPS（HTTPSecure）。</p>
+<h3 id="二、HTTP-加密-认证-完整性保护-HTTPS"><a href="#二、HTTP-加密-认证-完整性保护-HTTPS" class="headerlink" title="二、HTTP+ 加密 + 认证 + 完整性保护 = HTTPS"></a>二、HTTP+ 加密 + 认证 + 完整性保护 = HTTPS</h3><p>如果在 HTTP 协议通信过程中使用未经加密的明文，比如在 Web 页面中输入信用卡号，如果这条通信线路遭到窃听，那么信用卡号就暴露了。另外，对于 HTTP 来说，服务器也好，客户端也好，都是没有办法确认通信方的。因为很有可能并不是和原本预想的通信方在实际通信。并且还需要考虑到接收到的报文在通信途中已经遭到篡改这一可能性。为了统一解决上述这些问题，需要在 HTTP 上再加入加密处理和认证等机制。我们把添加了加密及认证机制的 HTTP 称为 HTTPS（HTTPSecure）。</p>
 <p><img src="https通信.png" alt></p>
 <p>经常会在 Web 的登录页面和购物结算界面等使用 HTTPS 通信。使用HTTPS 通信时，不再用 http://，而是改用 https://。另外，当浏览器访问 HTTPS 通信有效的 Web 网站时，浏览器的地址栏内会出现一个带锁的标记。对 HTTPS 的显示方式会因浏览器的不同而有所改变。</p>
 <p><img src="https网站.png" alt></p>
@@ -556,6 +572,34 @@
 <p><img src="6.png" alt></p>
 <p>在采用 SSL后，HTTP 就拥有了 HTTPS 的加密、证书和完整性保护这些功能。</p>
 <p>SSL是独立于 HTTP 的协议，所以不光是 HTTP 协议，其他运行在应用层的 SMTP 和 Telnet 等协议均可配合 SSL协议使用。可以说 SSL是当今世界上应用最为广泛的网络安全技术。</p>
+<h4 id="2、HTTPS的加密"><a href="#2、HTTPS的加密" class="headerlink" title="2、HTTPS的加密"></a>2、HTTPS的加密</h4><h5 id="（1）对称密钥加密"><a href="#（1）对称密钥加密" class="headerlink" title="（1）对称密钥加密"></a>（1）对称密钥加密</h5><p>对称密钥加密（Symmetric-Key Encryption），加密和解密使用同一密钥。 </p>
+<ul>
+<li>优点：运算速度快；</li>
+<li>缺点：无法安全地将密钥传输给通信方。</li>
+</ul>
+<p><img src="对称密钥加密.png" alt></p>
+<h5 id="（2）非对称密钥加密"><a href="#（2）非对称密钥加密" class="headerlink" title="（2）非对称密钥加密"></a>（2）非对称密钥加密</h5><p>非对称密钥加密，又称公开密钥加密（Public-Key Encryption），加密和解密使用不同的密钥。</p>
+<p>公开密钥所有人都可以获得，通信发送方获得接收方的公开密钥之后，就可以使用公开密钥进行加密，接收方收到通信内容后使用私有密钥解密。</p>
+<p>非对称密钥除了用来加密，还可以用来进行签名。因为私有密钥无法被其他人获取，因此通信发送方使用其私有密钥进行签名，通信接收方使用发送方的公开密钥对签名进行解密，就能判断这个签名是否正确。</p>
+<ul>
+<li>优点：可以更安全地将公开密钥传输给通信发送方；</li>
+<li>缺点：运算速度慢。</li>
+</ul>
+<p><img src="非对称密钥加密.png" alt></p>
+<h5 id="（3）HTTPS采用的加密方式"><a href="#（3）HTTPS采用的加密方式" class="headerlink" title="（3）HTTPS采用的加密方式"></a>（3）HTTPS采用的加密方式</h5><p>HTTPS 采用混合的加密机制，使用非对称密钥加密用于传输对称密钥来保证传输过程的安全性，之后使用对称密钥加密进行通信来保证通信过程的效率。（下图中的 Session Key 就是对称密钥） </p>
+<p><img src="HTTPS加密.png" alt></p>
+<h4 id="3、认证"><a href="#3、认证" class="headerlink" title="3、认证"></a>3、认证</h4><p>通过使用 <strong>证书</strong> 来对通信方进行认证。</p>
+<p>数字证书认证机构（CA，Certificate Authority）是客户端与服务器双方都可信赖的第三方机构。</p>
+<p>服务器的运营人员向 CA 提出公开密钥的申请，CA 在判明提出申请者的身份之后，会对已申请的公开密钥做数字签名，然后分配这个已签名的公开密钥，并将该公开密钥放入公开密钥证书后绑定在一起。</p>
+<p>进行 HTTPS 通信时，服务器会把证书发送给客户端。客户端取得其中的公开密钥之后，先使用数字签名进行验证，如果验证通过，就可以开始通信了。</p>
+<p><img src="认证.png" alt></p>
+<h4 id="4、完整性保护"><a href="#4、完整性保护" class="headerlink" title="4、完整性保护"></a>4、完整性保护</h4><p>SSL 提供报文摘要功能来进行完整性保护。</p>
+<p>HTTP 也提供了 MD5 报文摘要功能，但不是安全的。例如报文内容被篡改之后，同时重新计算 MD5 的值，通信接收方是无法意识到发生了篡改。</p>
+<p>HTTPS 的报文摘要功能之所以安全，是因为它结合了加密和认证这两个操作。试想一下，加密之后的报文，遭到篡改之后，也很难重新计算报文摘要，因为无法轻易获取明文。</p>
+<h4 id="5、HTTPS的缺点"><a href="#5、HTTPS的缺点" class="headerlink" title="5、HTTPS的缺点"></a>5、HTTPS的缺点</h4><ul>
+<li>因为需要进行加密解密等过程，因此速度会更慢；</li>
+<li>需要支付证书授权的高额费用。</li>
+</ul>
 
       
     </div>
@@ -743,7 +787,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -853,7 +897,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">26</span>
+                      
+                    
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -964,7 +1010,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、HTTP的缺点"><span class="nav-number">1.</span> <span class="nav-text">一、HTTP的缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、通信使用明文可能会被窃听"><span class="nav-number">1.1.</span> <span class="nav-text">1、通信使用明文可能会被窃听</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）TCP-IP是可能被窃听的网络"><span class="nav-number">1.1.1.</span> <span class="nav-text">（1）TCP/IP是可能被窃听的网络</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）加密处理防止被窃听"><span class="nav-number">1.1.2.</span> <span class="nav-text">（2）加密处理防止被窃听</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1）通信的加密"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1）通信的加密</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2）内容的加密"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">2）内容的加密</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、不验证通信方的身份就可能遭遇伪装"><span class="nav-number">1.2.</span> <span class="nav-text">2、不验证通信方的身份就可能遭遇伪装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）任何人可以发起请求"><span class="nav-number">1.2.1.</span> <span class="nav-text">（1）任何人可以发起请求</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）查明对手的证书"><span class="nav-number">1.2.2.</span> <span class="nav-text">（2）查明对手的证书</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、无法证明报文完整性，可能已遭篡改"><span class="nav-number">1.3.</span> <span class="nav-text">3、无法证明报文完整性，可能已遭篡改</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）接收到的内容可能有误"><span class="nav-number">1.3.1.</span> <span class="nav-text">（1）接收到的内容可能有误</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）如何防止篡改"><span class="nav-number">1.3.2.</span> <span class="nav-text">（2）如何防止篡改</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、HTTP-加密-认证-完整性保-HTTPS"><span class="nav-number">2.</span> <span class="nav-text">二、HTTP+ 加密 + 认证 + 完整性保=HTTPS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、HTTPS是身披外壳的HTTP"><span class="nav-number">2.1.</span> <span class="nav-text">1、HTTPS是身披外壳的HTTP</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、HTTP的缺点"><span class="nav-number">1.</span> <span class="nav-text">一、HTTP的缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、通信使用明文可能会被窃听"><span class="nav-number">1.1.</span> <span class="nav-text">1、通信使用明文可能会被窃听</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）TCP-IP是可能被窃听的网络"><span class="nav-number">1.1.1.</span> <span class="nav-text">（1）TCP/IP是可能被窃听的网络</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）加密处理防止被窃听"><span class="nav-number">1.1.2.</span> <span class="nav-text">（2）加密处理防止被窃听</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1）通信的加密"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1）通信的加密</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2）内容的加密"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">2）内容的加密</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、不验证通信方的身份就可能遭遇伪装"><span class="nav-number">1.2.</span> <span class="nav-text">2、不验证通信方的身份就可能遭遇伪装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）任何人可以发起请求"><span class="nav-number">1.2.1.</span> <span class="nav-text">（1）任何人可以发起请求</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）查明对手的证书"><span class="nav-number">1.2.2.</span> <span class="nav-text">（2）查明对手的证书</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、无法证明报文完整性，可能已遭篡改"><span class="nav-number">1.3.</span> <span class="nav-text">3、无法证明报文完整性，可能已遭篡改</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）接收到的内容可能有误"><span class="nav-number">1.3.1.</span> <span class="nav-text">（1）接收到的内容可能有误</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）如何防止篡改"><span class="nav-number">1.3.2.</span> <span class="nav-text">（2）如何防止篡改</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、HTTP-加密-认证-完整性保护-HTTPS"><span class="nav-number">2.</span> <span class="nav-text">二、HTTP+ 加密 + 认证 + 完整性保护 = HTTPS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、HTTPS是身披外壳的HTTP"><span class="nav-number">2.1.</span> <span class="nav-text">1、HTTPS是身披外壳的HTTP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、HTTPS的加密"><span class="nav-number">2.2.</span> <span class="nav-text">2、HTTPS的加密</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）对称密钥加密"><span class="nav-number">2.2.1.</span> <span class="nav-text">（1）对称密钥加密</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）非对称密钥加密"><span class="nav-number">2.2.2.</span> <span class="nav-text">（2）非对称密钥加密</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（3）HTTPS采用的加密方式"><span class="nav-number">2.2.3.</span> <span class="nav-text">（3）HTTPS采用的加密方式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、认证"><span class="nav-number">2.3.</span> <span class="nav-text">3、认证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、完整性保护"><span class="nav-number">2.4.</span> <span class="nav-text">4、完整性保护</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、HTTPS的缺点"><span class="nav-number">2.5.</span> <span class="nav-text">5、HTTPS的缺点</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1017,7 +1063,7 @@
     <!-- 博客字数统计 -->
     <span class="site-pv">
       &nbsp;<i class="fa fa-pencil"></i>
-      博客全站共： <span class="post-count">51.8k</span> 字
+      博客全站共： <span class="post-count">54.5k</span> 字
     </span>
 </div>
 
