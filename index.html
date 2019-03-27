@@ -2792,10 +2792,13 @@ Docker支持将软件编译成一个镜像；然后在镜像中各种软件做�
   
 
 <script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+<script src="/js/src/Valine.min.change.js"></script>
 
 
 
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/valine/1.3.4/Valine.min.js"></script>
 
 <script>
   var GUEST = ['nick', 'mail', 'link'];
@@ -2815,6 +2818,13 @@ Docker支持将软件编译成一个镜像；然后在镜像中各种软件做�
     pageSize: '10' || 10,
     visitor: false
   });
+   //增加以下六行代码去除 power by valine
+    var infoEle = document.querySelector('#comments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+      infoEle.childNodes.forEach(function(item) {
+        item.parentNode.removeChild(item);
+      });
+    }
 </script>
 
 
