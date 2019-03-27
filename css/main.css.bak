@@ -3558,7 +3558,7 @@ a#hexo-douban-tab3.hexo-douban-tab.hexo-douban-active {
   display: inline-block;
   padding: 2px 5px;
   background: #ffa500;
-  color: #ffffff;
+  color: #fff;
   font-size: 11px;
   border-radius: 0.2rem;
   margin-right: 0.3rem;
