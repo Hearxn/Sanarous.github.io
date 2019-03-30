@@ -1881,7 +1881,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #67ffac;
+  background: #39eed7;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3013,10 +3013,13 @@ hr {
   margin-top: 20px;
 }
 .post {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-bottom: 3px dashed #a4d8fa;
-  padding-bottom: 40px;
+  margin-top: 0px;
+  margin-bottom: 60px;
+/* border-bottom: 3px dashed #a4d8fa; */
+  padding: 25px;
+/*padding-bottom: 40px;  */
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 /*font-family: FontAwesome;*/
 }
 body {
@@ -4073,4 +4076,8 @@ a.nav-link {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   -moz-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.footer-inner {
+  text-align: center;
+  font-size: 15px;
 }
