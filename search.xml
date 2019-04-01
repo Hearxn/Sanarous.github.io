@@ -59,8 +59,8 @@
         <category>JVM</category>
       </categories>
       <tags>
-        <tag>JVM</tag>
         <tag>类加载机制</tag>
+        <tag>JVM</tag>
       </tags>
   </entry>
   <entry>
@@ -181,8 +181,8 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>Java高并发</tag>
         <tag>JavaSE</tag>
+        <tag>Java高并发</tag>
       </tags>
   </entry>
   <entry>
